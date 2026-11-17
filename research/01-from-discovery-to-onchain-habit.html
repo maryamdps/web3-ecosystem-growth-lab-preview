@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Independent research comparing how blockchain ecosystems approach discovery, onboarding, builders and user growth.">
+<title>From Discovery to Habit — Web3 Ecosystem Growth Lab</title>
+<style>
+:root{--bg:#f4f3ee;--paper:#fffefa;--ink:#20241f;--muted:#697067;--line:#d9ddd3;--green:#a9d65b;--deep:#17231d;--soft:#e8eddf;--orange:#d87945;--blue:#718ba7;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.62}a{color:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);font-size:.86rem}.brand{font-weight:850;letter-spacing:-.04em}.back{color:var(--muted);text-decoration:none}.hero{padding:78px 0 54px;display:grid;grid-template-columns:1.25fr .75fr;gap:50px;align-items:center}.eyebrow,.kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:850;color:var(--muted)}h1{font-size:clamp(3.3rem,7.5vw,7rem);line-height:.91;letter-spacing:-.085em;margin:20px 0 26px;max-width:850px}h1 em{font-style:normal;color:#69834a}.dek{font-size:1.22rem;color:#5e675d;max-width:720px}.meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:28px}.pill{border:1px solid var(--line);border-radius:99px;padding:7px 12px;font-size:.78rem;background:#ffffffa8}.cover{background:var(--deep);color:#eff5e7;border-radius:24px;padding:26px;min-height:360px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}.cover:before,.cover:after{content:"";position:absolute;border:1px solid #b4d77b80;border-radius:50%;width:310px;height:310px;right:-78px;top:34px}.cover:after{width:205px;height:205px;right:-25px;top:86px}.cover-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#bdccae}.orbit{position:relative;z-index:1;height:210px;display:grid;place-items:center}.core{width:106px;height:106px;border-radius:50%;background:var(--green);color:#18241a;display:grid;place-items:center;text-align:center;font-weight:900;line-height:1.1;box-shadow:0 0 0 18px #a9d65b18}.node{position:absolute;border:1px solid #b4d77b80;border-radius:99px;padding:7px 12px;background:#26372c;font-size:.76rem}.n1{top:8px;left:18%}.n2{right:4%;top:48%}.n3{bottom:5px;left:17%}.n4{left:0;top:49%}.cover-foot{position:relative;z-index:1;color:#c4cfbd;font-size:.82rem}.section{padding:62px 0;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:.55fr 1.45fr;gap:36px;margin-bottom:30px}.section-head h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.065em;line-height:1.02;margin:0}.section-head p{margin:0;color:var(--muted);max-width:700px}.finding-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.finding{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;min-height:210px}.finding .num{font-size:.72rem;letter-spacing:.12em;color:var(--muted);font-weight:850}.finding h3{font-size:1.12rem;line-height:1.15;letter-spacing:-.035em;margin:24px 0 10px}.finding p{font-size:.9rem;color:var(--muted);margin:0}.matrix{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;font-size:.91rem}.matrix th,.matrix td{padding:16px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.matrix th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f0f1eb}.matrix tr:last-child td{border-bottom:0}.chain{font-weight:850;white-space:nowrap}.signal{display:inline-block;border-radius:99px;padding:4px 9px;background:var(--soft);font-size:.72rem;font-weight:800;margin-bottom:6px}.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:24px}.step{padding:22px;background:var(--deep);color:#eff5e7;position:relative;border-right:1px solid #425046}.step:first-child{border-radius:16px 0 0 16px}.step:last-child{border-radius:0 16px 16px 0;border:0}.step .stepno{font-size:.7rem;color:#b9d68d;letter-spacing:.13em;font-weight:850}.step h3{font-size:1.22rem;margin:14px 0 8px;letter-spacing:-.04em}.step p{font-size:.85rem;color:#c5d0c2;margin:0}.step:after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:var(--green);color:#18241a;display:grid;place-items:center;font-weight:900;z-index:2}.step:last-child:after{display:none}.insight{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}.insight-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px}.insight-card h3{margin:0 0 10px;font-size:1.2rem;letter-spacing:-.035em}.insight-card p{margin:0;color:var(--muted)}.label{display:inline-block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;padding:5px 8px;border-radius:4px;background:#e8eddf;color:#52693b;margin-bottom:14px}.label.hyp{background:#f8e9df;color:#96552f}.recommendations{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rec{border:1px solid var(--line);background:var(--paper);border-radius:16px;padding:22px}.rec .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:850}.rec h3{font-size:1.22rem;letter-spacing:-.04em;margin:16px 0 9px}.rec p{color:var(--muted);font-size:.9rem;margin:0}.metric{font-size:.78rem;border-top:1px solid var(--line);padding-top:12px;margin-top:16px;color:#46553e}.sources{display:grid;grid-template-columns:1fr 1fr;gap:10px}.source{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;display:flex;justify-content:space-between;gap:16px}.source strong{display:block;font-size:.9rem}.source span{font-size:.77rem;color:var(--muted)}.source b{color:#748b51}.method{background:#e9ede4;border-radius:16px;padding:22px 24px;color:#465044}.method p{margin:5px 0}.footer{padding:32px 0 54px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}@media(max-width:850px){.hero{grid-template-columns:1fr;gap:28px}.cover{min-height:300px}.section-head{grid-template-columns:1fr;gap:12px}.finding-grid{grid-template-columns:repeat(2,1fr)}.matrix{display:block;overflow-x:auto}.journey{grid-template-columns:1fr 1fr;gap:8px}.step,.step:first-child,.step:last-child{border-radius:12px;border:0}.step:after{display:none}.recommendations{grid-template-columns:1fr}.insight{grid-template-columns:1fr}}@media(max-width:520px){.wrap{width:min(var(--max),calc(100% - 28px))}.hero{padding:54px 0 38px}.finding-grid{grid-template-columns:1fr}.journey{grid-template-columns:1fr}.sources{grid-template-columns:1fr}.top{font-size:.77rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="brand">WEB3 ECOSYSTEM GROWTH LAB</div><a class="back" href="../index.html">← Project overview</a></header>
+<main>
+<section class="hero">
+<div>
+<div class="eyebrow">Research note 01 / Ecosystem strategy</div>
+<h1>From discovery<br>to <em>on-chain habit.</em></h1>
+<p class="dek">A comparative review of how four blockchain ecosystems organise their products, developer journeys and routes to user adoption — and what growth teams can learn from them.</p>
+<div class="meta"><span class="pill">17 November 2026</span><span class="pill">Ethereum · Solana · Base · X Layer</span><span class="pill">Independent research</span></div>
+</div>
+<div class="cover">
+<div class="cover-label">The adoption system</div>
+<div class="orbit"><span class="node n1">Discover</span><span class="node n2">Activate</span><span class="node n3">Return</span><span class="node n4">Trust</span><div class="core">ECOSYSTEM<br>GROWTH</div></div>
+<div class="cover-foot">A chain is infrastructure. An ecosystem is the experience built around it.</div>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><div class="kicker">01 / Executive readout</div><div><h2>Four ecosystems.<br>Four different growth emphases.</h2><p>This first scan compares public-facing positioning and official onboarding resources. It is a qualitative desk-research snapshot, not a measurement of chain performance or user retention.</p></div></div>
+<div class="finding-grid">
+<article class="finding"><div class="num">01 / ETHEREUM</div><h3>Depth of infrastructure</h3><p>A broad technical and use-case landscape, with pathways for wallets, apps, scaling, bridges and developer tooling.</p></article>
+<article class="finding"><div class="num">02 / SOLANA</div><h3>Clarity for builders</h3><p>Developer entry points are organised around learning, working examples and migration from other stacks.</p></article>
+<article class="finding"><div class="num">03 / BASE</div><h3>Consumer distribution</h3><p>Its current strategy links markets, payments and builder support, while Base App combines discovery, social and trading experiences.</p></article>
+<article class="finding"><div class="num">04 / X LAYER</div><h3>Financial-market focus</h3><p>Its current public positioning centres on on-chain financial markets, shared infrastructure and composable market venues.</p></article>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><div class="kicker">02 / Comparative lens</div><div><h2>Where each ecosystem puts its emphasis.</h2><p>The table records what official ecosystem materials foreground. It does not imply that one approach is inherently better or that the published positioning has been independently validated.</p></div></div>
+<table class="matrix">
+<thead><tr><th>Ecosystem</th><th>Public-facing emphasis</th><th>Observed entry points</th><th>Growth question to investigate</th></tr></thead>
+<tbody>
+<tr><td class="chain">Ethereum</td><td><span class="signal">Infrastructure breadth</span><br>Core protocol, scaling, applications, wallets, developer tools and multiple use cases.</td><td>Start guides, wallet discovery, app directory, developer docs, community and grants.</td><td>How can a newcomer navigate a broad ecosystem and identify a trustworthy first use case?</td></tr>
+<tr><td class="chain">Solana</td><td><span class="signal">Builder enablement</span><br>Learning paths, templates, migration guides, payment and developer products.</td><td>Learn the stack, build from examples, migrate an app, follow use-case guides.</td><td>How effectively do builder resources translate into launched apps and active users?</td></tr>
+<tr><td class="chain">Base</td><td><span class="signal">Consumer distribution</span><br>Markets, stablecoin payments, Base App, builder programmes and growth measurement.</td><td>Base App discovery and trading, ecosystem directory, Base Batches, builder analytics.</td><td>How can social discovery and incentives lead to durable product usage rather than one-off activity?</td></tr>
+<tr><td class="chain">X Layer</td><td><span class="signal">On-chain financial markets</span><br>EVM Layer 2, Exchange OS, shared liquidity and financial infrastructure partners.</td><td>OKX Web3 entry points, bridge, explorer, developer docs, ecosystem partners.</td><td>How can a financial-market proposition create accessible first experiences for different user segments?</td></tr>
+</tbody>
+</table>
+</section>
+<section class="section">
+<div class="section-head"><div class="kicker">03 / Growth framework</div><div><h2>The real challenge is not awareness. It's progression.</h2><p>Across ecosystems, a useful growth lens is to follow a user from first exposure to repeated value. The stages below are an analytical framework for this project, not a claim that any chain currently performs well or poorly at each stage.</p></div></div>
+<div class="journey">
+<div class="step"><div class="stepno">STAGE 01</div><h3>Discover</h3><p>Can the right user find a relevant app or use case?</p></div>
+<div class="step"><div class="stepno">STAGE 02</div><h3>Understand</h3><p>Can they understand the value, risks and steps required?</p></div>
+<div class="step"><div class="stepno">STAGE 03</div><h3>Activate</h3><p>Can they complete a meaningful first action successfully?</p></div>
+<div class="step"><div class="stepno">STAGE 04</div><h3>Return</h3><p>Is there a compelling reason to come back and build a habit?</p></div>
+</div>
+<div class="insight">
+<div class="insight-card"><span class="label">Observed from public materials</span><h3>Discovery and onboarding are increasingly product surfaces.</h3><p>Ethereum provides app and wallet discovery paths; Solana makes developer learning and build paths explicit; Base brings app discovery into a consumer product; X Layer foregrounds bridge, explorer and developer entry points.</p></div>
+<div class="insight-card"><span class="label hyp">Research hypothesis</span><h3>The hand-off between stages is where growth may leak.</h3><p>A user can discover an ecosystem without understanding which app to trust, understand a product without completing a first transaction, or activate once without finding a repeat-use case. These are questions to test through product walkthroughs and user research.</p></div>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><div class="kicker">04 / Initial opportunities</div><div><h2>Three experiments worth designing.</h2><p>These are proposed growth experiments derived from the desk research. They have not been run, and no outcomes or performance lifts are claimed.</p></div></div>
+<div class="recommendations">
+<article class="rec"><div class="tag">Experiment A / Discovery</div><h3>Use-case-led ecosystem routes</h3><p>Build curated paths for distinct jobs-to-be-done — for example, stablecoin payments, earning, trading or building — rather than presenting a newcomer with an undifferentiated list of apps.</p><div class="metric">Measure: route click-through → app connection → first meaningful action.</div></article>
+<article class="rec"><div class="tag">Experiment B / Activation</div><h3>First-success onboarding</h3><p>Create a guided, low-risk first task with plain-language explanations of wallets, networks, fees and transaction approval. Make the successful outcome visible immediately.</p><div class="metric">Measure: onboarding completion → first successful transaction → time to completion.</div></article>
+<article class="rec"><div class="tag">Experiment C / Retention</div><h3>Progress-based return loops</h3><p>Give users a reason to return based on ongoing utility — portfolio actions, payment history, app updates or community progress — rather than relying only on short-lived rewards.</p><div class="metric">Measure: D7 / D30 return rate and repeat meaningful actions, segmented by use case.</div></article>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><div class="kicker">05 / Next research steps</div><div><h2>From desk research to product evidence.</h2><p>This report establishes the comparison framework. The next phase will test real user journeys and build a verified ecosystem map.</p></div></div>
+<div class="finding-grid">
+<article class="finding"><div class="num">NEXT 01</div><h3>Product walkthroughs</h3><p>Document first-time user journeys across selected wallets, bridges and dApps, including friction, terminology and trust signals.</p></article>
+<article class="finding"><div class="num">NEXT 02</div><h3>Ecosystem mapping</h3><p>Catalogue selected projects by category, use case, audience and dependencies using official directories and project documentation.</p></article>
+<article class="finding"><div class="num">NEXT 03</div><h3>Evidence-led scorecard</h3><p>Define a consistent rubric for discoverability, onboarding clarity, first-action friction and repeat-use hooks.</p></article>
+<article class="finding"><div class="num">NEXT 04</div><h3>Growth playbook</h3><p>Turn observed friction into prioritised acquisition, activation, retention and partnership recommendations.</p></article>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><div class="kicker">06 / Source register</div><div><h2>Public sources used.</h2><p>Primary sources are used for ecosystem positioning and official product or developer pathways. Claims are attributed to the relevant source; ecosystem self-reported figures are not treated as independently audited performance.</p></div></div>
+<div class="sources">
+<a class="source" href="https://ethereum.org/developers/docs/" target="_blank" rel="noopener"><div><strong>Ethereum — Developer documentation</strong><span>Core concepts, stack, apps, scaling and developer resources</span></div><b>↗</b></a>
+<a class="source" href="https://ethereum.org/what-are-apps/" target="_blank" rel="noopener"><div><strong>Ethereum — Applications</strong><span>Application discovery and use-case overview</span></div><b>↗</b></a>
+<a class="source" href="https://solana.com/developers" target="_blank" rel="noopener"><div><strong>Solana — Developer hub</strong><span>Learn, build, migrate and use-case pathways</span></div><b>↗</b></a>
+<a class="source" href="https://solana.com/learn" target="_blank" rel="noopener"><div><strong>Solana — Learning resources</strong><span>Wallet, fees, transactions and user education</span></div><b>↗</b></a>
+<a class="source" href="https://www.base.org/blog/2026-mission-vision-and-strategy" target="_blank" rel="noopener"><div><strong>Base — 2026 strategy</strong><span>Markets, payments, stablecoins and builder growth</span></div><b>↗</b></a>
+<a class="source" href="https://www.base.org/blog/baseapp" target="_blank" rel="noopener"><div><strong>Base — Base App launch</strong><span>Social, app discovery, trading and payments</span></div><b>↗</b></a>
+<a class="source" href="https://www.base.org/ecosystem" target="_blank" rel="noopener"><div><strong>Base — Ecosystem directory</strong><span>Public catalogue of third-party projects and categories</span></div><b>↗</b></a>
+<a class="source" href="https://web3.okx.com/xlayer" target="_blank" rel="noopener"><div><strong>X Layer — Official overview</strong><span>Current positioning, Exchange OS, architecture and partners</span></div><b>↗</b></a>
+<a class="source" href="https://www.okx.com/help/x-layer-faq" target="_blank" rel="noopener"><div><strong>OKX — X Layer FAQ</strong><span>Wallet and network usage guidance</span></div><b>↗</b></a>
+</div>
+<div class="method" style="margin-top:18px"><strong>Methodology & limitations</strong><p>Research snapshot dated 17 November 2026. This is a qualitative review of publicly available official materials. It does not include chain-level analytics, independent user interviews, controlled usability testing, or audited retention data. Officially published metrics and strategic statements are treated as self-reported. Recommendations are hypotheses for future testing, not measured results.</p><p><strong>Project status:</strong> Research note 01 — completed desk-research draft; product walkthroughs and ecosystem mapping are next.</p></div>
+</section>
+</main>
+<footer class="footer">WEB3 ECOSYSTEM GROWTH LAB · Independent research project · Not affiliated with or endorsed by any blockchain ecosystem, protocol or company.</footer>
+</div>
+</body>
+</html>
