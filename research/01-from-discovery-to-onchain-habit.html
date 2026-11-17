@@ -22,6 +22,8 @@ main section{padding:68px 0;border-top:1px solid var(--line)}.section-head{displ
 footer{padding:28px 0 45px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
 @media(max-width:780px){.hero{grid-template-columns:1fr;padding:52px 0 40px}.section-head{grid-template-columns:1fr;gap:12px}.concept-grid,.takeaways{grid-template-columns:1fr 1fr}.funnel{grid-template-columns:1fr 1fr}.intro-grid{grid-template-columns:1fr}.analogy{grid-template-columns:1fr}.analogy-icon{transform:rotate(90deg)}.diagram-title{display:block}.diagram-title p{margin-top:10px}.comparison{display:block;overflow-x:auto}}
 @media(max-width:520px){.wrap{width:calc(100% - 28px)}.concept-grid,.takeaways,.funnel,.sources{grid-template-columns:1fr}.layer{grid-template-columns:1fr;gap:5px}.hero-art{min-height:330px}.section-head h2{font-size:2.35rem}}
+
+.visual-panel{background:#12232d;color:#f5f7f1;border-radius:20px;padding:24px;overflow:hidden;margin-top:18px}.visual-panel h3{font-size:1.25rem;letter-spacing:-.04em;margin:0 0 5px}.visual-panel>p{color:#bdcbc6;font-size:.87rem;margin:0 0 18px}.visual-panel svg{display:block;width:100%;height:auto}.visual-caption{font-size:.76rem;color:#aebdb7;margin-top:12px}.visual-light{background:#e7ece3;border-radius:18px;padding:22px;margin-top:16px}.visual-light h3{font-size:1.2rem;margin:0 0 5px}.visual-light>p{color:#5e6b63;font-size:.86rem;margin:0 0 14px}.ecosystem-map text,.growth-map text{font-family:Inter,Arial,sans-serif}.icon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.icon-tile{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:15px;text-align:center}.icon-tile svg{width:42px;height:42px;margin:0 auto 8px;display:block}.icon-tile strong{display:block;font-size:.85rem}.icon-tile span{display:block;font-size:.75rem;color:var(--muted)}@media(max-width:650px){.icon-grid{grid-template-columns:1fr 1fr}.visual-panel,.visual-light{padding:15px}}
 </style>
 </head>
 <body><div class="wrap">
@@ -42,6 +44,30 @@ footer{padding:28px 0 45px;border-top:1px solid var(--line);font-size:.8rem;colo
 </div>
 <div class="analogy" style="margin-top:14px"><div class="analogy-side"><strong>Think of a city</strong><span>Roads, electricity and water are infrastructure. Shops, homes, services and people make the city useful.</span></div><div class="analogy-icon">↔</div><div class="analogy-side"><strong>Think of a blockchain ecosystem</strong><span>The network is infrastructure. Wallets, apps, developers and users create the experiences people come for.</span></div></div>
 <p class="disclaimer">The city comparison is a learning aid, not a literal technical description. Blockchains have different designs, trade-offs and governance models.</p>
+<div class="visual-panel">
+<h3>Picture the ecosystem</h3>
+<p>A blockchain is the shared foundation. The ecosystem is the network of people and products built around it.</p>
+<svg class="ecosystem-map" viewBox="0 0 1000 390" role="img" aria-label="Illustration of a blockchain ecosystem connecting users, developers, applications, wallets and the underlying network">
+<defs><linearGradient id="netgrad" x1="0" x2="1"><stop stop-color="#b9adff"/><stop offset="1" stop-color="#c8f477"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g stroke="#60777b" stroke-width="2" stroke-dasharray="7 8" fill="none"><path d="M500 188 L180 75 M500 188 L500 58 M500 188 L820 75 M500 188 L180 305 M500 188 L820 305"/></g>
+<g><rect x="370" y="140" width="260" height="100" rx="18" fill="#263d48" stroke="url(#netgrad)" stroke-width="3" filter="url(#glow)"/><text x="500" y="180" fill="#c8f477" font-size="17" font-weight="700" text-anchor="middle">THE BLOCKCHAIN</text><text x="500" y="207" fill="#f5f7f1" font-size="14" text-anchor="middle">Shared network foundation</text></g>
+<g><rect x="72" y="30" width="216" height="88" rx="15" fill="#243b4c" stroke="#b9adff" stroke-width="2"/><circle cx="112" cy="74" r="20" fill="#b9adff"/><path d="M112 58 L124 74 L112 90 L100 74Z" fill="#243b4c"/><text x="148" y="69" fill="#f5f7f1" font-size="17" font-weight="700">Developers</text><text x="148" y="91" fill="#bdcbc6" font-size="12">Build products</text></g>
+<g><rect x="392" y="12" width="216" height="88" rx="15" fill="#243b4c" stroke="#c8f477" stroke-width="2"/><circle cx="432" cy="56" r="20" fill="#c8f477"/><path d="M423 56h18M432 47v18" stroke="#243b4c" stroke-width="3"/><text x="468" y="51" fill="#f5f7f1" font-size="17" font-weight="700">Applications</text><text x="468" y="73" fill="#bdcbc6" font-size="12">Solve user needs</text></g>
+<g><rect x="712" y="30" width="216" height="88" rx="15" fill="#243b4c" stroke="#f2a078" stroke-width="2"/><circle cx="752" cy="74" r="20" fill="#f2a078"/><path d="M744 70h16v12h-16z M747 65h10" stroke="#243b4c" stroke-width="3" fill="none"/><text x="788" y="69" fill="#f5f7f1" font-size="17" font-weight="700">Wallets</text><text x="788" y="91" fill="#bdcbc6" font-size="12">Help users connect</text></g>
+<g><rect x="72" y="270" width="216" height="88" rx="15" fill="#243b4c" stroke="#c8f477" stroke-width="2"/><circle cx="112" cy="314" r="20" fill="#c8f477"/><circle cx="106" cy="309" r="5" fill="#243b4c"/><circle cx="119" cy="309" r="5" fill="#243b4c"/><path d="M100 325q12-17 24 0" stroke="#243b4c" stroke-width="3" fill="none"/><text x="148" y="309" fill="#f5f7f1" font-size="17" font-weight="700">Communities</text><text x="148" y="331" fill="#bdcbc6" font-size="12">Share knowledge</text></g>
+<g><rect x="712" y="270" width="216" height="88" rx="15" fill="#243b4c" stroke="#b9adff" stroke-width="2"/><circle cx="752" cy="314" r="20" fill="#b9adff"/><path d="M741 314h22M752 303v22" stroke="#243b4c" stroke-width="3"/><text x="788" y="309" fill="#f5f7f1" font-size="17" font-weight="700">Users</text><text x="788" y="331" fill="#bdcbc6" font-size="12">Use the products</text></g>
+</svg>
+<div class="visual-caption">Simplified concept map: real ecosystems contain many more participants, services and dependencies.</div>
+</div>
+<div class="visual-light">
+<h3>Meet the four networks</h3><p>Different foundations and designs — one useful question: what can people build or do here?</p>
+<div class="icon-grid">
+<div class="icon-tile"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3 11 24l13 7 13-7L24 3Z" fill="#9b8cff"/><path d="m11 27 13 7 13-7-13 18-13-18Z" fill="#6c5bd0"/></svg><strong>Ethereum</strong><span>Layer 1</span></div>
+<div class="icon-tile"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 12 37 7 41 13 11 18Z" fill="#9a74ff"/><path d="M7 23 37 18 41 24 11 29Z" fill="#36d5ad"/><path d="M7 34 37 29 41 35 11 40Z" fill="#7c8cff"/></svg><strong>Solana</strong><span>Layer 1</span></div>
+<div class="icon-tile"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="#175be8"/><path d="M13 25h22l-5 6H8z" fill="#fff"/><path d="M16 16h24l-5 6H11z" fill="#9bc3ff"/></svg><strong>Base</strong><span>Ethereum Layer 2</span></div>
+<div class="icon-tile"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="14" height="14" rx="3" fill="#111f2b"/><rect x="28" y="6" width="14" height="14" rx="3" fill="#111f2b"/><rect x="6" y="28" width="14" height="14" rx="3" fill="#111f2b"/><rect x="28" y="28" width="14" height="14" rx="3" fill="#111f2b"/></svg><strong>X Layer</strong><span>Ethereum Layer 2</span></div>
+</div></div>
+
 </section>
 <section>
 <div class="section-head"><div class="kicker">02 / The vocabulary</div><h2>Seven terms, without the jargon.</h2></div>
@@ -65,7 +91,19 @@ footer{padding:28px 0 45px;border-top:1px solid var(--line);font-size:.8rem;colo
 </section>
 <section>
 <div class="section-head"><div class="kicker">04 / Why growth is hard</div><h2>Getting someone to hear about a network is only step one.</h2><p>A person might see a campaign, download a wallet and still never use a blockchain app. Growth means helping them move from curiosity to a useful first experience — and giving them a reason to return.</p></div>
-<div class="funnel">
+
+<div class="visual-panel" style="margin:0 0 18px">
+<h3>The growth loop</h3><p>A strong ecosystem does more than attract attention. It turns a useful first experience into a reason to return.</p>
+<svg class="growth-map" viewBox="0 0 900 250" role="img" aria-label="Four-stage growth loop: discover, understand, activate, return">
+<defs><marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#c8f477"/></marker></defs>
+<path d="M185 104 H310 M405 104 H530 M625 104 H750" stroke="#c8f477" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+<path d="M790 148 Q790 220 450 220 Q110 220 110 148" stroke="#b9adff" stroke-width="3" fill="none" stroke-dasharray="8 7" marker-end="url(#arrowhead)"/>
+<g text-anchor="middle"><circle cx="110" cy="104" r="43" fill="#263d48" stroke="#b9adff" stroke-width="3"/><text x="110" y="111" fill="#fff" font-size="23">⌕</text><text x="110" y="170" fill="#fff" font-size="17" font-weight="700">DISCOVER</text><text x="110" y="190" fill="#bdcbc6" font-size="12">Find a relevant use</text>
+<circle cx="330" cy="104" r="43" fill="#263d48" stroke="#c8f477" stroke-width="3"/><text x="330" y="111" fill="#fff" font-size="23">?</text><text x="330" y="170" fill="#fff" font-size="17" font-weight="700">UNDERSTAND</text><text x="330" y="190" fill="#bdcbc6" font-size="12">Know what to do</text>
+<circle cx="550" cy="104" r="43" fill="#263d48" stroke="#f2a078" stroke-width="3"/><text x="550" y="111" fill="#fff" font-size="23">✓</text><text x="550" y="170" fill="#fff" font-size="17" font-weight="700">ACTIVATE</text><text x="550" y="190" fill="#bdcbc6" font-size="12">Achieve first value</text>
+<circle cx="770" cy="104" r="43" fill="#263d48" stroke="#b9adff" stroke-width="3"/><text x="770" y="111" fill="#fff" font-size="23">↻</text><text x="770" y="170" fill="#fff" font-size="17" font-weight="700">RETURN</text><text x="770" y="190" fill="#bdcbc6" font-size="12">Find ongoing value</text></g></svg>
+<div class="visual-caption">The loop is a proposed growth framework for analysis, not a measured funnel from any one network.</div>
+</div><div class="funnel">
 <article class="funnel-step"><div class="n">01 / DISCOVER</div><h3>Find something relevant</h3><p>They hear about a network or discover an app that appears useful.</p><div class="question">Growth question: Can the right audience find it?</div></article>
 <article class="funnel-step"><div class="n">02 / UNDERSTAND</div><h3>Feel confident enough</h3><p>They understand what the product does, what it costs and what risks to consider.</p><div class="question">Growth question: Is the value clear?</div></article>
 <article class="funnel-step"><div class="n">03 / ACTIVATE</div><h3>Achieve a first success</h3><p>They complete a meaningful action, such as making a payment or using an app.</p><div class="question">Growth question: Can they get started?</div></article>
