@@ -22,6 +22,44 @@ section{padding:82px 0}.section-head{display:grid;grid-template-columns:.9fr 1.1
 footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:.82rem}
 @media(max-width:760px){.wrap{width:calc(100% - 28px)}.hero{grid-template-columns:1fr;padding:52px 0 40px;gap:24px}.hero-art{min-height:300px}.orbit-core{right:76px;top:100px}.summary,.principles{grid-template-columns:1fr}.section-head{grid-template-columns:1fr;gap:16px}section{padding:60px 0}.two-col,.baseline,.workstreams,.evidence,.closing{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.closing{padding:27px}.closing-note{border-left:0;border-top:1px solid #849c54;padding:17px 0 0}footer{flex-direction:column}}
 @media(max-width:480px){.steps{grid-template-columns:1fr}.evidence-table th,.evidence-table td{padding:11px 10px;font-size:.8rem}}
+
+/* Research-lab visual system */
+:root{--bg:#f2f3ef;--paper:#fff;--ink:#171d24;--muted:#65717c;--line:#d9dedb;--accent:#c7f36b;--soft:#e9eee5;--dark:#101b27;--green:#4e6f42;--violet:#a99cff;--orange:#ff9b6a}
+body{background:var(--bg);color:var(--ink)}
+.nav{border-bottom-color:#cfd6d1}.mark{border-radius:9px}
+.hero{padding-top:84px}.hero-art{background:radial-gradient(circle at 72% 42%,#314a54 0,#172a35 35%,#101b27 72%);border:1px solid #354956;min-height:455px}
+.hero-art:before{width:370px;height:370px;right:-35px;top:22px;border:1px dashed #c7f36b77}
+.hero-art:after{width:260px;height:260px;right:20px;top:77px;border-color:#a99cff99}
+.orbit-core{background:linear-gradient(135deg,var(--accent),#e6ffad);width:124px;height:124px;right:105px;top:151px;box-shadow:0 0 0 18px #c7f36b18,0 0 0 46px #a99cff12}
+.hero-art .orbit-tag{position:absolute;z-index:2;border:1px solid #ffffff30;background:#ffffff12;backdrop-filter:blur(8px);padding:8px 11px;border-radius:10px;font-size:.72rem;color:#f5f8ef}
+.orbit-tag.t1{right:28px;top:75px}.orbit-tag.t2{right:265px;top:195px}.orbit-tag.t3{right:45px;bottom:115px}.orbit-tag.t4{right:250px;bottom:145px}
+.summary-card{border-radius:8px;border-top:3px solid var(--accent);box-shadow:0 8px 25px #18251b08}
+section{padding:88px 0}.section-head{margin-bottom:42px}
+.research-board{background:#111e2a;color:#f7f8f3;border-radius:24px;padding:34px;overflow:hidden;position:relative}
+.research-board:after{content:"FIELD NOTES / 001";position:absolute;right:28px;top:27px;color:#9ba9a9;font-size:.68rem;letter-spacing:.16em;font-weight:800}
+.board-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}.board-head h2{max-width:520px}.board-head p{color:#b8c5c4;max-width:340px;font-size:.9rem}
+.board-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}
+.visual-card{background:#1b2b38;border:1px solid #344653;border-radius:16px;padding:22px;min-height:250px}
+.visual-card h3{font-size:1rem;margin:0 0 5px}.visual-card .sub{font-size:.78rem;color:#aebdbb;margin:0 0 22px}
+.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:center}
+.journey-step{min-height:100px;border:1px solid #52636a;border-radius:12px;padding:12px 9px;display:flex;flex-direction:column;justify-content:space-between;background:#203442}
+.journey-step b{font-size:.68rem;color:var(--accent);letter-spacing:.08em}.journey-step span{font-size:.84rem;font-weight:750;line-height:1.2}.journey-step small{font-size:.66rem;color:#b8c5c4}
+.journey-arrow{display:none}
+.loop-wrap{height:154px;display:flex;align-items:center;justify-content:center;position:relative}
+.loop-center{width:92px;height:92px;border-radius:50%;background:var(--accent);color:#18242b;display:grid;place-items:center;text-align:center;font-size:.77rem;font-weight:900;z-index:2}
+.loop-node{position:absolute;padding:9px 12px;border:1px solid #71817f;background:#263c48;border-radius:10px;font-size:.72rem;font-weight:750}
+.loop-node.n1{top:0;left:calc(50% - 42px)}.loop-node.n2{right:5px;top:65px}.loop-node.n3{bottom:0;left:calc(50% - 40px)}.loop-node.n4{left:5px;top:65px}
+.signal-list{display:grid;gap:12px}.signal{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center}.signal b{font-size:.72rem;color:#dce6d9}.signal-line{height:10px;border-radius:20px;background:#334956;overflow:hidden}.signal-line i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--violet))}
+.framework-note{margin-top:15px;font-size:.75rem;color:#aebdbb}
+.workstream{border-radius:10px;position:relative;overflow:hidden}.workstream:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+.workstream h3{font-size:1.45rem}.number{font-size:.9rem}.stage{background:#edf3e4}
+.process{background:#101b27}.steps{border-radius:12px}.step{min-height:200px}.step b{font-size:.9rem}
+.evidence-table{border-radius:12px}.evidence-note{border-radius:12px}
+.principle{border-radius:10px}.principle .icon{border-radius:8px}
+.closing{border-radius:12px;background:linear-gradient(115deg,#c7f36b,#dff8a7)}
+@media(max-width:760px){.board-grid{grid-template-columns:1fr}.board-head{display:block}.research-board{padding:23px}.board-head p{margin-top:15px}.hero-art{min-height:340px}.orbit-core{right:85px;top:112px}.orbit-tag.t2{right:215px}.orbit-tag.t4{right:220px}}
+@media(max-width:480px){.journey{grid-template-columns:repeat(2,1fr)}.journey-step{min-height:90px}.hero-art .orbit-tag{font-size:.62rem}.orbit-tag.t2{right:185px}.orbit-tag.t4{right:190px}}
+
 </style>
 </head>
 <body id="top">
@@ -43,7 +81,7 @@ footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;c
       </div>
       <div class="hero-art" aria-label="Abstract illustration of a connected Web3 ecosystem">
         <div class="art-top">Research · Explore · Activate · Retain</div>
-        <div class="orbit-core">WEB3</div>
+        <div class="orbit-core">WEB3<br><small style="font-size:.62rem;letter-spacing:.1em">ECOSYSTEM</small></div><span class="orbit-tag t1">ON-CHAIN</span><span class="orbit-tag t2">PRODUCT</span><span class="orbit-tag t3">COMMUNITY</span><span class="orbit-tag t4">GROWTH</span>
         <div class="art-bottom">From first interaction to meaningful participation.</div>
         <small>Independent research project by Maryam Khan</small>
       </div>
@@ -54,6 +92,57 @@ footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;c
       <div class="summary-card"><strong>03 / Growth execution thinking</strong><span>Translate product and user insights into acquisition, activation and retention strategies.</span></div>
     </div>
   </div>
+
+
+  <section style="padding:30px 0 82px">
+    <div class="wrap">
+      <div class="research-board">
+        <div class="board-head">
+          <div><p class="kicker" style="color:var(--accent)">RESEARCH CANVAS / 01</p><h2>What makes an ecosystem grow?</h2></div>
+          <p>A set of lenses for investigating the journey from first discovery to repeat participation. These are research frameworks — not measured results.</p>
+        </div>
+        <div class="board-grid">
+          <article class="visual-card">
+            <h3>The user adoption journey</h3><p class="sub">A journey to examine through product testing</p>
+            <div class="journey">
+              <div class="journey-step"><b>01 / DISCOVER</b><span>Find a reason to try</span><small>Awareness & trust</small></div>
+              <div class="journey-step"><b>02 / ONBOARD</b><span>Understand the basics</span><small>Wallet & first steps</small></div>
+              <div class="journey-step"><b>03 / ACTIVATE</b><span>Complete a useful action</span><small>First value moment</small></div>
+              <div class="journey-step"><b>04 / RETURN</b><span>Build a habit</span><small>Repeat utility</small></div>
+            </div>
+            <p class="framework-note">Questions: where does confidence drop? What explains the next action?</p>
+          </article>
+          <article class="visual-card">
+            <h3>The ecosystem growth loop</h3><p class="sub">A hypothesis to validate through ecosystem research</p>
+            <div class="loop-wrap">
+              <span class="loop-node n1">Useful products</span><span class="loop-node n2">User value</span><span class="loop-node n3">Community proof</span><span class="loop-node n4">Discovery</span>
+              <div class="loop-center">ECOSYSTEM<br>FLYWHEEL</div>
+            </div>
+            <p class="framework-note">The loop only compounds when each stage creates genuine value.</p>
+          </article>
+          <article class="visual-card">
+            <h3>Signals worth investigating</h3><p class="sub">Qualitative and quantitative evidence to collect</p>
+            <div class="signal-list">
+              <div class="signal"><b>Activation</b><div class="signal-line"><i style="width:88%"></i></div></div>
+              <div class="signal"><b>Retention</b><div class="signal-line"><i style="width:72%"></i></div></div>
+              <div class="signal"><b>Utility</b><div class="signal-line"><i style="width:94%"></i></div></div>
+              <div class="signal"><b>Trust</b><div class="signal-line"><i style="width:80%"></i></div></div>
+            </div>
+            <p class="framework-note">Bars are visual labels only — not scores, rankings or ecosystem metrics.</p>
+          </article>
+          <article class="visual-card">
+            <h3>Research output map</h3><p class="sub">How exploration becomes a strategic recommendation</p>
+            <div class="journey" style="grid-template-columns:repeat(2,1fr)">
+              <div class="journey-step"><b>INPUT</b><span>Product walkthroughs</span><small>First-hand observations</small></div>
+              <div class="journey-step"><b>CONTEXT</b><span>Ecosystem landscape</span><small>Projects & audiences</small></div>
+              <div class="journey-step"><b>INSIGHT</b><span>Friction & opportunity</span><small>Evidence-based synthesis</small></div>
+              <div class="journey-step"><b>OUTPUT</b><span>Growth experiment</span><small>Hypothesis & KPIs</small></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">
@@ -78,7 +167,7 @@ footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;c
 
   <section>
     <div class="wrap">
-      <div class="section-head"><div><p class="kicker">03 / Workstreams</p><h2>Five connected areas of exploration.</h2></div><p class="section-intro">Each workstream will produce a concrete output. Planned activities are not presented as completed work; this page will be updated as research and practical exercises are carried out.</p></div>
+      <div class="section-head"><div><p class="kicker">03 / Workstreams</p><h2>Six connected research workstreams.</h2></div><p class="section-intro">Each workstream will produce a concrete output. Planned activities are not presented as completed work; this page will be updated as research and practical exercises are carried out.</p></div>
       <div class="workstreams">
         <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">Planned</span></div><h3>Wallet & on-chain fundamentals</h3><p>Explore wallet setup, addresses, networks, transaction anatomy, gas, signatures, token approvals and blockchain explorers.</p><div class="deliverable">Output: annotated transaction and wallet journey notes</div></article>
         <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">Planned</span></div><h3>dApp & DeFi product review</h3><p>Experience selected decentralised applications and examine swaps, liquidity, slippage, bridges and user-facing risk communication.</p><div class="deliverable">Output: product experience audit and friction map</div></article>
