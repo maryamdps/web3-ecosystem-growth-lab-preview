@@ -86,19 +86,62 @@ main section{padding:74px 0;border-bottom:1px solid var(--line)}.section-top{dis
 </div>
 </section>
 
-<section>
-<div class="section-top"><div class="chapter">04 / Network design</div><div><h2>Layer 1 and Layer 2: what is the difference?</h2><p>Some blockchains operate as base networks. Others are separate systems designed to extend a base network. Their architecture and security models can differ significantly.</p></div></div>
-<div class="figure"><div class="figure-head"><h3>A simplified network stack</h3><p>Here is one way to picture Ethereum and an Ethereum Layer 2. This is a learning diagram, not a full technical architecture.</p></div>
-<svg class="stack-svg" viewBox="0 0 900 310" role="img" aria-label="Layer 2 networks such as Base and X Layer shown above Ethereum Layer 1 with applications above">
-<rect x="90" y="25" width="720" height="80" rx="15" fill="#29444d" stroke="#c3b8ff" stroke-width="2"/><text x="125" y="57" fill="#c3b8ff" font-size="14" font-weight="800">APPLICATION LAYER</text><text x="125" y="82" fill="#fff" font-size="17">Wallets · Games · Trading · Payments · Other apps</text>
-<path d="M450 107v24" stroke="#d2f477" stroke-width="3"/><path d="m442 124 8 10 8-10" fill="none" stroke="#d2f477" stroke-width="3"/>
-<rect x="90" y="139" width="720" height="73" rx="15" fill="#29444d" stroke="#d2f477" stroke-width="2"/><text x="125" y="169" fill="#d2f477" font-size="14" font-weight="800">LAYER 2 EXAMPLES</text><text x="125" y="192" fill="#fff" font-size="17">Base · X Layer</text>
-<path d="M450 214v24" stroke="#d2f477" stroke-width="3"/><path d="m442 231 8 10 8-10" fill="none" stroke="#d2f477" stroke-width="3"/>
-<rect x="90" y="246" width="720" height="55" rx="13" fill="#203b45" stroke="#f3a17d" stroke-width="2"/><text x="125" y="280" fill="#f3a17d" font-size="14" font-weight="800">LAYER 1 EXAMPLE</text><text x="350" y="280" fill="#fff" font-size="17">Ethereum</text></svg>
-<div class="figcap">Solana is a Layer 1 in this comparison. Base and X Layer are Ethereum Layer 2 networks. The diagram does not imply that every app runs on every layer or that all Layer 2 designs work identically.</div></div>
-<div class="callout"><strong>Why build Layer 2s?</strong> They aim to improve aspects such as transaction capacity, speed or cost while remaining connected to an underlying Layer 1 in different ways. The exact benefits and trade-offs depend on the design.</div>
+<section id="layers">
+<div class="section-top"><div class="chapter">04 / Network design</div><div><h2>Layer 1 and Layer 2: picture a main road and an expressway.</h2><p>A Layer 1 is the base network. A Layer 2 is a separate network built on top of it to process activity more efficiently, while relying on the Layer 1 for important parts of its security and final settlement.</p></div></div>
+<div class="intro">
+<article class="note"><div class="micro">Layer 1 · The foundation</div><h3>Ethereum is the main road network.</h3><p>Ethereum is the underlying blockchain. It provides the core rules and infrastructure that applications and Layer 2 networks can build on.</p></article>
+<article class="note dark"><div class="micro">Layer 2 · The extra capacity</div><h3>Base is an expressway built on Ethereum.</h3><p>Base processes transactions on its own network, then regularly sends transaction data back to Ethereum. This helps handle activity without asking Ethereum to process every individual user action directly.</p></article>
+</div>
+<div class="figure">
+<div class="figure-head"><h3>One foundation. An additional route.</h3><p>Imagine Ethereum as a strong, established highway. Base adds another route for traffic, while staying connected to the underlying road system.</p></div>
+<svg class="road-svg" viewBox="0 0 1000 490" role="img" aria-label="Road and bridge analogy: Ethereum is the foundational main road and Base is an elevated Layer 2 expressway connected by ramps, with batches of transaction data returning to Ethereum">
+<defs>
+<linearGradient id="roadDeck" x1="0" x2="1"><stop stop-color="#c3b8ff"/><stop offset="1" stop-color="#d2f477"/></linearGradient>
+<marker id="roadArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6" fill="#d2f477"/></marker>
+<marker id="dataArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6" fill="#f3a17d"/></marker>
+</defs>
+<!-- sky and distant city -->
+<circle cx="840" cy="76" r="34" fill="#d2f477" opacity=".16"/>
+<g fill="#29444d"><rect x="35" y="105" width="55" height="92" rx="5"/><rect x="99" y="75" width="70" height="122" rx="5"/><rect x="178" y="122" width="46" height="75" rx="5"/><rect x="790" y="113" width="52" height="84" rx="5"/><rect x="850" y="84" width="75" height="113" rx="5"/><rect x="933" y="130" width="38" height="67" rx="5"/></g>
+<g fill="#d2f477" opacity=".55"><path d="M48 122h9v9h-9zm20 0h9v9h-9zm-20 20h9v9h-9zm64-27h10v10h-10zm22 0h10v10h-10zm-22 23h10v10h-10zm22 0h10v10h-10zm-22 23h10v10h-10zm22 0h10v10h-10zM804 130h9v9h-9zm20 0h9v9h-9zm47-24h10v10h-10zm22 0h10v10h-10zm-22 23h10v10h-10zm22 0h10v10h-10z"/></g>
+<!-- elevated Layer 2 bridge deck -->
+<path d="M95 230 Q190 230 250 184 L750 184 Q810 230 905 230" fill="none" stroke="#6e7780" stroke-width="28" stroke-linecap="round"/>
+<path d="M95 219 Q190 219 250 173 L750 173 Q810 219 905 219" fill="none" stroke="url(#roadDeck)" stroke-width="12" stroke-linecap="round"/>
+<path d="M285 173H715" stroke="#263943" stroke-width="3" stroke-dasharray="28 20"/>
+<!-- bridge supports -->
+<path d="M300 188V352M700 188V352" stroke="#758a8e" stroke-width="14"/>
+<path d="M275 352H325M675 352H725" stroke="#758a8e" stroke-width="10" stroke-linecap="round"/>
+<!-- traffic on L2 -->
+<g><rect x="365" y="142" width="54" height="24" rx="7" fill="#f3a17d"/><rect x="376" y="147" width="16" height="8" rx="2" fill="#203b45"/><rect x="395" y="147" width="15" height="8" rx="2" fill="#203b45"/><circle cx="378" cy="167" r="5" fill="#101e26"/><circle cx="405" cy="167" r="5" fill="#101e26"/></g>
+<g><rect x="570" y="142" width="54" height="24" rx="7" fill="#d2f477"/><rect x="581" y="147" width="16" height="8" rx="2" fill="#203b45"/><rect x="600" y="147" width="15" height="8" rx="2" fill="#203b45"/><circle cx="583" cy="167" r="5" fill="#101e26"/><circle cx="610" cy="167" r="5" fill="#101e26"/></g>
+<!-- base road foundation -->
+<rect x="0" y="366" width="1000" height="95" rx="10" fill="#263f49"/>
+<path d="M0 378H1000" stroke="#d2f477" stroke-width="3" opacity=".8"/>
+<path d="M0 413H1000" stroke="#e7e8dc" stroke-width="3" stroke-dasharray="36 24" opacity=".75"/>
+<g><rect x="110" y="398" width="64" height="28" rx="7" fill="#c3b8ff"/><rect x="124" y="403" width="17" height="9" rx="2" fill="#203b45"/><rect x="144" y="403" width="17" height="9" rx="2" fill="#203b45"/><circle cx="126" cy="428" r="5" fill="#101e26"/><circle cx="159" cy="428" r="5" fill="#101e26"/></g>
+<g><rect x="817" y="398" width="64" height="28" rx="7" fill="#9dc9ed"/><rect x="831" y="403" width="17" height="9" rx="2" fill="#203b45"/><rect x="851" y="403" width="17" height="9" rx="2" fill="#203b45"/><circle cx="833" cy="428" r="5" fill="#101e26"/><circle cx="866" cy="428" r="5" fill="#101e26"/></g>
+<!-- labels -->
+<rect x="338" y="35" width="324" height="78" rx="14" fill="#203b45" stroke="#d2f477" stroke-width="2"/>
+<text x="500" y="65" text-anchor="middle" fill="#d2f477" font-size="17" font-weight="800">LAYER 2 · BASE</text>
+<text x="500" y="89" text-anchor="middle" fill="#f5f7f1" font-size="13">The additional expressway</text>
+<path d="M500 114V145" stroke="#d2f477" stroke-width="2" marker-end="url(#roadArrow)"/>
+<text x="500" y="344" text-anchor="middle" fill="#d2f477" font-size="17" font-weight="800">LAYER 1 · ETHEREUM</text>
+<text x="500" y="438" text-anchor="middle" fill="#f5f7f1" font-size="16" font-weight="800">THE UNDERLYING FOUNDATION</text>
+<!-- data batches back to L1 -->
+<path d="M730 242 Q810 278 790 350" stroke="#f3a17d" stroke-width="3" fill="none" stroke-dasharray="7 6" marker-end="url(#dataArrow)"/>
+<rect x="782" y="265" width="174" height="58" rx="10" fill="#3b4245" stroke="#f3a17d"/>
+<text x="869" y="288" text-anchor="middle" fill="#f3a17d" font-size="12" font-weight="800">DATA / PROOFS</text>
+<text x="869" y="307" text-anchor="middle" fill="#fff" font-size="11">Sent back to Ethereum</text>
+</svg>
+<div class="figcap">Analogy, not literal architecture: Base is a separate Layer 2 network, not a physical bridge. It executes transactions on Base and posts transaction data to Ethereum. The precise security and settlement design is more technical than this simplified illustration.</div>
+</div>
+<div class="two-col">
+<div class="mini-figure"><h3>What happens on Base?</h3><p>Users interact with apps on Base. Base processes those transactions as its own network, rather than sending every individual transaction to Ethereum for direct execution.</p></div>
+<div class="mini-figure"><h3>Why connect it to Ethereum?</h3><p>Base posts transaction data to Ethereum so the underlying Layer 1 can support important parts of the system's security and settlement. The exact guarantees depend on the rollup design and its current configuration.</p></div>
+</div>
+<div class="callout"><strong>One important distinction: a Layer 2 is not the same thing as a bridge.</strong> Base is the Layer 2 network. A bridge is a tool or mechanism that can move assets between networks, such as Ethereum and Base. The bridge connects the roads; it is not the expressway itself.</div>
+<div class="callout"><strong>Why build Layer 2s?</strong> They aim to offer more capacity and often lower transaction costs or faster experiences, while remaining connected to an underlying Layer 1. These benefits come with design trade-offs, and not all Layer 2 networks work in exactly the same way.</div>
 </section>
-
 <section id="networks">
 <div class="section-top"><div class="chapter">05 / Compare ecosystems</div><div><h2>Four networks. Different designs and growth questions.</h2><p>These examples help illustrate the range of blockchain ecosystems. The aim is not to rank them, but to understand what each one is and what a growth strategist might investigate.</p></div></div>
 <div class="compare">
