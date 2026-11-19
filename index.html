@@ -190,6 +190,17 @@ section{padding:104px 0}
 .foundation-example strong{color:#d3c7ff}
 @media(max-width:760px){.foundations-grid{grid-template-columns:1fr}.foundations{padding-top:38px!important;padding-bottom:38px!important}}
 
+
+/* Plain-English Web3 primer */
+.primer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 18px}
+.primer-card{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#151e29,#11151c)}
+.primer-label{display:block;color:var(--accent);font-size:.65rem;font-weight:850;letter-spacing:.13em;margin-bottom:10px}
+.primer-card h3{font-size:1.1rem;margin:0 0 8px;color:var(--ink)}
+.primer-card p{font-size:.86rem;line-height:1.6;color:var(--muted);margin:0}
+.primer-card .primer-example{margin-top:12px;padding-top:11px;border-top:1px solid var(--line);font-size:.8rem}
+.primer-example strong{color:var(--accent)}
+@media(max-width:760px){.primer-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -254,8 +265,22 @@ section{padding:104px 0}
   <section>
     <div class="wrap">
       <div class="section-head"><div><p class="kicker">02 / THE TECHNOLOGY — IN PLAIN ENGLISH</p><h2>Just enough context to understand the opportunity.</h2></div><p class="section-intro">A Layer 2 is a network built to help applications run with more capacity and often lower transaction costs than using Ethereum directly. That can make frequent digital actions more practical. For this growth strategy, the important point is what that enables — not the technical mechanics underneath.</p></div>
+      <div class="primer-grid" aria-label="Web3 and blockchain basics">
+        <article class="primer-card">
+          <span class="primer-label">THE BIGGER IDEA</span>
+          <h3>What is Web3?</h3>
+          <p>Web3 is a broad term for internet services that use blockchain technology. Instead of every digital record being controlled by one company, some Web3 applications let people interact with shared networks and use or hold digital assets themselves.</p>
+          <p class="primer-example"><strong>Example:</strong> Rather than keeping a game item only inside one company's game database, a Web3 game might represent that item as a digital asset in a wallet that the player can control and use where supported.</p>
+        </article>
+        <article class="primer-card">
+          <span class="primer-label">THE UNDERLYING TECHNOLOGY</span>
+          <h3>What is a blockchain?</h3>
+          <p>A blockchain is a shared digital record of activity. A network of computers checks new transactions against agreed rules and updates the record, so participants can verify the same history without relying on one central company to maintain it.</p>
+          <p class="primer-example"><strong>Example:</strong> If someone sends a digital asset, the network checks that the sender is allowed to make the transfer and then adds the transaction to its shared record.</p>
+        </article>
+      </div>
       <div class="workstreams">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">FOUNDATION</span><span class="icon-mark" aria-hidden="true">◈</span></div><h3>Ethereum</h3><p>The underlying blockchain that provides the base environment and security foundations for the ecosystem.</p><p class="example"><strong>Beginner example:</strong> Think of Ethereum as the main railway network and shared rulebook. It helps different participants keep and verify a common record of transactions, so apps do not have to rely on one company holding the only copy. Many Layer 2 networks use Ethereum to anchor data or settle activity, although the exact security design differs between networks.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">FOUNDATION</span><span class="icon-mark" aria-hidden="true">◈</span></div><h3>Ethereum</h3><p>The underlying blockchain that provides the base environment and security foundations for the ecosystem.</p><p class="example"><strong>Beginner example:</strong> Think of Ethereum as a shared public record book and rulebook. When someone sends a transaction or uses an app, computers on the network check that it follows the rules — for example, that the person is allowed to make the transfer — and update the shared record. This lets users and apps verify the same history instead of relying on one company to keep the only copy. Many Layer 2 networks use Ethereum to publish data or settle activity, although their security designs differ.</p></article>
         <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">SCALING</span><span class="icon-mark" aria-hidden="true">↗</span></div><h3>Layer 2 network</h3><p>A network designed to make blockchain activity more scalable and practical for everyday applications.</p><p class="example"><strong>Beginner example:</strong> Imagine a local express line connected to the main railway. It handles more journeys away from the busiest central tracks, then uses the main network in a defined way to report or settle activity. This can help apps handle more activity, often at a lower cost.</p></article>
         <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">UTILITY</span><span class="icon-mark" aria-hidden="true">▣</span></div><h3>Apps and services</h3><p>Products built on the network — such as payment tools, games, marketplaces and finance applications.</p><p class="example"><strong>Beginner example:</strong> Think of an app as the service passengers actually use. For example, a freelancer could use a payment app built on a Layer 2 network to receive a supported digital payment from an overseas client.</p></article>
         <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">ADOPTION</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>People using them</h3><p>Growth happens when people discover an app, understand its value, complete a useful action and come back.</p><p class="example"><strong>Beginner example:</strong> The freelancer discovers the app, checks that it supports their country and payment needs, receives a first payment successfully, and returns to use it for the next client. That repeat behaviour is adoption.</p></article>
@@ -342,343 +367,6 @@ section{padding:104px 0}
           <div class="adoption-takeaway"><strong>The real signal:</strong> people complete a useful action — and choose to do it again.</div>
         </aside>
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="An independent research and go-to-market strategy for a hypothetical Ethereum Layer 2 ecosystem, focused on turning infrastructure into real user adoption.">
-<meta name="robots" content="noindex,nofollow">
-<title>Layer 2 Ecosystem Growth Strategy | Maryam Khan</title>
-<style>
-:root{--bg:#f7f6f2;--paper:#fffefa;--ink:#20221f;--muted:#686d65;--line:#dedfd7;--accent:#c4f06b;--soft:#ecefe5;--dark:#202821;--green:#697f4a;--max:1120px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:21px 0;border-bottom:1px solid var(--line)}.brand{font-size:.92rem;font-weight:850;letter-spacing:-.03em}.mark{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--accent);border-radius:50%;margin-right:8px}.back{font-size:.9rem;color:var(--muted)}
-.hero{padding:76px 0 58px;display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center}.eyebrow,.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;font-weight:850;color:var(--muted)}.status{display:inline-flex;align-items:center;gap:9px;border:1px solid #cbd6b8;background:#eff4e6;border-radius:99px;padding:8px 13px;font-size:.78rem;font-weight:800;color:#425332}.status:before{content:"";width:8px;height:8px;border-radius:50%;background:#7b9c48}h1{font-size:clamp(3.1rem,7vw,6.4rem);line-height:.94;letter-spacing:-.078em;margin:22px 0 24px;font-weight:790;max-width:800px}h1 em{font-style:normal;color:var(--green)}.lead{font-size:1.16rem;color:var(--muted);max-width:690px}.hero-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}.chip{font-size:.8rem;border:1px solid var(--line);border-radius:99px;padding:8px 12px;background:#ffffffa6}.hero-art{min-height:420px;background:var(--dark);border-radius:24px;padding:25px;color:#eff5e5;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #c4f06b66;border-radius:50%;width:310px;height:310px;right:-60px;top:42px}.hero-art:after{width:220px;height:220px;right:-15px;top:87px}.orbit-core{position:absolute;width:112px;height:112px;right:90px;top:142px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:var(--dark);font-size:1.1rem;font-weight:900;box-shadow:0 0 0 18px #c4f06b16,0 0 0 42px #c4f06b0b}.art-top,.art-bottom{position:relative;z-index:1}.art-top{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:850}.art-bottom{font-size:1.7rem;line-height:1.08;letter-spacing:-.05em;font-weight:800;max-width:270px}.hero-art small{font-size:.8rem;color:#c5cebb}
-.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 18px}.summary-card{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:21px}.summary-card strong{display:block;font-size:1.02rem;margin-bottom:6px}.summary-card span{font-size:.88rem;color:var(--muted)}
-section{padding:82px 0}.section-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start;margin-bottom:34px}h2{font-size:clamp(2.15rem,4.4vw,3.8rem);line-height:1.02;letter-spacing:-.07em;margin:10px 0 0}h3{letter-spacing:-.035em}.section-intro{font-size:1.02rem;color:var(--muted);margin:0;max-width:680px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:19px;padding:25px}.panel h3{font-size:1.22rem;margin:0 0 10px}.panel p,.panel li{color:var(--muted);font-size:.94rem}.panel ul{padding-left:20px;margin-bottom:0}.panel li{margin:8px 0}.dark{background:var(--dark);color:#f7f6f2;border-color:var(--dark)}.dark p,.dark li{color:#c7cec0}.dark .kicker{color:var(--accent)}
-.baseline{display:grid;grid-template-columns:1fr 1fr;gap:14px}.baseline-item{background:var(--soft);border-radius:16px;padding:22px}.baseline-item strong{display:block;margin-bottom:6px}.baseline-item p{margin:0;color:#5c6554;font-size:.91rem}
-.workstreams{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.workstream{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:225px;display:flex;flex-direction:column}.workstream-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.number{font-size:.78rem;letter-spacing:.1em;font-weight:900;color:var(--green)}.stage{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:850;border-radius:99px;background:var(--soft);padding:6px 9px;color:#59634f}.workstream h3{font-size:1.35rem;line-height:1.15;margin:22px 0 9px}.workstream p{font-size:.92rem;color:var(--muted);margin:0}.deliverable{margin-top:auto;padding-top:19px;font-size:.82rem;font-weight:800}
-.process{background:var(--dark);color:#f7f6f2}.process .kicker,.process .section-intro{color:#c7cec0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#4b5146;border:1px solid #4b5146;border-radius:19px;overflow:hidden;margin-top:32px}.step{padding:22px;background:var(--dark);min-height:185px}.step b{font-size:.8rem;color:var(--accent)}.step h3{font-size:1.03rem;margin:26px 0 7px}.step p{font-size:.84rem;color:#c7cec0;margin:0}
-.evidence{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.evidence-table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}.evidence-table th,.evidence-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:.87rem;vertical-align:top}.evidence-table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:#f0f1eb}.evidence-table tr:last-child td{border-bottom:0}.evidence-note{background:var(--soft);border-radius:17px;padding:23px}.evidence-note h3{margin:0 0 10px}.evidence-note p{color:#59634f;font-size:.91rem}
-.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.principle{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--paper)}.principle .icon{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:var(--accent);font-weight:900;margin-bottom:18px}.principle h3{font-size:1.04rem;margin:0 0 7px}.principle p{font-size:.87rem;color:var(--muted);margin:0}
-.closing{background:var(--accent);padding:42px;border-radius:24px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.closing h2{font-size:clamp(2rem,4vw,3.1rem);max-width:700px}.closing p{color:#48543b;max-width:620px}.closing-note{border-left:1px solid #849c54;padding-left:22px;font-size:.9rem;color:#48543b}
-footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:.82rem}
-@media(max-width:760px){.wrap{width:calc(100% - 28px)}.hero{grid-template-columns:1fr;padding:52px 0 40px;gap:24px}.hero-art{min-height:300px}.orbit-core{right:76px;top:100px}.summary,.principles{grid-template-columns:1fr}.section-head{grid-template-columns:1fr;gap:16px}section{padding:60px 0}.two-col,.baseline,.workstreams,.evidence,.closing{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.closing{padding:27px}.closing-note{border-left:0;border-top:1px solid #849c54;padding:17px 0 0}footer{flex-direction:column}}
-@media(max-width:480px){.steps{grid-template-columns:1fr}.evidence-table th,.evidence-table td{padding:11px 10px;font-size:.8rem}}
-
-/* Research-lab visual system */
-:root{--bg:#f2f3ef;--paper:#fff;--ink:#171d24;--muted:#65717c;--line:#d9dedb;--accent:#c7f36b;--soft:#e9eee5;--dark:#101b27;--green:#4e6f42;--violet:#a99cff;--orange:#ff9b6a}
-body{background:var(--bg);color:var(--ink)}
-.nav{border-bottom-color:#cfd6d1}.mark{border-radius:9px}
-.hero{padding-top:48px}.hero-art{background:radial-gradient(circle at 72% 42%,#314a54 0,#172a35 35%,#101b27 72%);border:1px solid #354956;min-height:455px}
-.hero-art:before{width:370px;height:370px;right:-35px;top:22px;border:1px dashed #c7f36b77}
-.hero-art:after{width:260px;height:260px;right:20px;top:77px;border-color:#a99cff99}
-.orbit-core{background:linear-gradient(135deg,var(--accent),#e6ffad);width:124px;height:124px;right:105px;top:151px;box-shadow:0 0 0 18px #c7f36b18,0 0 0 46px #a99cff12}
-.hero-art .orbit-tag{position:absolute;z-index:2;border:1px solid #ffffff30;background:#ffffff12;backdrop-filter:blur(8px);padding:8px 11px;border-radius:10px;font-size:.72rem;color:#f5f8ef}
-.orbit-tag.t1{right:28px;top:75px}.orbit-tag.t2{right:265px;top:195px}.orbit-tag.t3{right:45px;bottom:115px}.orbit-tag.t4{right:250px;bottom:145px}
-.summary-card{border-radius:8px;border-top:3px solid var(--accent);box-shadow:0 8px 25px #18251b08}
-section{padding:88px 0}.section-head{margin-bottom:42px}
-.research-board{background:#111e2a;color:#f7f8f3;border-radius:24px;padding:34px;overflow:hidden;position:relative}
-.research-board:after{content:"FIELD NOTES / 001";position:absolute;right:28px;top:27px;color:#9ba9a9;font-size:.68rem;letter-spacing:.16em;font-weight:800}
-.board-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}.board-head h2{max-width:520px}.board-head p{color:#b8c5c4;max-width:340px;font-size:.9rem}
-.board-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}
-.visual-card{background:#1b2b38;border:1px solid #344653;border-radius:16px;padding:22px;min-height:250px}
-.visual-card h3{font-size:1rem;margin:0 0 5px}.visual-card .sub{font-size:.78rem;color:#aebdbb;margin:0 0 22px}
-.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:center}
-.journey-step{height:124px;min-height:124px;border:1px solid #52636a;border-radius:12px;padding:12px 9px;display:flex;flex-direction:column;justify-content:space-between;background:#203442;min-width:0}
-.journey-step b{font-size:.68rem;color:var(--accent);letter-spacing:.08em}.journey-step span{font-size:.84rem;font-weight:750;line-height:1.2}.journey-step small{font-size:.66rem;color:#b8c5c4}
-.journey-arrow{display:none}
-.loop-wrap{height:154px;display:flex;align-items:center;justify-content:center;position:relative}
-.loop-center{width:92px;height:92px;border-radius:50%;background:var(--accent);color:#18242b;display:grid;place-items:center;text-align:center;font-size:.77rem;font-weight:900;z-index:2}
-.loop-node{position:absolute;padding:9px 12px;border:1px solid #71817f;background:#263c48;border-radius:10px;font-size:.72rem;font-weight:750}
-.loop-node.n1{top:0;left:calc(50% - 42px)}.loop-node.n2{right:5px;top:65px}.loop-node.n3{bottom:0;left:calc(50% - 40px)}.loop-node.n4{left:5px;top:65px}
-.signal-list{display:grid;gap:12px}.signal{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center}.signal b{font-size:.72rem;color:#dce6d9}.signal-line{height:10px;border-radius:20px;background:#334956;overflow:hidden}.signal-line i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--violet))}
-.framework-note{margin-top:15px;font-size:.75rem;color:#aebdbb}
-.workstream{border-radius:10px;position:relative;overflow:hidden}.workstream:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
-.workstream h3{font-size:1.45rem}.number{font-size:.9rem}.stage{background:#edf3e4}
-.process{background:#101b27}.steps{border-radius:12px}.step{min-height:200px}.step b{font-size:.9rem}
-.evidence-table{border-radius:12px}.evidence-note{border-radius:12px}
-.principle{border-radius:10px}.principle .icon{border-radius:8px}
-.closing{border-radius:12px;background:linear-gradient(115deg,#c7f36b,#dff8a7)}
-@media(max-width:760px){.board-grid{grid-template-columns:1fr}.board-head{display:block}.research-board{padding:23px}.board-head p{margin-top:15px}.hero-art{min-height:340px}.orbit-core{right:85px;top:112px}.orbit-tag.t2{right:215px}.orbit-tag.t4{right:220px}}
-@media(max-width:480px){.journey{grid-template-columns:repeat(2,1fr)}.journey-step{min-height:90px}.hero-art .orbit-tag{font-size:.62rem}.orbit-tag.t2{right:185px}.orbit-tag.t4{right:190px}}
-
-
-/* Dark Web3 research theme */
-:root{color-scheme:dark;--bg:#08090c;--paper:#11151c;--ink:#f4f6f0;--muted:#a6afa8;--line:#2a313c;--accent:#c8ff42;--soft:#171d26;--dark:#11151c;--green:#c8ff42;--violet:#a56bff;--orange:#ff9b6a}
-body{background:radial-gradient(ellipse at 82% 0%,#552b8426,transparent 34%),var(--bg);color:var(--ink)}
-.nav{justify-content:flex-start;border-bottom-color:var(--line)}.brand{color:var(--ink)}.mark{background:var(--accent);color:#10130b;border-radius:50%}
-.eyebrow,.kicker{color:#b7c0b7}h1 em{color:var(--accent)}.lead,.section-intro{color:var(--muted)}
-.hero-art{background:radial-gradient(circle at 72% 42%,#30234e 0,#172431 38%,#10151d 78%);border:1px solid #344050;color:#f4f6f0}
-.hero-art:before{border-color:#c8ff4266}.hero-art:after{border-color:#a56bff88}.orbit-core{background:linear-gradient(135deg,var(--accent),#e7ffad);color:#10130b}.hero-art small{color:#c3cdc5}
-.orbit-tag{background:#ffffff12!important;border-color:#ffffff35!important;color:#f4f6f0!important}
-.summary-card,.panel,.workstream,.principle{background:var(--paper);border-color:var(--line);color:var(--ink);box-shadow:none}
-.summary-card{border-top:3px solid var(--accent)}.summary-card span,.workstream p,.principle p,.panel p,.panel li{color:var(--muted)}
-section[style*="background:#f0f1eb"]{background:#0d1219!important}
-.baseline-item{background:#151c25;border:1px solid var(--line)}.baseline-item p{color:var(--muted)}
-.number{color:var(--accent)}.stage{background:#202a31;color:#dce7d6;border:1px solid #35434a}.deliverable{color:#dce7d6}
-.process{background:#0e141c;color:var(--ink)}.process .kicker{color:var(--accent)}.process .section-intro,.step p{color:#a6afa8}.steps{background:#303b45;border-color:#303b45}.step{background:#111923}.step b{color:var(--accent)}
-.evidence-table{background:#111923;border-color:var(--line)}.evidence-table th,.evidence-table td{border-bottom-color:var(--line);color:#e8eee8}.evidence-table th{background:#1a232d;color:#aeb9b0}.evidence-note{background:#151e28;border:1px solid var(--line)}.evidence-note p{color:var(--muted)}
-.principle .icon{background:var(--accent);color:#10130b}
-.closing{background:linear-gradient(115deg,#c8ff42,#b4e65c);color:#10150d}.closing h2{color:#10150d}.closing p,.closing-note{color:#26351c}.closing-note{border-left-color:#829f38}
-a{color:var(--accent)}.panel a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}.dark{background:#111923;border-color:#303b45}.dark p,.dark li{color:#c0cbc1}
-footer{color:#84908a}
-@media(max-width:760px){.nav{justify-content:flex-start}}
-
-/* Visual icon system */
-.workstream-top{justify-content:flex-start}
-.workstream-top .stage{margin-left:auto}
-.icon-mark{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:10px;background:#202b36;border:1px solid #394653;color:var(--accent);font-size:1.12rem;font-weight:800;line-height:1}
-.visual-card:before{content:"";display:block;width:30px;height:3px;background:var(--accent);border-radius:5px;margin-bottom:14px}
-.summary-card{position:relative}
-.summary-card:before{content:"";display:block;width:24px;height:3px;background:var(--violet);margin-bottom:12px;border-radius:4px}
-/* Refined hierarchy: compact editorial typography */
-h1{font-size:clamp(2.35rem,4.8vw,4.25rem);line-height:1.02;letter-spacing:-.065em;margin:16px 0 18px;max-width:680px}
-.lead{font-size:1.02rem;line-height:1.65;max-width:610px}
-h2{font-size:clamp(1.65rem,3vw,2.65rem);line-height:1.08;letter-spacing:-.055em}
-.section-head{gap:30px;margin-bottom:28px}
-h3{font-size:1.08rem}
-.panel h3{font-size:1.08rem}
-.workstream h3{font-size:1.18rem;margin:17px 0 8px}
-section{padding:78px 0}
-.summary-card{padding:17px}
-.summary-card strong{font-size:.94rem}
-.summary-card span{font-size:.84rem}
-.research-board{padding:26px}
-.board-head h2{font-size:1.75rem}
-.board-head p{font-size:.84rem}
-.visual-card{padding:18px;min-height:unset}
-.visual-card h3{font-size:.96rem}
-.step{min-height:165px;padding:18px}
-.step h3{font-size:.98rem;margin:20px 0 7px}
-.closing h2{font-size:clamp(1.65rem,3vw,2.5rem)}
-@media(max-width:760px){h1{font-size:clamp(2.35rem,9vw,3.4rem)}h2{font-size:1.8rem}.section-head{gap:12px}section{padding:62px 0}.hero{padding-top:38px}}
-
-/* Spacious layout and a clean, non-overlapping hero illustration */
-section{padding:104px 0}
-.section-head{margin-bottom:46px}
-.hero{padding-top:34px}
-.hero-art{
-  min-height:455px;
-  padding:26px;
-  display:grid;
-  grid-template-rows:auto 1fr auto auto;
-  gap:18px;
-  justify-items:stretch;
-  align-items:center;
-  overflow:hidden;
-  background:
-    radial-gradient(ellipse at 50% 34%,#273b4d 0,#172635 45%,#10151d 100%);
-  border:1px solid #344454;
-  border-radius:22px;
-}
-.hero-art:before,.hero-art:after{display:none}
-.hero-visual-heading{display:flex;align-items:center;gap:9px;font-size:.7rem;letter-spacing:.14em;font-weight:850;color:#dce6df}
-.visual-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px #c8ff42aa}
-.hero-visual-core{display:grid;justify-items:center;align-content:center;gap:8px;min-height:168px;position:relative}
-.core-orbit{width:118px;height:118px;border:1px solid #c8ff4280;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 13px #c8ff4210,0 0 0 27px #a56bff0d}
-.core-orbit span{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#d8ff83,#a9e83d);color:#111a12;font-size:1.65rem;font-weight:950;letter-spacing:-.07em}
-.core-caption{font-size:.66rem;letter-spacing:.2em;font-weight:850;color:#d5dfd9}
-.hero-visual-links{height:15px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:310px;width:80%;margin:-7px auto 0}
-.hero-visual-links i{display:block;width:1px;height:15px;background:linear-gradient(#c8ff42,#a56bff);justify-self:center}
-.hero-visual-nodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
-.hero-node{min-width:0;min-height:104px;padding:12px 8px;border:1px solid #40515d;background:#ffffff0a;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:5px}
-.node-symbol{font-size:1.05rem;color:var(--accent);line-height:1.2}
-.hero-node b{font-size:.68rem;letter-spacing:.08em;color:#f2f6ef}
-.hero-node small{font-size:.62rem;line-height:1.35;color:#b8c5c2}
-.hero-visual-foot{font-size:.62rem;letter-spacing:.11em;font-weight:800;color:#aab9b7;text-align:center;padding-top:2px}
-@media(max-width:760px){
-  section{padding:76px 0}
-  .section-head{margin-bottom:30px}
-  .hero{padding-top:28px}
-  .hero-art{min-height:410px;padding:22px}
-}
-@media(max-width:420px){
-  .hero-art{padding:17px;min-height:390px}
-  .hero-visual-nodes{gap:6px}
-  .hero-node{padding:10px 5px}
-  .hero-node b{font-size:.61rem}
-  .hero-node small{font-size:.56rem}
-}
-
-
-/* Beginner examples, campaign outcomes and adoption measurement visual */
-.example{margin-top:13px!important;padding:12px 13px;border-left:2px solid var(--accent);background:#18212b;border-radius:0 9px 9px 0;color:#c5d0c7!important;font-size:.82rem!important;line-height:1.55}
-.example strong{color:var(--accent)}
-.campaign-outcome{margin-top:12px!important;font-size:.82rem!important;line-height:1.5}
-.campaign-outcome strong{color:var(--accent)}
-.adoption-visual{background:linear-gradient(160deg,#151f2b,#101720);border:1px solid #34414c;border-radius:16px;padding:22px;color:#f2f5ef;align-self:stretch}
-.adoption-visual .kicker{color:var(--accent);margin:0 0 9px}
-.adoption-visual h3{font-size:1.3rem;line-height:1.15;margin:0 0 20px;letter-spacing:-.04em}
-.adoption-flow{display:grid;gap:0}
-.adoption-stage{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 10px;background:#1c2935;border:1px solid #354552;border-radius:10px}
-.adoption-icon{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#c8ff42;color:#111a12;font-weight:900}
-.adoption-stage b{display:block;font-size:.72rem;letter-spacing:.07em;color:#f2f5ef}
-.adoption-stage small{display:block;font-size:.7rem;color:#b3c0bd;margin-top:3px;line-height:1.35}
-.adoption-stage em{font-style:normal;font-size:.58rem;letter-spacing:.08em;font-weight:850;color:#c8ff42;text-align:right}
-.adoption-connector{height:13px;width:2px;background:linear-gradient(var(--accent),#a56bff);margin-left:25px}
-.adoption-takeaway{margin-top:17px;padding:13px;border-radius:10px;background:#c8ff42;color:#111a12;font-size:.8rem;line-height:1.5}
-.adoption-takeaway strong{font-weight:900}
-@media(max-width:760px){.adoption-visual{padding:18px}.adoption-stage{grid-template-columns:32px 1fr auto;gap:8px}.adoption-stage em{font-size:.52rem}}
-
-</style>
-</head>
-<body>
-<header class="wrap">
-  <nav class="nav" aria-label="Main navigation">
-    <a class="brand" href="#top"><span class="mark">M</span>MARYAM KHAN</a>
-  </nav>
-</header>
-<main id="top">
-  <div class="wrap">
-    <section class="hero" style="padding-bottom:42px">
-      <div>
-        <p class="eyebrow">WEB3 ECOSYSTEM GROWTH · LAYER 2 · GO-TO-MARKET</p>
-        <h1>Turning Layer 2<br><em>into real adoption.</em></h1>
-        <p class="lead">An independent go-to-market case study exploring how an Ethereum Layer 2 ecosystem could attract users, support builders and grow real-world adoption.</p>
-        <div class="hero-meta"><span class="chip">Ecosystem research</span><span class="chip">Audience & positioning</span><span class="chip">GTM campaign</span></div>
-      </div>
-      <div class="hero-art" aria-label="Illustration of a Layer 2 ecosystem connecting applications, builders and users">
-        <div class="hero-visual-heading"><span class="visual-dot"></span> THE LAYER 2 ECOSYSTEM</div>
-        <div class="hero-visual-core">
-          <div class="core-orbit"><span> L2 </span></div>
-          <div class="core-caption">NETWORK</div>
-        </div>
-        <div class="hero-visual-links" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="hero-visual-nodes">
-          <div class="hero-node"><span class="node-symbol">⌘</span><b>BUILDERS</b><small>Create applications</small></div>
-          <div class="hero-node"><span class="node-symbol">▦</span><b>APPS</b><small>Deliver useful services</small></div>
-          <div class="hero-node"><span class="node-symbol">◎</span><b>USERS</b><small>Drive real adoption</small></div>
-        </div>
-        <div class="hero-visual-foot">FROM INFRASTRUCTURE TO EVERYDAY UTILITY</div>
-      </div>
-    </section>
-    <div class="summary">
-      <div class="summary-card"><strong>FOCUS</strong><span>Real user needs, not technology for its own sake.</span></div>
-      <div class="summary-card"><strong>APPROACH</strong><span>Audience research, partnerships and practical marketing.</span></div>
-      <div class="summary-card"><strong>OUTCOME</strong><span>A plan to attract, activate and retain users.</span></div>
-    </div>
-  </div>
-
-  <section style="padding-top:56px">
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">01 / THE PROJECT BRIEF</p><h2>What is this strategy trying to solve?</h2></div><p class="section-intro">Imagine an Ethereum Layer 2 network with the technology in place, but competing for attention in a crowded ecosystem. The challenge is not simply to explain that it is faster or cheaper. It is to give users, developers and partners a compelling reason to build on it and return to it.</p></div>
-      <div class="two-col">
-        <article class="panel"><h3>The business problem</h3><p>Many people hear about networks, transactions and low fees without understanding what they can actually do there. Technical advantages alone do not guarantee active users, useful applications or a thriving ecosystem.</p></article>
-        <article class="panel dark"><h3>The strategic question</h3><p>Which audience and real-world use case offer the clearest starting point — and how should the ecosystem communicate, acquire and activate those users?</p></article>
-      </div>
-      <p class="framework-note" style="margin-top:16px">Scope: an illustrative ecosystem-level GTM strategy. It is not a strategy commissioned by a named Layer 2 company, and the recommendations would need validation against a real network's capabilities, data and market.</p>
-    </div>
-  </section>
-
-  <section class="foundations">
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">A QUICK WEB3 PRIMER</p><h2>First, what do Web3 and blockchain mean?</h2></div><p class="section-intro">You do not need a technical background to follow this case study. These three ideas provide the context; the Layer 2 explainer reel can then show how they connect.</p></div>
-      <div class="foundations-grid">
-        <article class="foundation-card"><span class="foundation-index">01 / THE RECORD</span><h3>Blockchain</h3><p>A shared digital record of activity. Instead of one organisation keeping the only copy, a network of computers helps maintain and verify the record using agreed rules.</p><p class="foundation-example"><strong>Simple example:</strong> Imagine a shared record book that many independent participants can check. When a valid transaction is added, the network updates the record so participants can agree on what happened.</p></article>
-        <article class="foundation-card"><span class="foundation-index">02 / THE IDEA</span><h3>Web3</h3><p>A broad idea for internet services that use blockchain and digital assets to let people hold and use certain digital items, and interact with applications through a wallet.</p><p class="foundation-example"><strong>Simple example:</strong> Instead of signing into every service only with a company account, a person may connect a digital wallet to an app to use a supported service or manage a digital asset.</p></article>
-        <article class="foundation-card"><span class="foundation-index">03 / THE NETWORK</span><h3>Ethereum</h3><p>A blockchain network that can record transactions and run smart contracts — software that follows rules stored on the blockchain. Developers use it to build applications.</p><p class="foundation-example"><strong>Simple example:</strong> Developers can build services on Ethereum, such as apps for exchanging digital assets, lending, games or payments.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">02 / THE TECHNOLOGY — IN PLAIN ENGLISH</p><h2>Just enough context to understand the opportunity.</h2></div><p class="section-intro">A Layer 2 is a network built to help applications run with more capacity and often lower transaction costs than using Ethereum directly. That can make frequent digital actions more practical. For this growth strategy, the important point is what that enables — not the technical mechanics underneath.</p></div>
-      <div class="workstreams">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">FOUNDATION</span><span class="icon-mark" aria-hidden="true">◈</span></div><h3>Ethereum</h3><p>The underlying blockchain that provides the base environment and security foundations for the ecosystem.</p><p class="example"><strong>Beginner example:</strong> Think of Ethereum as the main railway network and shared rulebook. It helps different participants keep and verify a common record of transactions, so apps do not have to rely on one company holding the only copy. Many Layer 2 networks use Ethereum to anchor data or settle activity, although the exact security design differs between networks.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">SCALING</span><span class="icon-mark" aria-hidden="true">↗</span></div><h3>Layer 2 network</h3><p>A network designed to make blockchain activity more scalable and practical for everyday applications.</p><p class="example"><strong>Beginner example:</strong> Imagine a local express line connected to the main railway. It handles more journeys away from the busiest central tracks, then uses the main network in a defined way to report or settle activity. This can help apps handle more activity, often at a lower cost.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">UTILITY</span><span class="icon-mark" aria-hidden="true">▣</span></div><h3>Apps and services</h3><p>Products built on the network — such as payment tools, games, marketplaces and finance applications.</p><p class="example"><strong>Beginner example:</strong> Think of an app as the service passengers actually use. For example, a freelancer could use a payment app built on a Layer 2 network to receive a supported digital payment from an overseas client.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">ADOPTION</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>People using them</h3><p>Growth happens when people discover an app, understand its value, complete a useful action and come back.</p><p class="example"><strong>Beginner example:</strong> The freelancer discovers the app, checks that it supports their country and payment needs, receives a first payment successfully, and returns to use it for the next client. That repeat behaviour is adoption.</p></article>
-      </div>
-      <div class="panel" style="margin-top:16px"><h3>Why this matters for marketing</h3><p>Do not lead with “our network uses rollups”. Lead with the useful experience the network helps make possible. Explain the technology only when it helps someone understand the benefit, trust the product or take the next step.</p></div>
-    </div>
-  </section>
-
-  <section style="background:#f0f1eb">
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">03 / CHOOSE A USE CASE</p><h2>Start with a problem people already have.</h2></div><p class="section-intro">A network can support many applications, but a broad message aimed at everyone is difficult to remember. This strategy uses cross-border payments as an illustrative entry point because the user problem is familiar and easy to communicate.</p></div>
-      <div class="research-board">
-        <div class="board-grid">
-          <article class="visual-card"><h3>The user problem</h3><p class="sub">A freelancer works with clients in different countries and wants to receive money with fewer surprises.</p><div class="journey"><div class="journey-step"><b>THE NEED</b><span>Get paid</span><small>By an overseas client</small></div><div class="journey-step"><b>THE EXPERIENCE</b><span>Simple steps</span><small>Clear fees and status</small></div><div class="journey-step"><b>THE OUTCOME</b><span>Access funds</span><small>With a usable cash-out route</small></div><div class="journey-step"><b>THE VALUE</b><span>Come back</span><small>Use it for the next payment</small></div></div></article>
-          <article class="visual-card"><h3>Why this is a useful starting point</h3><p class="sub">A clear job-to-be-done gives the ecosystem a more concrete story.</p><ul><li>It starts with a recognisable need, not crypto terminology.</li><li>It creates a practical way to demonstrate the user experience.</li><li>It gives partners and developers a use case to build around.</li><li>It creates measurable actions beyond wallet connections.</li></ul></article>
-        </div>
-      </div>
-      <p class="framework-note">Important: an L2 network does not automatically provide payment services, stablecoin liquidity or fiat cash-out. A real campaign must be built with applications and providers that support the relevant markets and journey.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">04 / AUDIENCE & POSITIONING</p><h2>Who needs to believe in the ecosystem — and why?</h2></div><p class="section-intro">Ecosystem growth has more than one audience. Users need a useful product; developers need a reason to build; partners need confidence that the ecosystem can attract demand.</p></div>
-      <div class="workstreams">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">END USERS</span><span class="icon-mark" aria-hidden="true">↗</span></div><h3>Freelancers & remote workers</h3><p>Need a straightforward way to receive international payments through an application that supports their markets.</p><div class="deliverable">Message: Get paid globally, with a clearer payment experience.</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">BUILDERS</span><span class="icon-mark" aria-hidden="true">⌘</span></div><h3>Payment app developers</h3><p>Need users, distribution, useful infrastructure, documentation and ecosystem support.</p><div class="deliverable">Message: Build payment experiences for real user needs.</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">ECOSYSTEM PARTNERS</span><span class="icon-mark" aria-hidden="true">◇</span></div><h3>Wallets, providers & communities</h3><p>Can improve discovery, onboarding, access and trust when the product experience is ready.</p><div class="deliverable">Message: Help make the end-to-end journey work.</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">PAYMENT ACCESS</span><span class="icon-mark" aria-hidden="true">⇄</span></div><h3>On- and off-ramp providers</h3><p>Help users move between supported digital assets and local currency, making it possible to access or cash out funds where services are available.</p><div class="deliverable">Message: Connect the digital payment to a usable local outcome.</div></article>
-      </div>
-    </div>
-  </section>
-
-  <section style="background:#f0f1eb">
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">05 / THE USER JOURNEY</p><h2>The journey from discovery to habit.</h2></div><p class="section-intro">A practical framework for examining where people progress — and where they get stuck. Marketing can create awareness, but activation depends on a working application, clear onboarding and reliable support.</p></div>
-      <div class="steps">
-        <div class="step"><b>01 / DISCOVER</b><h3>“What is this?”</h3><p>Someone hears about a network or finds an app that appears relevant.</p><p class="framework-note"><strong>Possible friction:</strong> unclear audience or value proposition.</p></div>
-        <div class="step"><b>02 / UNDERSTAND</b><h3>“Is this for me?”</h3><p>They understand what it does, how to start, what it costs and what risks exist.</p><p class="framework-note"><strong>Possible friction:</strong> jargon, uncertainty or low trust.</p></div>
-        <div class="step"><b>03 / ACTIVATE</b><h3>“I did it.”</h3><p>They complete a meaningful first action and experience the product's value.</p><p class="framework-note"><strong>Possible friction:</strong> wallet setup, fees or confusing steps.</p></div>
-        <div class="step"><b>04 / RETURN</b><h3>“I'll use this again.”</h3><p>They find ongoing utility, community or a reason to return.</p><p class="framework-note"><strong>Possible friction:</strong> no repeat use case or weak product value.</p></div>
-      </div>
-      <div class="two-col" style="margin-top:18px">
-        <article class="panel"><h3>What the ecosystem team can do</h3><ul><li>Recruit and support relevant application partners.</li><li>Coordinate co-marketing with wallets, apps and communities.</li><li>Make the ecosystem easier to discover and understand.</li><li>Share developer resources and user education.</li></ul></article>
-        <article class="panel dark"><h3>What must be true before launch</h3><ul><li>A partner app supports the target user journey.</li><li>Fees, availability and supported markets are verified.</li><li>Onboarding and customer support are ready.</li><li>Claims about speed, cost and security are substantiated.</li></ul></article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">06 / CAMPAIGN EXAMPLE</p><h2>Turn the strategy into something people can see.</h2></div><p class="section-intro">A sample campaign showing how the use case could be communicated across content and partner channels. This is a creative proposal, not a live campaign or a claim of results.</p></div>
-      <div class="two-col">
-        <article class="panel dark"><p class="kicker" style="color:var(--accent)">CAMPAIGN CONCEPT</p><h2 style="font-size:1.8rem;line-height:1.1">Money Moves<br><span style="color:var(--accent)">Beyond Borders.</span></h2><p>Help freelancers understand a simpler way to receive international payments through participating ecosystem apps.</p><div class="deliverable">Core message: Your work is global. Getting paid should feel clear.</div></article>
-        <article class="panel"><h3>Example social creative</h3><p style="font-size:1.35rem;font-weight:850;line-height:1.2;letter-spacing:-.04em">Client overseas. You are at home. Know what happens between “sent” and “received”.</p><p>A practical walkthrough of the supported payment journey, the fees to check and where to get help.</p><p><strong>CTA:</strong> See how it works</p></article>
-      </div>
-      <div class="workstreams" style="margin-top:18px">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">SHORT VIDEO</span><span class="icon-mark" aria-hidden="true">▶</span></div><h3>Explain the problem</h3><p>“What should you check before receiving an international payment?”</p><p class="campaign-outcome"><strong>Purpose:</strong> Make a confusing topic feel relevant and easy to understand.</p><p class="campaign-outcome"><strong>Expected outcome:</strong> More qualified attention and visits to the campaign or partner page.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">CAROUSEL</span><span class="icon-mark" aria-hidden="true">▤</span></div><h3>Make the journey clear</h3><p>Show the steps from client payment to funds received, using a real partner app.</p><p class="campaign-outcome"><strong>Purpose:</strong> Break the process into clear, manageable steps.</p><p class="campaign-outcome"><strong>Expected outcome:</strong> Better understanding and fewer unanswered questions before trying the app.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">PARTNER CONTENT</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>Demonstrate the product</h3><p>A freelancer or creator walks through the supported experience with transparent disclosures.</p><p class="campaign-outcome"><strong>Purpose:</strong> Show a real, supported product journey through a relatable person.</p><p class="campaign-outcome"><strong>Expected outcome:</strong> Greater trust and more users exploring the partner app.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">FOLLOW-UP</span><span class="icon-mark" aria-hidden="true">↻</span></div><h3>Answer objections</h3><p>Address availability, fees, safety, network choice and support before asking people to try it.</p><p class="campaign-outcome"><strong>Purpose:</strong> Resolve practical concerns that may stop someone from taking action.</p><p class="campaign-outcome"><strong>Expected outcome:</strong> More confident first attempts and fewer avoidable drop-offs.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section style="background:#f0f1eb">
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">07 / MEASURING ADOPTION</p><h2>Did the ecosystem create real usage?</h2></div><p class="section-intro">Measure progress beyond impressions and wallet connections. The most useful signals show whether people find an application, complete a valuable action and return.</p></div>
-      <div class="evidence">
-        <table class="evidence-table" aria-label="Example ecosystem adoption metrics"><thead><tr><th>Goal</th><th>Example measure</th><th>Why it matters</th></tr></thead><tbody>
-          <tr><td>Discovery</td><td>Qualified visits to use-case pages and partner apps</td><td>Are we reaching relevant people?</td></tr>
-          <tr><td>Developer growth</td><td>Qualified builder leads, integrations and active apps</td><td>Is the ecosystem attracting useful products?</td></tr>
-          <tr><td>Activation</td><td>First successful payment in a partner app</td><td>Can users complete the intended task?</td></tr>
-          <tr><td>Quality</td><td>Completion rate, failed actions and support requests</td><td>Is the experience working reliably?</td></tr>
-          <tr><td>Retention</td><td>Repeat payments and returning active users</td><td>Does the use case create lasting value?</td></tr>
-        </tbody></table>
-        <aside class="adoption-visual" aria-label="Visual adoption measurement framework">
-          <p class="kicker">THE ADOPTION LOOP</p>
-          <h3>From first discovery to repeat use</h3>
-          <div class="adoption-flow">
-            <div class="adoption-stage"><span class="adoption-icon">◉</span><div><b>01 · DISCOVER</b><small>Relevant people find the app</small></div><em>VISITS</em></div>
-            <div class="adoption-connector"></div>
-            <div class="adoption-stage"><span class="adoption-icon">⌘</span><div><b>02 · BUILD</b><small>Useful apps join the ecosystem</small></div><em>INTEGRATIONS</em></div>
-            <div class="adoption-connector"></div>
-            <div class="adoption-stage"><span class="adoption-icon">↗</span><div><b>03 · ACTIVATE</b><small>Someone completes a first payment</small></div><em>FIRST ACTION</em></div>
-            <div class="adoption-connector"></div>
-            <div class="adoption-stage"><span class="adoption-icon">✓</span><div><b>04 · DELIVER</b><small>The experience works reliably</small></div><em>COMPLETION</em></div>
-            <div class="adoption-connector"></div>
-            <div class="adoption-stage"><span class="adoption-icon">↻</span><div><b>05 · RETAIN</b><small>The user comes back again</small></div><em>REPEAT USE</em></div>
-          </div>
-          <div class="adoption-takeaway"><strong>The real signal:</strong> people complete a useful action — and choose to do it again.</div>
-        </aside>
       </div>
       <p class="framework-note">Targets should be set only after reviewing a real network's baseline data, partner analytics and the definition of an active user.</p>
     </div>
