@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="An independent Web3 product exploration and ecosystem growth research project by Maryam Khan.">
+<meta name="description" content="Independent Web3 ecosystem research and growth strategy by Maryam Khan, connecting blockchain infrastructure, user adoption and product education.">
 <meta name="robots" content="noindex,nofollow">
 <title>Web3 Ecosystem Growth Lab | Maryam Khan</title>
 <style>
@@ -47,6 +47,34 @@ footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;c
 @media(max-width:760px){.video-feature{grid-template-columns:1fr}.episode-list{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.episode-list{grid-template-columns:1fr}}
 
+
+/* Research-led case study layout */
+.research-card{display:grid;grid-template-columns:.85fr 1.15fr;background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.research-visual{min-height:310px;background:#202821;color:#eff5e5;padding:25px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.research-visual:before,.research-visual:after{content:"";position:absolute;border:1px solid #c4f06b55;border-radius:50%;width:270px;height:270px;left:50%;top:45%;transform:translate(-50%,-50%)}
+.research-visual:after{width:190px;height:190px}
+.research-orbit{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;font-size:.78rem;font-weight:850;letter-spacing:.16em}
+.research-orbit span{background:var(--accent);color:#202821;padding:13px 17px;border-radius:99px;z-index:1}
+.research-orbit i,.research-orbit b{font-style:normal;border:1px solid #71836d;border-radius:99px;padding:8px 14px;background:#202821e8;z-index:1}
+.research-visual small{position:relative;z-index:2;font-size:.7rem;letter-spacing:.14em;color:#c7f36b;font-weight:850}
+.research-copy{padding:34px;display:flex;flex-direction:column;align-items:flex-start}
+.research-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--green);font-weight:850}
+.research-copy h3{font-size:2rem;letter-spacing:-.055em;line-height:1.05;margin:15px 0 10px}
+.research-copy p{color:var(--muted);font-size:.95rem;max-width:620px}
+.research-tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 24px}
+.research-tags span{font-size:.74rem;border:1px solid var(--line);padding:6px 9px;border-radius:99px;color:var(--muted)}
+.research-link{font-size:.9rem;font-weight:850;border-bottom:1px solid var(--green);padding-bottom:5px;margin-top:auto}
+.research-link span{margin-left:8px;color:var(--green)}
+.strategy-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.strategy-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:21px;min-height:225px;display:flex;flex-direction:column}
+.strategy-card>span{font-size:.76rem;color:var(--green);font-weight:900;letter-spacing:.1em}
+.strategy-card h3{font-size:1.2rem;margin:25px 0 8px}
+.strategy-card p{font-size:.88rem;color:var(--muted);margin:0}
+.strategy-card small{font-size:.72rem;color:var(--green);font-weight:850;margin-top:auto;padding-top:17px}
+.strategy-note{font-size:.78rem;color:var(--muted);margin:17px 0 0}
+@media(max-width:760px){.research-card{grid-template-columns:1fr}.research-visual{min-height:245px}.strategy-grid{grid-template-columns:repeat(2,1fr)}.research-copy{padding:25px}}
+@media(max-width:480px){.strategy-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -60,135 +88,86 @@ footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;c
   <div class="wrap">
     <section class="hero" style="padding-bottom:42px">
       <div>
-        <span class="status">Independent project · In development</span>
-        <p class="eyebrow" style="margin-top:25px">Web3 · Product exploration · Ecosystem growth</p>
+        <span class="status">Independent research &amp; strategy case study</span>
+        <p class="eyebrow" style="margin-top:25px">Web3 · Ecosystem research · Growth strategy</p>
         <h1>Web3 Ecosystem <em>Growth Lab</em></h1>
-        <p class="lead">A hands-on learning and research initiative exploring how people discover, understand and adopt on-chain products — and how ecosystems can turn first interactions into lasting participation.</p>
-        <div class="hero-meta"><span class="chip">Wallet & dApp exploration</span><span class="chip">Ecosystem intelligence</span><span class="chip">Growth strategy</span></div>
+        <p class="lead">An independent research project exploring how blockchain ecosystems work, how people understand and adopt on-chain products, and how clear product education can support meaningful participation.</p>
+        <div class="hero-meta"><span class="chip">Blockchain infrastructure</span><span class="chip">User adoption</span><span class="chip">Ecosystem growth</span></div>
       </div>
       <div class="hero-art" aria-label="Abstract illustration of a connected Web3 ecosystem">
-        <div class="art-top">Research · Explore · Activate · Retain</div>
+        <div class="art-top">Understand · Explain · Activate · Retain</div>
         <div class="orbit-core">WEB3</div>
-        <div class="art-bottom">From first interaction to meaningful participation.</div>
-        <small>Independent research project by Maryam Khan</small>
+        <div class="art-bottom">Connecting technical understanding with user and ecosystem growth.</div>
+        <small>Independent research by Maryam Khan</small>
       </div>
     </section>
     <div class="summary">
-      <div class="summary-card"><strong>01 / Product fluency</strong><span>Build practical understanding of wallets, transactions and decentralised applications.</span></div>
-      <div class="summary-card"><strong>02 / Ecosystem intelligence</strong><span>Research protocols, user segments and opportunities across emerging ecosystems.</span></div>
-      <div class="summary-card"><strong>03 / Growth execution thinking</strong><span>Translate product and user insights into acquisition, activation and retention strategies.</span></div>
+      <div class="summary-card"><strong>01 / Technical research</strong><span>Break down blockchain networks, transactions and scaling infrastructure.</span></div>
+      <div class="summary-card"><strong>02 / User understanding</strong><span>Explore the journey from first discovery to confident product participation.</span></div>
+      <div class="summary-card"><strong>03 / Growth strategy</strong><span>Translate research into practical acquisition, activation and retention opportunities.</span></div>
     </div>
   </div>
-
   <section>
     <div class="wrap">
-      <div class="section-head"><div><p class="kicker">01 / Project overview</p><h2>Learning the ecosystem by experiencing it.</h2></div><p class="section-intro">This project connects practical product exploration with the growth skills I have developed across marketing, community building, content and go-to-market work. The aim is to understand both the mechanics of on-chain products and the reasons people choose to use them — or drop off.</p></div>
+      <div class="section-head"><div><p class="kicker">01 / Overview</p><h2>Where technology meets adoption.</h2></div><p class="section-intro">Web3 products introduce new concepts, behaviours and trust decisions for users. This project examines the infrastructure behind those experiences and considers how ecosystem teams can make complex products easier to understand, access and use.</p></div>
       <div class="two-col">
-        <article class="panel"><h3>Research questions</h3><ul><li>What makes a first wallet or dApp interaction understandable and approachable?</li><li>Where do users encounter friction across discovery, connection and transaction flows?</li><li>What motivates users to return after their first on-chain action?</li><li>How can ecosystem campaigns create useful participation rather than one-off activity?</li></ul></article>
-        <article class="panel dark"><h3>Intended outcome</h3><p>A documented body of practical product observations, ecosystem research and a clearly labelled growth proposal. Findings will be supported by dated notes, screenshots and source links as the work is completed.</p></article>
+        <article class="panel"><h3>Research focus</h3><ul><li>How blockchains record and validate activity</li><li>How Layer 1 networks and Layer 2 rollups work together</li><li>How wallets, bridges and decentralised applications fit into the ecosystem</li><li>Where education, onboarding and trust influence adoption</li></ul></article>
+        <article class="panel dark"><h3>Strategic lens</h3><p>Technical understanding is connected to the user journey: discovery, comprehension, first action and repeat participation. The focus is not activity for its own sake, but helping users recognise value and make informed decisions.</p></article>
       </div>
     </div>
   </section>
-
   <section style="background:#f0f1eb">
     <div class="wrap">
-      <div class="section-head"><div><p class="kicker">02 / Starting point</p><h2>Establishing a clear baseline.</h2></div><p class="section-intro">The project begins with foundational wallet familiarity and exchange experience. The baseline is intentionally specific: owning a wallet or purchasing crypto through an exchange is not the same as completing an on-chain transaction.</p></div>
-      <div class="baseline">
-        <div class="baseline-item"><strong>Current experience</strong><p>MetaMask wallet created. Prior experience purchasing crypto through Binance.</p></div>
-        <div class="baseline-item"><strong>Experience to develop</strong><p>Verified on-chain interactions, dApp connections, transaction inspection, token approvals, swaps and cross-chain concepts.</p></div>
-      </div>
-      <p style="font-size:.8rem;color:#68705f;margin:15px 0 0">Baseline reflects experience confirmed at project start. Additional activity will only be added after it has been completed and documented.</p>
+      <div class="section-head"><div><p class="kicker">02 / Featured research</p><h2>From discovery to on-chain habit.</h2></div><p class="section-intro">A visual research report explaining the building blocks of a blockchain ecosystem, how transactions move across networks and how infrastructure choices connect to the wider user experience.</p></div>
+      <article class="research-card">
+        <div class="research-visual"><div class="research-orbit"><span>BLOCKCHAIN</span><i>NETWORKS</i><b>GROWTH</b></div><small>RESEARCH 01 · WEB3 ECOSYSTEMS</small></div>
+        <div class="research-copy">
+          <span class="research-label">Independent research report</span>
+          <h3>Inside a Blockchain Ecosystem</h3>
+          <p>A beginner-friendly, technically grounded guide to blockchain networks, transactions, Layer 1 and Layer 2 infrastructure, rollups, bridges and the path from initial discovery to ongoing participation.</p>
+          <div class="research-tags"><span>Blockchain fundamentals</span><span>Layer 1 &amp; Layer 2</span><span>Rollup models</span><span>Adoption framework</span></div>
+          <a class="research-link" href="../../research/01-from-discovery-to-onchain-habit.html">Read the research report <span>↗</span></a>
+        </div>
+      </article>
     </div>
   </section>
-
   <section>
     <div class="wrap">
-      <div class="section-head"><div><p class="kicker">03 / Workstreams</p><h2>Five connected areas of exploration.</h2></div><p class="section-intro">Each workstream will produce a concrete output. Planned activities are not presented as completed work; this page will be updated as research and practical exercises are carried out.</p></div>
-      <div class="workstreams">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">Planned</span></div><h3>Wallet & on-chain fundamentals</h3><p>Explore wallet setup, addresses, networks, transaction anatomy, gas, signatures, token approvals and blockchain explorers.</p><div class="deliverable">Output: annotated transaction and wallet journey notes</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">Planned</span></div><h3>dApp & DeFi product review</h3><p>Experience selected decentralised applications and examine swaps, liquidity, slippage, bridges and user-facing risk communication.</p><div class="deliverable">Output: product experience audit and friction map</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">Planned</span></div><h3>X Layer ecosystem intelligence</h3><p>Research ecosystem projects, their value propositions, target users, activity signals and potential partnership fit.</p><div class="deliverable">Output: ecosystem map and project shortlist</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">Planned</span></div><h3>Acquisition & retention strategy</h3><p>Develop a campaign concept with audience segments, discovery channels, activation mechanics, community touchpoints and retention loops.</p><div class="deliverable">Output: campaign proposal, funnel and KPI framework</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">05</span><span class="stage">Planned</span></div><h3>User insights & adoption</h3><p>Study onboarding, education, trust cues and the barriers that shape beginner and experienced user behaviour.</p><div class="deliverable">Output: user journey, insight summary and recommendations</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">06</span><span class="stage">Planned</span></div><h3>OKX Wallet product exploration</h3><p>Review the wallet experience and relevant ecosystem journeys, documenting what is intuitive, what needs explanation and where users may need support.</p><div class="deliverable">Output: product walkthrough and improvement opportunities</div></article>
+      <div class="section-head"><div><p class="kicker">03 / Growth strategy</p><h2>Turning understanding into participation.</h2></div><p class="section-intro">The research informs a practical growth lens for Web3 products: reduce uncertainty at each stage of the journey, make the first meaningful action easier, and give users a reason to return.</p></div>
+      <div class="strategy-grid">
+        <article class="strategy-card"><span>01</span><h3>Discovery</h3><p>Reach relevant audiences through clear use cases, trusted education, creator partnerships and ecosystem communities.</p><small>Awareness · Qualified interest</small></article>
+        <article class="strategy-card"><span>02</span><h3>Comprehension</h3><p>Explain product value, wallet requirements, network choices, fees and risks in language users can act on.</p><small>Education · Confidence</small></article>
+        <article class="strategy-card"><span>03</span><h3>Activation</h3><p>Design a guided first-use journey around one useful action, with clear prompts and visible feedback.</p><small>Onboarding · First success</small></article>
+        <article class="strategy-card"><span>04</span><h3>Retention</h3><p>Build ongoing reasons to participate through product utility, community, relevant updates and progressive education.</p><small>Repeat use · Meaningful engagement</small></article>
       </div>
+      <p class="strategy-note">These are strategic recommendations derived from the research framework, not claims of an executed campaign or measured client results.</p>
     </div>
   </section>
-
-  <section class="video-lab">
-    <div class="wrap">
-      <div class="section-head">
-        <div><p class="kicker">04 / Web3 Explained</p><h2>Making complex ideas easier to understand.</h2></div>
-        <p class="section-intro">An AI-assisted educational video series translating Web3 concepts into clear, beginner-friendly explanations. Each episode combines research, scripting, visual storytelling and an AI-assisted production workflow — building the ability to communicate technical ideas to broader audiences.</p>
-      </div>
-      <div class="video-feature">
-        <article class="video-main">
-          <span class="video-status">Episode 01 · In production</span>
-          <h3>What is Web3?</h3>
-          <p>The pilot episode introduces the evolution from Web1 to Web2 and the emerging vision for Web3, using simple comparisons and visual explanations of blockchains, digital wallets and smart contracts.</p>
-          <div class="video-meta"><span>Beginner education</span><span>AI presenter + cloned voice</span><span>Motion-led diagrams</span><span>60-second pilot</span></div>
-        </article>
-        <div class="video-side">
-          <div class="video-side-card"><b>01 / Research & scripting</b><p>Translate technical concepts into accurate, accessible narration, supported by research and clear learning objectives.</p></div>
-          <div class="video-side-card"><b>02 / Visual storytelling</b><p>Storyboard diagrams, comparisons, visual metaphors, typography, colour and transitions to make abstract concepts easier to follow.</p></div>
-          <div class="video-side-card"><b>03 / AI-assisted production</b><p>Use an AI presenter, cloned voice and generated visual sequences, then review the output for clarity, accuracy and mobile readability.</p></div>
-        </div>
-      </div>
-      <div class="episode-list" aria-label="Planned Web3 Explained episodes">
-        <article class="episode"><small>Episode 01 · In production</small><strong>What is Web3?</strong><span>Series pilot</span></article>
-        <article class="episode"><small>Episode 02 · Planned</small><strong>What is a Blockchain?</strong><span>Shared digital record</span></article>
-        <article class="episode"><small>Episode 03 · Planned</small><strong>What is a Blockchain Network?</strong><span>Nodes and networks</span></article>
-        <article class="episode"><small>Episode 04 · Planned</small><strong>What is Layer 1?</strong><span>Base-layer foundations</span></article>
-      </div>
-      <p class="video-footnote">The pilot is currently being generated. Further episodes are planned and will be added as they are produced and reviewed. No completed video or published performance results are claimed at this stage.</p>
-    </div>
-  </section>
-
-
   <section class="process">
     <div class="wrap">
-      <div class="section-head"><div><p class="kicker">05 / Working method</p><h2>Learn it. Test it. Analyse it. Apply it.</h2></div><p class="section-intro">A repeatable process keeps the work grounded in actual product use and observable evidence, then connects those findings to commercial and ecosystem growth decisions.</p></div>
+      <div class="section-head"><div><p class="kicker">04 / Approach</p><h2>Research with a growth perspective.</h2></div><p class="section-intro">The work combines structured research, accessible communication and commercial thinking to connect technical concepts with the needs of real users and ecosystem teams.</p></div>
       <div class="steps">
-        <div class="step"><b>STEP 01</b><h3>Explore</h3><p>Use products and protocols in a controlled, low-risk way. Record the exact journey and context.</p></div>
-        <div class="step"><b>STEP 02</b><h3>Document</h3><p>Capture screenshots, transaction references where applicable, sources and dated observations.</p></div>
-        <div class="step"><b>STEP 03</b><h3>Interpret</h3><p>Identify user needs, friction points, ecosystem patterns and potential growth levers.</p></div>
-        <div class="step"><b>STEP 04</b><h3>Recommend</h3><p>Turn evidence into product, partnership, campaign and retention recommendations.</p></div>
+        <div class="step"><b>01 / RESEARCH</b><h3>Understand</h3><p>Review primary documentation and credible ecosystem sources to establish how the technology works.</p></div>
+        <div class="step"><b>02 / SYNTHESISE</b><h3>Clarify</h3><p>Organise complex ideas into clear explanations, comparisons and visual models.</p></div>
+        <div class="step"><b>03 / INTERPRET</b><h3>Connect</h3><p>Identify what the technical experience means for user needs, confidence and behaviour.</p></div>
+        <div class="step"><b>04 / APPLY</b><h3>Recommend</h3><p>Translate findings into user education, onboarding and ecosystem growth opportunities.</p></div>
       </div>
     </div>
   </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">06 / Evidence log</p><h2>Proof before claims.</h2></div><p class="section-intro">This section will become the evidence layer of the case study. Only completed activities and verified findings will be added here; proposed exercises and hypotheses will remain clearly labelled.</p></div>
-      <div class="evidence">
-        <table class="evidence-table" aria-label="Project evidence tracker"><thead><tr><th>Evidence item</th><th>Status</th></tr></thead><tbody>
-          <tr><td>MetaMask wallet created</td><td>Confirmed at start</td></tr>
-          <tr><td>On-chain transaction inspected</td><td>Not yet documented</td></tr>
-          <tr><td>dApp interaction and permissions review</td><td>To be completed</td></tr>
-          <tr><td>DEX / DeFi product walkthrough</td><td>To be completed</td></tr>
-          <tr><td>X Layer project research</td><td>To be completed</td></tr>
-          <tr><td>Growth campaign proposal</td><td>To be developed</td></tr>
-        </tbody></table>
-        <aside class="evidence-note"><h3>Documentation standard</h3><p>Each completed exercise will include its date, product or protocol, network, steps taken, what was observed, relevant source or transaction reference, and the growth or product insight drawn from it. Sensitive wallet details will never be published.</p></aside>
-      </div>
-    </div>
-  </section>
-
   <section style="background:#f0f1eb">
     <div class="wrap">
-      <div class="section-head"><div><p class="kicker">07 / Principles</p><h2>Useful participation over vanity activity.</h2></div><p class="section-intro">The project is designed to build practical fluency without confusing activity with expertise. It will prioritise responsible exploration, accurate interpretation and user-centred recommendations.</p></div>
+      <div class="section-head"><div><p class="kicker">05 / Capabilities demonstrated</p><h2>Research, communication and growth thinking.</h2></div><p class="section-intro">The project brings together core strengths from marketing and strategy with focused research into Web3 infrastructure and product adoption.</p></div>
       <div class="principles">
-        <article class="principle"><div class="icon">01</div><h3>Evidence-led</h3><p>Distinguish verified activity, research observations, hypotheses and proposed campaign ideas.</p></article>
-        <article class="principle"><div class="icon">02</div><h3>User-centred</h3><p>Consider clarity, usability, trust and the reasons users may hesitate or disengage.</p></article>
-        <article class="principle"><div class="icon">03</div><h3>Risk-aware</h3><p>Use controlled exploration, protect wallet credentials and avoid unnecessary financial exposure.</p></article>
+        <article class="principle"><div class="icon">01</div><h3>Technical research</h3><p>Interpret technical documentation and explain blockchain concepts with accuracy and context.</p></article>
+        <article class="principle"><div class="icon">02</div><h3>Visual communication</h3><p>Turn abstract systems and processes into structured, accessible visual explanations.</p></article>
+        <article class="principle"><div class="icon">03</div><h3>Growth strategy</h3><p>Connect user needs and product value to acquisition, activation and retention opportunities.</p></article>
       </div>
     </div>
   </section>
-
   <div class="wrap" style="padding:20px 0 76px">
     <div class="closing">
-      <div><p class="kicker">The intended result</p><h2>Turning product understanding into ecosystem growth.</h2><p>A portfolio case study connecting hands-on Web3 learning with user research, ecosystem analysis and practical growth strategy.</p></div>
-      <div class="closing-note"><strong>Project status: In development</strong><br><br>This is an independent learning and research project. It is not affiliated with or endorsed by OKX. No campaign execution or ecosystem partnership is claimed.</div>
+      <div><p class="kicker">The opportunity</p><h2>Making complex ecosystems easier to understand — and easier to adopt.</h2><p>This case study demonstrates an approach to Web3 research and ecosystem growth, grounded in technical understanding, clear communication and user-centred strategy.</p></div>
+      <div class="closing-note"><strong>Project type</strong><br><br>Independent research and strategic analysis. Growth frameworks and recommendations are presented as analysis, not as implemented campaigns or verified performance outcomes.</div>
     </div>
   </div>
 </main>
