@@ -136,6 +136,91 @@ main section:not(.project-hero){padding:86px 0;border-bottom:1px solid #25292a}
 @media(max-width:900px){.site-links{gap:14px;padding:11px 15px}.site-links a{font-size:.72rem}.project-hero{grid-template-columns:1fr;gap:25px}.hero-visual{height:420px}.hero-meta{margin-top:38px}}
 @media(max-width:600px){.wrap{width:calc(100% - 28px)}.site-nav{height:auto;padding:15px 0;flex-wrap:wrap}.site-links{order:3;width:100%;justify-content:space-between;gap:8px;overflow:auto}.site-links a{white-space:nowrap;font-size:.68rem}.nav-cta{font-size:.7rem;padding:11px 13px}.project-hero{padding:35px 0 38px;min-height:0}.project-hero h1{font-size:3.55rem}.hero-visual{height:330px}.hero-core{width:125px;height:125px}.hero-prism{border-left-width:110px;border-right-width:110px;border-bottom-width:220px}.hero-meta{font-size:.55rem;gap:8px}.contents{position:relative}.contents a{font-size:.66rem}main section:not(.project-hero){padding:56px 0}.section-top{grid-template-columns:1fr;gap:10px}.figure{padding:17px}}
 
+
+/* FINAL UX REFINEMENT — quieter typography, less visual noise, tighter reading rhythm */
+:root{--reading:760px}
+body{font-size:14px;line-height:1.62}
+.wrap{width:min(1280px,calc(100% - 64px))}
+.site-nav{height:72px}
+.site-brand{font-size:.58rem}
+.brand-mark{width:34px;height:34px;font-size:1.05rem}
+.site-links{gap:23px;padding:11px 20px}
+.site-links a{font-size:.73rem}
+.nav-cta,.primary-action,.secondary-action{font-size:.76rem;padding:12px 17px}
+.project-hero{min-height:540px;grid-template-columns:1.04fr .96fr;padding:34px 0 42px;gap:22px}
+.project-hero h1{font-size:clamp(3.2rem,5.4vw,5.4rem);line-height:.98;max-width:650px;margin:22px 0 18px}
+.project-hero .lead{font-size:.94rem;line-height:1.65;max-width:510px}
+.hero-copy .eyebrow{font-size:.61rem}
+.hero-meta{margin-top:42px;font-size:.58rem}
+.hero-visual{height:470px;border-radius:22px}
+.hero-core{width:145px;height:145px}
+.hero-node{font-size:.57rem;padding:8px 12px}
+.contents{padding:11px 0;gap:7px}
+.contents span{font-size:.55rem}
+.contents a{font-size:.65rem;padding:7px 10px}
+main section:not(.project-hero){padding:62px 0}
+.section-top{grid-template-columns:155px 1fr;gap:32px;margin-bottom:22px}
+.chapter{font-size:.59rem}
+.section-top h2{font-size:clamp(2rem,3.6vw,3.35rem);line-height:1.04;max-width:760px}
+.section-top p{font-size:.88rem;line-height:1.6;max-width:690px;margin-top:10px}
+.note,.term,.sequence article,.network,.metric,.experiment,.source{border-radius:12px}
+.note{padding:19px}
+.note h3,.term h3,.experiment h3{font-size:.94rem}
+.note p,.term p,.experiment p,.network p{font-size:.78rem;line-height:1.6}
+.figure,.growth-loop{padding:21px;border-radius:18px}
+.figure h3,.growth-loop h3,.mini-figure h3{font-size:1.22rem}
+.figure-head p,.mini-figure p,.growth-loop>p{font-size:.76rem}
+.key{gap:7px}
+.key-item{padding:10px}
+.key-item b{font-size:.74rem}
+.key-item span{font-size:.66rem}
+.term-grid{gap:9px}
+.term{padding:15px;min-height:145px}
+.sequence{gap:8px}
+.sequence article{padding:14px}
+.sequence h4,.journey h4{font-size:.86rem}
+.sequence p,.journey p,.metric span{font-size:.72rem}
+.two-col{gap:10px}
+.mini-figure{padding:16px}
+.compare{gap:8px}
+.network-body{padding:14px}
+.network h3{font-size:.96rem}
+.network .type,.network .question{font-size:.62rem}
+.journey{gap:8px}
+.journey article{padding:13px}
+.journey .n{font-size:.59rem}
+.metric-grid{gap:8px}
+.metric{padding:14px}
+.metric b{font-size:.8rem}
+.experiments{gap:9px}
+.experiment{padding:16px}
+.experiment .letter{font-size:1.7rem}
+.experiment .measure{font-size:.68rem}
+.sources{gap:7px}
+.source{padding:11px 13px}
+.source strong{font-size:.76rem}
+.source span{font-size:.67rem}
+.method{padding:16px}
+.method p,.caution{font-size:.72rem}
+.endnote{font-size:.68rem;padding:24px 0 36px}
+@media(max-width:900px){
+ .wrap{width:calc(100% - 40px)}
+ .project-hero{min-height:0;grid-template-columns:1fr;padding:38px 0}
+ .hero-visual{height:390px}
+ .section-top{grid-template-columns:1fr;gap:8px}
+}
+@media(max-width:600px){
+ .wrap{width:calc(100% - 28px)}
+ .project-hero h1{font-size:3rem}
+ .project-hero .lead{font-size:.88rem}
+ .hero-visual{height:320px}
+ .hero-core{width:118px;height:118px}
+ main section:not(.project-hero){padding:44px 0}
+ .section-top h2{font-size:2rem}
+ .figure,.growth-loop{padding:15px}
+ .note{padding:15px}
+}
+
 </style>
 </head>
 <body><div class="wrap">
@@ -275,7 +360,7 @@ main section:not(.project-hero){padding:86px 0;border-bottom:1px solid #25292a}
 <div class="callout"><strong>One more distinction: a Layer 2 is not a bridge.</strong> Base is a Layer 2 network. A bridge is a separate mechanism for moving assets or messages between networks, such as Ethereum and Base. Bridges have their own risks and fees; they are not the Layer 2 itself.</div>
 </section>
 <section id="networks">
-<div class="section-top"><div class="chapter">05 / Compare ecosystems</div><div><h2>Four networks. Different designs and growth questions.</h2><p>These examples help illustrate the range of blockchain ecosystems. The aim is not to rank them, but to understand what each one is and what a growth strategist might investigate.</p></div></div>
+<div class="section-top"><div class="chapter">05 / Compare ecosystems</div><div><h2>Explore different blockchain ecosystems.</h2><p>These examples help illustrate the range of blockchain ecosystems. The aim is not to rank them, but to understand what each one is and what a growth strategist might investigate.</p></div></div>
 <div class="compare">
 <article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">Ξ</div><div class="type">Layer 1</div><h3>Ethereum</h3><p>A programmable blockchain that supports smart contracts and a broad ecosystem of applications and scaling networks.</p><div class="question">Explore: How do newcomers navigate a large, diverse ecosystem?</div></div></article>
 <article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">≋</div><div class="type">Layer 1</div><h3>Solana</h3><p>A Layer 1 blockchain with its own architecture, developer ecosystem and user-facing applications.</p><div class="question">Explore: How does a first-time user move from learning to safe first use?</div></div></article>
@@ -321,9 +406,8 @@ main section:not(.project-hero){padding:86px 0;border-bottom:1px solid #25292a}
 <a class="source" href="https://docs.zksync.io/zksync-network/zksync-era" target="_blank" rel="noopener"><div><strong>ZKsync — About Era</strong><span>Validity proofs and network architecture</span></div><b>↗</b></a>
 <a class="source" href="https://solana.com/learn" target="_blank" rel="noopener"><div><strong>Solana — Learn</strong><span>Wallets, fees, tokens and applications</span></div><b>↗</b></a>
 <a class="source" href="https://www.coinbase.com/developer-platform/products/base" target="_blank" rel="noopener"><div><strong>Base — Developer platform</strong><span>Base network and developer resources</span></div><b>↗</b></a>
-<a class="source" href="https://web3.okx.com/xlayer" target="_blank" rel="noopener"><div><strong>X Layer — Official site</strong><span>Network overview and ecosystem information</span></div><b>↗</b></a>
 </div>
-<div class="method"><strong>Method, scope and limitations</strong><p>Prepared 18 November 2026 as a qualitative desk-research explainer based on selected official educational and ecosystem materials. It is intended to introduce concepts and frame questions for further investigation, not to provide a technical audit or comprehensive comparison. No chain analytics, user interviews, usability tests or independently audited adoption and retention data were collected for this publication.</p><p>Network descriptions are simplified and may change as products and architectures evolve. Growth ideas are hypotheses, not proven outcomes. The next research phase should include hands-on product walkthroughs, user interviews, journey observations and independent data sources.</p><p><strong>Independence:</strong> This is an independent learning and growth strategy project. It is not affiliated with or endorsed by Ethereum, Solana, Base, OKX or any other company or protocol.</p></div>
+<div class="method"><strong>Method, scope and limitations</strong><p>Prepared 18 November 2026 as a qualitative desk-research explainer based on selected official educational and ecosystem materials. It is intended to introduce concepts and frame questions for further investigation, not to provide a technical audit or comprehensive comparison. No chain analytics, user interviews, usability tests or independently audited adoption and retention data were collected for this publication.</p><p>Network descriptions are simplified and may change as products and architectures evolve. Growth ideas are hypotheses, not proven outcomes. The next research phase should include hands-on product walkthroughs, user interviews, journey observations and independent data sources.</p><p><strong>Independence:</strong> This is an independent learning and growth strategy project. It is not affiliated with or endorsed by Ethereum, Solana, Base or any other company or protocol.</p></div>
 </section>
 </main>
 <footer class="endnote"><span>WEB3 ECOSYSTEM GROWTH LAB · FIELD GUIDE 01</span><span>Independent research · Concepts simplified for learning</span></footer>
