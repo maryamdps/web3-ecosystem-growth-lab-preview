@@ -27,7 +27,7 @@ footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;c
 :root{--bg:#f2f3ef;--paper:#fff;--ink:#171d24;--muted:#65717c;--line:#d9dedb;--accent:#c7f36b;--soft:#e9eee5;--dark:#101b27;--green:#4e6f42;--violet:#a99cff;--orange:#ff9b6a}
 body{background:var(--bg);color:var(--ink)}
 .nav{border-bottom-color:#cfd6d1}.mark{border-radius:9px}
-.hero{padding-top:84px}.hero-art{background:radial-gradient(circle at 72% 42%,#314a54 0,#172a35 35%,#101b27 72%);border:1px solid #354956;min-height:455px}
+.hero{padding-top:48px}.hero-art{background:radial-gradient(circle at 72% 42%,#314a54 0,#172a35 35%,#101b27 72%);border:1px solid #354956;min-height:455px}
 .hero-art:before{width:370px;height:370px;right:-35px;top:22px;border:1px dashed #c7f36b77}
 .hero-art:after{width:260px;height:260px;right:20px;top:77px;border-color:#a99cff99}
 .orbit-core{background:linear-gradient(135deg,var(--accent),#e6ffad);width:124px;height:124px;right:105px;top:151px;box-shadow:0 0 0 18px #c7f36b18,0 0 0 46px #a99cff12}
@@ -42,7 +42,7 @@ section{padding:88px 0}.section-head{margin-bottom:42px}
 .visual-card{background:#1b2b38;border:1px solid #344653;border-radius:16px;padding:22px;min-height:250px}
 .visual-card h3{font-size:1rem;margin:0 0 5px}.visual-card .sub{font-size:.78rem;color:#aebdbb;margin:0 0 22px}
 .journey{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:center}
-.journey-step{min-height:100px;border:1px solid #52636a;border-radius:12px;padding:12px 9px;display:flex;flex-direction:column;justify-content:space-between;background:#203442}
+.journey-step{height:124px;min-height:124px;border:1px solid #52636a;border-radius:12px;padding:12px 9px;display:flex;flex-direction:column;justify-content:space-between;background:#203442;min-width:0}
 .journey-step b{font-size:.68rem;color:var(--accent);letter-spacing:.08em}.journey-step span{font-size:.84rem;font-weight:750;line-height:1.2}.journey-step small{font-size:.66rem;color:#b8c5c4}
 .journey-arrow{display:none}
 .loop-wrap{height:154px;display:flex;align-items:center;justify-content:center;position:relative}
@@ -97,7 +97,7 @@ h2{font-size:clamp(1.65rem,3vw,2.65rem);line-height:1.08;letter-spacing:-.055em}
 h3{font-size:1.08rem}
 .panel h3{font-size:1.08rem}
 .workstream h3{font-size:1.18rem;margin:17px 0 8px}
-section{padding:64px 0}
+section{padding:78px 0}
 .summary-card{padding:17px}
 .summary-card strong{font-size:.94rem}
 .summary-card span{font-size:.84rem}
@@ -109,7 +109,7 @@ section{padding:64px 0}
 .step{min-height:165px;padding:18px}
 .step h3{font-size:.98rem;margin:20px 0 7px}
 .closing h2{font-size:clamp(1.65rem,3vw,2.5rem)}
-@media(max-width:760px){h1{font-size:clamp(2.35rem,9vw,3.4rem)}h2{font-size:1.8rem}.section-head{gap:12px}section{padding:52px 0}}
+@media(max-width:760px){h1{font-size:clamp(2.35rem,9vw,3.4rem)}h2{font-size:1.8rem}.section-head{gap:12px}section{padding:62px 0}.hero{padding-top:38px}}
 </style>
 </head>
 <body>
@@ -163,6 +163,16 @@ section{padding:64px 0}
         <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">ADOPTION</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>People using them</h3><p>Growth happens when people discover an app, understand its value, complete a useful action and come back.</p></article>
       </div>
       <div class="panel" style="margin-top:16px"><h3>Why this matters for marketing</h3><p>Do not lead with “our network uses rollups”. Lead with the useful experience the network helps make possible. Explain the technology only when it helps someone understand the benefit, trust the product or take the next step.</p></div>
+      <div class="research-board" style="margin-top:18px">
+        <div class="board-head"><div><p class="kicker">A SIMPLE TRANSACTION FLOW</p><h2>From a tap to a network record.</h2></div><p>A wallet prepares and signs an instruction. The network checks and processes it, then records the result.</p></div>
+        <div class="journey">
+          <div class="journey-step"><b>01 / WALLET</b><span>Approve an action</span><small>User reviews and signs</small></div>
+          <div class="journey-step"><b>02 / INSTRUCTION</b><span>Submit the request</span><small>Signed and sent to network</small></div>
+          <div class="journey-step"><b>03 / NETWORK</b><span>Check & process</span><small>Rules are applied</small></div>
+          <div class="journey-step"><b>04 / RECORD</b><span>Check the outcome</span><small>Success, failure or pending</small></div>
+        </div>
+        <p class="framework-note">Conceptual flow only. Consensus, transaction ordering, fees and finality differ across blockchains. For growth, every step is part of the user experience: unclear approvals, network selection, fees or long waits can cause drop-off.</p>
+      </div>
     </div>
   </section>
 
@@ -192,12 +202,12 @@ section{padding:64px 0}
 
   <section style="background:#f0f1eb">
     <div class="wrap">
-      <div class="section-head"><div><p class="kicker">05 / GO-TO-MARKET PLAN</p><h2>Move people from discovery to repeat use.</h2></div><p class="section-intro">The plan connects ecosystem storytelling with the actual product journey. Marketing can create awareness, but activation depends on a working application, clear onboarding and reliable support.</p></div>
+      <div class="section-head"><div><p class="kicker">05 / THE USER JOURNEY</p><h2>The journey from discovery to habit.</h2></div><p class="section-intro">A practical framework for examining where people progress — and where they get stuck. Marketing can create awareness, but activation depends on a working application, clear onboarding and reliable support.</p></div>
       <div class="steps">
-        <div class="step"><b>01 / DISCOVER</b><h3>Reach the right people</h3><p>Freelancer communities, creator partnerships, practical search content and payment-focused education.</p></div>
-        <div class="step"><b>02 / UNDERSTAND</b><h3>Show how it helps</h3><p>Explain the use case, supported markets, fees, application partners and limitations in plain language.</p></div>
-        <div class="step"><b>03 / ACTIVATE</b><h3>Support the first use</h3><p>Guide users through a partner app's first successful payment with clear steps and support.</p></div>
-        <div class="step"><b>04 / RETURN</b><h3>Create repeat value</h3><p>Build reasons to return through saved recipients, recurring workflows and useful app features.</p></div>
+        <div class="step"><b>01 / DISCOVER</b><h3>“What is this?”</h3><p>Someone hears about a network or finds an app that appears relevant.</p><p class="framework-note"><strong>Possible friction:</strong> unclear audience or value proposition.</p></div>
+        <div class="step"><b>02 / UNDERSTAND</b><h3>“Is this for me?”</h3><p>They understand what it does, how to start, what it costs and what risks exist.</p><p class="framework-note"><strong>Possible friction:</strong> jargon, uncertainty or low trust.</p></div>
+        <div class="step"><b>03 / ACTIVATE</b><h3>“I did it.”</h3><p>They complete a meaningful first action and experience the product's value.</p><p class="framework-note"><strong>Possible friction:</strong> wallet setup, fees or confusing steps.</p></div>
+        <div class="step"><b>04 / RETURN</b><h3>“I'll use this again.”</h3><p>They find ongoing utility, community or a reason to return.</p><p class="framework-note"><strong>Possible friction:</strong> no repeat use case or weak product value.</p></div>
       </div>
       <div class="two-col" style="margin-top:18px">
         <article class="panel"><h3>What the ecosystem team can do</h3><ul><li>Recruit and support relevant application partners.</li><li>Coordinate co-marketing with wallets, apps and communities.</li><li>Make the ecosystem easier to discover and understand.</li><li>Share developer resources and user education.</li></ul></article>
