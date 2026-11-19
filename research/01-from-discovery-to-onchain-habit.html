@@ -2,413 +2,104 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="An illustrated, beginner-friendly field guide to blockchain ecosystems, how they work, and how they grow.">
-<title>Inside a Blockchain Ecosystem — Web3 Ecosystem Growth Lab</title>
+<meta name="description" content="A concise visual field note on blockchain ecosystems, Layer 2 networks and the path from discovery to on-chain adoption.">
+<title>From Discovery to On-chain Habit — Web3 Ecosystem Growth Lab</title>
 <style>
-:root{--ink:#17252d;--muted:#66747a;--paper:#fffefa;--canvas:#f1f0e9;--line:#dce0d8;--night:#142832;--night2:#203b45;--lime:#d2f477;--lilac:#c3b8ff;--coral:#f3a17d;--blue:#9dc9ed;--serif:Georgia,"Times New Roman",serif;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--canvas);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}.brand{font-weight:900}.top a{text-decoration:none;color:var(--muted);letter-spacing:0;text-transform:none}
-.cover{padding:64px 0 46px;display:grid;grid-template-columns:1.02fr .98fr;gap:38px;align-items:center}.eyebrow,.chapter,.micro{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:850;color:#71804e}.cover h1{font:normal clamp(3.7rem,7.6vw,7.4rem)/.91 var(--serif);letter-spacing:-.075em;margin:18px 0 22px;max-width:680px}.cover h1 em{color:#6f8747;font-style:italic}.lead{font-size:1.15rem;line-height:1.6;color:#5c696e;max-width:610px}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.tag{border:1px solid var(--line);border-radius:30px;padding:6px 11px;font-size:.73rem;color:#5c696e;background:#ffffff80}
-.cover-art{background:var(--night);border-radius:22px;min-height:440px;padding:26px;position:relative;overflow:hidden;color:#f5f7ef;display:flex;flex-direction:column;justify-content:space-between}.cover-art:before,.cover-art:after{content:"";position:absolute;border:1px solid #d2f47765;border-radius:50%;width:340px;height:340px;left:calc(50% - 170px);top:44px}.cover-art:after{width:240px;height:240px;left:calc(50% - 120px);top:94px;border-color:#c3b8ff8a}.cover-note,.cover-foot{position:relative;z-index:2}.cover-note{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#c8d4c9}.cover-foot{font:normal 1.5rem/1.2 var(--serif);max-width:270px}.core{position:absolute;z-index:1;left:50%;top:48%;transform:translate(-50%,-50%);width:138px;height:138px;border-radius:50%;background:var(--lime);color:var(--night);display:grid;place-items:center;text-align:center;font-size:.86rem;line-height:1.2;font-weight:950;box-shadow:0 0 0 18px #d2f47713,0 0 0 45px #c3b8ff12}.orbit{position:absolute;z-index:2;border:1px solid #ffffff55;background:#ffffff12;border-radius:9px;padding:7px 11px;font-size:.68rem;letter-spacing:.06em}.o1{top:17%;left:9%}.o2{top:23%;right:8%}.o3{bottom:24%;left:8%}.o4{bottom:19%;right:9%}
-.contents{display:flex;gap:10px;flex-wrap:wrap;padding:17px 0 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.contents span{font-size:.72rem;color:var(--muted);margin-right:8px}.contents a{font-size:.72rem;text-decoration:none;color:#4d5e50;border:1px solid var(--line);border-radius:20px;padding:5px 10px}
-main section{padding:74px 0;border-bottom:1px solid var(--line)}.section-top{display:grid;grid-template-columns:160px 1fr;gap:34px;margin-bottom:28px}.chapter{padding-top:9px}.section-top h2{font:normal clamp(2.5rem,5vw,4.6rem)/.98 var(--serif);letter-spacing:-.06em;margin:0;max-width:820px}.section-top p{color:var(--muted);max-width:750px;margin:15px 0 0}.intro{display:grid;grid-template-columns:1fr 1fr;gap:14px}.note{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:23px}.note.dark{background:var(--night);color:#f6f7f0;border:0}.note h3{margin:0 0 8px;font-size:1.12rem}.note p{margin:0;color:var(--muted);font-size:.92rem}.note.dark p{color:#c5d0cb}.note .micro{margin-bottom:9px}.analogy{margin-top:14px;background:#e5eadf;border-radius:16px;padding:23px;display:grid;grid-template-columns:1fr 54px 1fr;gap:14px;align-items:center}.analogy div:nth-child(2){text-align:center;font-size:1.8rem;color:#758d4d}.analogy strong{display:block;font-size:1.05rem}.analogy p{margin:5px 0 0;color:#58665e;font-size:.88rem}
-.figure{margin-top:20px;background:var(--night);color:#f5f7f1;border-radius:20px;padding:25px;overflow:hidden}.figure-head{display:flex;justify-content:space-between;gap:20px;align-items:start;margin-bottom:16px}.figure h3{font:normal 1.65rem/1.15 var(--serif);margin:0}.figure-head p{max-width:470px;color:#bdcbc5;font-size:.85rem;margin:2px 0 0}.figure svg{width:100%;height:auto;display:block}.figcap{color:#aebdb7;font-size:.74rem;margin-top:12px}.ecosystem-svg text,.flow-svg text,.contract-svg text,.stack-svg text,.loop-svg text{font-family:Inter,Arial,sans-serif}
-.key{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:13px}.key-item{background:#203b45;border:1px solid #49616a;border-radius:12px;padding:13px}.key-item b{display:block;font-size:.82rem;color:#fff}.key-item span{display:block;font-size:.73rem;color:#bdcbc5;margin-top:3px}
-.term-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.term{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:19px;min-height:168px}.term .num{font-size:.68rem;color:#748b4c;font-weight:900;letter-spacing:.12em}.term h3{margin:10px 0 6px;font-size:1.05rem}.term p{font-size:.84rem;color:var(--muted);margin:0}.term .plain{display:block;margin-top:10px;font-size:.76rem;font-weight:800;color:#667c45}
-.callout{margin-top:16px;padding:20px 22px;background:#e7e9e0;border-left:4px solid #91a95e;border-radius:0 13px 13px 0;color:#536057;font-size:.87rem}
-.sequence{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:17px}.sequence article{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:17px}.sequence .step{font-size:.68rem;color:#7c914e;font-weight:900;letter-spacing:.12em}.sequence h4{margin:9px 0 5px;font-size:.98rem}.sequence p{margin:0;font-size:.8rem;color:var(--muted)}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.mini-figure{background:#e6eae1;border-radius:16px;padding:20px}.mini-figure h3{font:normal 1.4rem var(--serif);margin:0 0 5px}.mini-figure p{font-size:.83rem;color:#5d6b63;margin:0 0 12px}.mini-figure svg{width:100%;height:auto;display:block}
-.compare{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.network{background:var(--paper);border:1px solid var(--line);border-radius:15px;overflow:hidden}.network .stripe{height:7px;background:#a99bfa}.network:nth-child(2) .stripe{background:#70d9bd}.network:nth-child(3) .stripe{background:#7da7f5}.network:nth-child(4) .stripe{background:#f1a17c}.network-body{padding:17px}.network .symbol{height:48px;width:48px;border-radius:14px;background:#eeeafc;display:grid;place-items:center;font-size:1.1rem;font-weight:950;margin-bottom:12px}.network h3{margin:0;font-size:1.1rem}.network .type{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#71834e;font-weight:900}.network p{font-size:.81rem;color:var(--muted);margin:10px 0}.network .question{border-top:1px solid var(--line);padding-top:10px;font-size:.77rem;color:#4e6147;font-weight:750}
-.caution{font-size:.76rem;color:var(--muted);margin-top:13px}.growth-loop{margin-top:20px;background:var(--night);border-radius:20px;padding:25px;color:#fff}.growth-loop h3{font:normal 1.6rem var(--serif);margin:0}.growth-loop>p{color:#bdcbc5;font-size:.85rem;margin:4px 0 18px}.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.journey article{border:1px solid #52666c;background:#1d3741;border-radius:13px;padding:16px;position:relative}.journey .n{font-size:.68rem;color:var(--lime);letter-spacing:.12em;font-weight:900}.journey h4{margin:12px 0 6px;font-size:1.05rem}.journey p{margin:0;color:#c1ceca;font-size:.79rem}.journey .friction{border-top:1px solid #52666c;padding-top:9px;margin-top:12px;font-size:.73rem;color:#f1b18d}.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:15px}.metric{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:18px}.metric b{display:block;font-size:.9rem}.metric span{display:block;color:var(--muted);font-size:.79rem;margin-top:5px}
-.experiments{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.experiment{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:20px}.experiment .letter{font:normal 2.1rem var(--serif);color:#839a56}.experiment h3{font-size:1.05rem;margin:6px 0}.experiment p{font-size:.84rem;color:var(--muted);margin:0}.experiment .measure{margin-top:14px;border-top:1px solid var(--line);padding-top:11px;font-size:.76rem;color:#526746}
-.sources{display:grid;grid-template-columns:1fr 1fr;gap:9px}.source{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:13px 15px;text-decoration:none;display:flex;justify-content:space-between;gap:12px}.source strong{display:block;font-size:.84rem}.source span{font-size:.74rem;color:var(--muted)}.source b{color:#718a4d}.method{background:#e6eae1;border-radius:14px;padding:20px;margin-top:15px}.method p{font-size:.82rem;color:#56645b;margin:6px 0}.endnote{padding:30px 0 48px;color:var(--muted);font-size:.78rem;display:flex;justify-content:space-between;gap:15px}
-@media(max-width:800px){.cover{grid-template-columns:1fr}.cover-art{min-height:360px}.section-top{grid-template-columns:1fr;gap:9px}.key{grid-template-columns:repeat(3,1fr)}.compare{grid-template-columns:1fr 1fr}.journey{grid-template-columns:1fr 1fr}.term-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:540px){.wrap{width:calc(100% - 28px)}.cover{padding:43px 0 32px}.cover h1{font-size:3.65rem}.cover-art{min-height:330px}.contents{gap:7px}.contents span{width:100%}main section{padding:52px 0}.intro,.analogy,.two-col{grid-template-columns:1fr}.analogy div:nth-child(2){transform:rotate(90deg)}.term-grid,.compare,.journey,.sequence,.experiments,.metric-grid,.sources{grid-template-columns:1fr}.key{grid-template-columns:1fr 1fr}.figure{padding:16px}.figure-head{display:block}.figure-head p{margin-top:8px}.endnote{display:block}}
-
-/* === Web3 Growth Lab visual identity: dark / electric / lime === */
-:root{--ink:#f3f4f1;--muted:#a4a8a2;--paper:#121313;--canvas:#080909;--line:#292b2b;--night:#101113;--night2:#191a20;--lime:#c7ff43;--lilac:#a78bfa;--coral:#ff77c8;--blue:#7d8cff;--serif:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-body{background:radial-gradient(ellipse at 82% 3%,#26103c55 0,transparent 34%),var(--canvas);color:var(--ink)}
-.wrap{width:min(1240px,calc(100% - 56px))}
-.top{border-color:#292b2b;color:#f3f4f1;padding:22px 0}
-.brand{font-size:.84rem;letter-spacing:.02em;text-transform:none}
-.top a{color:#c7ff43;border:1px solid #454747;border-radius:30px;padding:8px 15px}
-.cover{padding:66px 0 52px;gap:42px}
-.eyebrow,.chapter,.micro{color:var(--lime)}
-.cover h1{font:800 clamp(3.7rem,7.5vw,7.6rem)/.92 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.075em;max-width:760px}
-.cover h1 em{font-style:normal;color:var(--lime)}
-.lead{color:#c2c5c0;font-size:1.08rem;max-width:650px}
-.tag{background:#151716;border-color:#3b4039;color:#d6dbd1}
-.cover-art{background:radial-gradient(ellipse at 74% 28%,#7717ad 0,transparent 34%),radial-gradient(ellipse at 75% 72%,#192d9b 0,transparent 36%),linear-gradient(135deg,#111214,#08090b 72%);border:1px solid #35313d;border-radius:28px;min-height:490px;box-shadow:inset 0 0 80px #7a24b51a}
-.cover-art:before{border-color:#c7ff4370;width:390px;height:390px;left:calc(50% - 195px);top:48px;transform:rotate(-18deg);border-radius:28px}
-.cover-art:after{border-color:#c45cffb0;width:290px;height:290px;left:calc(50% - 145px);top:98px;transform:rotate(32deg);border-radius:24px}
-.cover-note{color:#d5d8d1}
-.cover-foot{font:750 1.45rem/1.18 Inter,ui-sans-serif,system-ui,sans-serif;max-width:300px}
-.core{background:var(--lime);color:#10120d;box-shadow:0 0 45px #c7ff4380,0 0 0 18px #c7ff4319,0 0 0 48px #a855f719}
-.orbit{background:#111217c9;border-color:#8d67bd;color:#f3f4f1;backdrop-filter:blur(8px)}
-.contents{border-color:var(--line)}
-.contents span{color:#a4a8a2}
-.contents a{background:#111313;border-color:#343737;color:#d7dbd3}
-main section{border-color:#292b2b}
-.section-top h2{font:750 clamp(2.4rem,5vw,4.7rem)/.98 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.065em}
-.section-top p{color:#aeb3ac}
-.note,.term,.sequence article,.network,.metric,.experiment,.source{background:#121414;border-color:#303333;color:#f1f3ee}
-.note p,.term p,.sequence p,.network p,.metric span,.experiment p,.source span{color:#aeb4ac}
-.note.dark,.figure,.growth-loop{background:linear-gradient(145deg,#17151e,#101315 72%);border:1px solid #41304d}
-.note.dark p,.figure-head p,.figcap,.key-item span,.growth-loop>p,.journey p{color:#b9bdb7}
-.analogy,.callout,.mini-figure,.method{background:#17191a;color:#dfe3dc;border:1px solid #353a35}
-.analogy p,.mini-figure p,.method p{color:#aeb4ac}
-.analogy div:nth-child(2){color:var(--lime)}
-.key-item,.journey article{background:#191a20;border-color:#41404d}
-.key-item b,.journey h4{color:#f6f7f2}
-.term .num,.sequence .step,.network .type,.network .question,.metric b,.experiment .measure{color:var(--lime)}
-.callout{border-left:4px solid var(--lime)}
-.network .stripe{background:var(--lime)}
-.network:nth-child(2) .stripe{background:#a78bfa}.network:nth-child(3) .stripe{background:#7d8cff}.network:nth-child(4) .stripe{background:#ff77c8}
-.network .symbol{background:#24202e;color:var(--lime)}
-.mini-figure h3,.figure h3,.growth-loop h3{font:750 1.55rem/1.15 Inter,ui-sans-serif,system-ui,sans-serif}
-.journey .n{color:var(--lime)}
-.journey .friction{border-color:#42414a;color:#ff9acb}
-.experiment .letter{color:var(--lime)}
-.source b{color:var(--lime)}
-.endnote{color:#929891;border-color:#292b2b}
-a:hover{color:var(--lime)}
-@media(max-width:800px){.wrap{width:calc(100% - 36px)}.cover{padding-top:48px}.cover-art{min-height:390px}}
-@media(max-width:540px){.wrap{width:calc(100% - 28px)}.cover h1{font-size:3.55rem}.cover-art{min-height:330px}.top{align-items:flex-start;gap:12px}.top a{font-size:.7rem}}
-
-
-/* PRODUCT WEBSITE REBUILD — inspired by the supplied Consensys-style reference */
-:root{--canvas:#070809;--ink:#f5f6f3;--paper:#111315;--muted:#a6aaa4;--line:#292c2e;--lime:#c8ff42;--lilac:#a84dff;--blue:#394dff}
-body{background:#070809;color:#f5f6f3}
-.wrap{width:min(1440px,calc(100% - 64px))}
-.site-nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px;border-bottom:1px solid #25282a;position:relative;z-index:5}
-.site-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#f5f6f3;font-size:.64rem;line-height:1.05;letter-spacing:.12em;font-weight:700}
-.site-brand b{font-size:.73rem;letter-spacing:.08em}
-.brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:50%;background:var(--lime);color:#111;font-size:1.2rem;font-weight:950;letter-spacing:-.08em}
-.site-links{display:flex;align-items:center;gap:30px;background:#151719;border:1px solid #292c2e;border-radius:50px;padding:13px 24px}
-.site-links a{font-size:.8rem;color:#c3c6c1;text-decoration:none;transition:color .2s}
-.site-links a:hover{color:var(--lime)}
-.nav-cta,.primary-action{display:inline-flex;align-items:center;gap:20px;border-radius:50px;background:var(--lime);color:#10120c;text-decoration:none;font-weight:750;font-size:.82rem;padding:14px 20px}
-.nav-cta span,.primary-action span{font-size:1rem}
-.project-hero{min-height:660px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:10px;padding:45px 0 56px;position:relative;overflow:hidden}
-.hero-copy{position:relative;z-index:2;padding:22px 0}
-.hero-copy .eyebrow{font-size:.68rem;letter-spacing:.14em;color:#c6cbc2;display:flex;align-items:center;gap:10px}
-.live-dot{width:8px;height:8px;background:var(--lime);border-radius:50%;box-shadow:0 0 16px var(--lime)}
-.project-hero h1{font:650 clamp(3.8rem,6.8vw,7.1rem)/.99 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.075em;margin:30px 0 24px;max-width:780px}
-.project-hero h1 em{font-style:normal;color:var(--lime)}
-.project-hero .lead{font-size:1.08rem;color:#b9beb7;max-width:600px;line-height:1.65}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.secondary-action{display:inline-flex;align-items:center;border:1px solid #777b79;border-radius:50px;padding:13px 20px;color:#f2f3ef;text-decoration:none;font-size:.82rem}
-.hero-meta{display:flex;align-items:center;gap:14px;margin-top:62px;color:#888e87;font-size:.64rem;letter-spacing:.13em;font-weight:700}
-.hero-meta i{width:25px;height:1px;background:#62675f}
-.hero-visual{height:570px;position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(ellipse at 65% 40%,#6b16a9 0,transparent 34%),radial-gradient(ellipse at 72% 78%,#1726a5 0,transparent 37%),linear-gradient(135deg,#101114,#070809 68%);border:1px solid #282b31;box-shadow:inset 0 0 100px #6720a322}
-.hero-glow{position:absolute;width:390px;height:390px;right:7%;top:13%;border-radius:50%;background:#b500ff30;filter:blur(70px)}
-.hero-orbit{position:absolute;border:1px solid #a45bff80;transform:rotate(-28deg);border-radius:30px}
-.orbit-a{width:78%;height:65%;right:-7%;top:12%;box-shadow:0 0 45px #9b2bff25}
-.orbit-b{width:55%;height:86%;right:12%;top:5%;border-color:#c8ff4280;transform:rotate(32deg)}
-.hero-prism{position:absolute;width:0;height:0;border-left:170px solid transparent;border-right:170px solid transparent;border-bottom:300px solid #6423a544;filter:drop-shadow(0 0 22px #9c2aff);transform:rotate(28deg)}
-.prism-a{right:8%;top:9%}
-.prism-b{left:2%;bottom:-27%;transform:rotate(205deg);border-bottom-color:#2636b866}
-.hero-core{position:absolute;top:47%;left:50%;transform:translate(-50%,-50%);width:170px;height:170px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#e0ff9a,#c8ff42 60%,#88b923);color:#111;box-shadow:0 0 65px #c8ff4270,0 0 0 20px #c8ff4210,0 0 0 48px #c8ff4208}
-.hero-core span{font-size:.8rem;letter-spacing:.2em;font-weight:850}.hero-core b{font-size:.68rem;letter-spacing:.08em}
-.hero-node{position:absolute;z-index:2;border:1px solid #a85cff88;background:#11121bd9;backdrop-filter:blur(10px);border-radius:30px;padding:10px 15px;color:#f2eff8;font-size:.63rem;letter-spacing:.12em}
-.node-a{top:19%;left:9%}.node-b{top:28%;right:6%}.node-c{bottom:22%;left:13%}
-.visual-caption{position:absolute;bottom:24px;right:25px;text-align:right;color:#aeb3ad;font-size:.62rem;line-height:1.6;letter-spacing:.14em}
-.contents{position:sticky;top:0;z-index:4;background:#0b0c0deF;backdrop-filter:blur(16px);border-top:1px solid #272a2b;border-bottom:1px solid #272a2b;padding:14px 0;gap:8px;align-items:center}
-.contents span{width:100%;font-size:.6rem;letter-spacing:.15em;color:#858b83;font-weight:800}
-.contents a{display:flex;align-items:center;gap:8px;border-radius:8px;background:#141617;border:1px solid #2a2e2f;padding:9px 12px;color:#d7dbd3;font-size:.72rem}
-.contents a b{color:var(--lime);font-size:.61rem}
-main section:not(.project-hero){padding:86px 0;border-bottom:1px solid #25292a}
-.section-top{grid-template-columns:190px 1fr;gap:45px}
-.chapter{color:var(--lime);font-size:.66rem}
-.section-top h2{font-size:clamp(2.5rem,4.8vw,4.8rem);font-weight:650;line-height:1.02;letter-spacing:-.065em;max-width:900px}
-.section-top p{color:#aeb3ac;font-size:1rem;max-width:790px}
-.note,.term,.sequence article,.network,.metric,.experiment,.source{background:#111416;border-color:#2a2f31}
-.note.dark,.figure,.growth-loop{background:linear-gradient(140deg,#17131f,#101315 72%);border:1px solid #39303f}
-.analogy,.callout,.mini-figure,.method{background:#151819;color:#dfe3dc;border:1px solid #303637}
-.figure{border-radius:24px;padding:30px}
-.key-item,.journey article{background:#1a1d20;border-color:#414247}
-.term .num,.sequence .step,.network .type,.network .question,.metric b,.experiment .measure{color:var(--lime)}
-.callout{border-left:4px solid var(--lime)}
-.network .stripe{background:var(--lime)}
-.network:nth-child(2) .stripe{background:#a78bfa}.network:nth-child(3) .stripe{background:#7d8cff}.network:nth-child(4) .stripe{background:#ff77c8}
-.source b{color:var(--lime)}
-.endnote{border-color:#282c2d}
-@media(max-width:900px){.site-links{gap:14px;padding:11px 15px}.site-links a{font-size:.72rem}.project-hero{grid-template-columns:1fr;gap:25px}.hero-visual{height:420px}.hero-meta{margin-top:38px}}
-@media(max-width:600px){.wrap{width:calc(100% - 28px)}.site-nav{height:auto;padding:15px 0;flex-wrap:wrap}.site-links{order:3;width:100%;justify-content:space-between;gap:8px;overflow:auto}.site-links a{white-space:nowrap;font-size:.68rem}.nav-cta{font-size:.7rem;padding:11px 13px}.project-hero{padding:35px 0 38px;min-height:0}.project-hero h1{font-size:3.55rem}.hero-visual{height:330px}.hero-core{width:125px;height:125px}.hero-prism{border-left-width:110px;border-right-width:110px;border-bottom-width:220px}.hero-meta{font-size:.55rem;gap:8px}.contents{position:relative}.contents a{font-size:.66rem}main section:not(.project-hero){padding:56px 0}.section-top{grid-template-columns:1fr;gap:10px}.figure{padding:17px}}
-
-
-/* FINAL UX REFINEMENT — quieter typography, less visual noise, tighter reading rhythm */
-:root{--reading:760px}
-body{font-size:14px;line-height:1.62}
-.wrap{width:min(1280px,calc(100% - 64px))}
-.site-nav{height:72px}
-.site-brand{font-size:.58rem}
-.brand-mark{width:34px;height:34px;font-size:1.05rem}
-.site-links{gap:23px;padding:11px 20px}
-.site-links a{font-size:.73rem}
-.nav-cta,.primary-action,.secondary-action{font-size:.76rem;padding:12px 17px}
-.project-hero{min-height:540px;grid-template-columns:1.04fr .96fr;padding:34px 0 42px;gap:22px}
-.project-hero h1{font-size:clamp(3.2rem,5.4vw,5.4rem);line-height:.98;max-width:650px;margin:22px 0 18px}
-.project-hero .lead{font-size:.94rem;line-height:1.65;max-width:510px}
-.hero-copy .eyebrow{font-size:.61rem}
-.hero-meta{margin-top:42px;font-size:.58rem}
-.hero-visual{height:470px;border-radius:22px}
-.hero-core{width:145px;height:145px}
-.hero-node{font-size:.57rem;padding:8px 12px}
-.contents{padding:11px 0;gap:7px}
-.contents span{font-size:.55rem}
-.contents a{font-size:.65rem;padding:7px 10px}
-main section:not(.project-hero){padding:62px 0}
-.section-top{grid-template-columns:155px 1fr;gap:32px;margin-bottom:22px}
-.chapter{font-size:.59rem}
-.section-top h2{font-size:clamp(2rem,3.6vw,3.35rem);line-height:1.04;max-width:760px}
-.section-top p{font-size:.88rem;line-height:1.6;max-width:690px;margin-top:10px}
-.note,.term,.sequence article,.network,.metric,.experiment,.source{border-radius:12px}
-.note{padding:19px}
-.note h3,.term h3,.experiment h3{font-size:.94rem}
-.note p,.term p,.experiment p,.network p{font-size:.78rem;line-height:1.6}
-.figure,.growth-loop{padding:21px;border-radius:18px}
-.figure h3,.growth-loop h3,.mini-figure h3{font-size:1.22rem}
-.figure-head p,.mini-figure p,.growth-loop>p{font-size:.76rem}
-.key{gap:7px}
-.key-item{padding:10px}
-.key-item b{font-size:.74rem}
-.key-item span{font-size:.66rem}
-.term-grid{gap:9px}
-.term{padding:15px;min-height:145px}
-.sequence{gap:8px}
-.sequence article{padding:14px}
-.sequence h4,.journey h4{font-size:.86rem}
-.sequence p,.journey p,.metric span{font-size:.72rem}
-.two-col{gap:10px}
-.mini-figure{padding:16px}
-.compare{gap:8px}
-.network-body{padding:14px}
-.network h3{font-size:.96rem}
-.network .type,.network .question{font-size:.62rem}
-.journey{gap:8px}
-.journey article{padding:13px}
-.journey .n{font-size:.59rem}
-.metric-grid{gap:8px}
-.metric{padding:14px}
-.metric b{font-size:.8rem}
-.experiments{gap:9px}
-.experiment{padding:16px}
-.experiment .letter{font-size:1.7rem}
-.experiment .measure{font-size:.68rem}
-.sources{gap:7px}
-.source{padding:11px 13px}
-.source strong{font-size:.76rem}
-.source span{font-size:.67rem}
-.method{padding:16px}
-.method p,.caution{font-size:.72rem}
-.endnote{font-size:.68rem;padding:24px 0 36px}
-@media(max-width:900px){
- .wrap{width:calc(100% - 40px)}
- .project-hero{min-height:0;grid-template-columns:1fr;padding:38px 0}
- .hero-visual{height:390px}
- .section-top{grid-template-columns:1fr;gap:8px}
-}
-@media(max-width:600px){
- .wrap{width:calc(100% - 28px)}
- .project-hero h1{font-size:3rem}
- .project-hero .lead{font-size:.88rem}
- .hero-visual{height:320px}
- .hero-core{width:118px;height:118px}
- main section:not(.project-hero){padding:44px 0}
- .section-top h2{font-size:2rem}
- .figure,.growth-loop{padding:15px}
- .note{padding:15px}
-}
-
+:root{color-scheme:dark;--bg:#08090b;--panel:#111318;--line:#292c34;--text:#f3f4ef;--muted:#a0a59e;--lime:#c8ff42;--purple:#a56bff;--blue:#627bff;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 78% 5%,#3a155a55,transparent 34%),var(--bg);color:var(--text);font:14px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+header{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.08em}.mark{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--lime);color:#10120c;font-weight:950;font-size:17px}
+nav{display:flex;gap:24px}nav a{font-size:12px;text-decoration:none;color:#b8bdb5}nav a:hover{color:var(--lime)}
+.back{font-size:12px;color:var(--lime);text-decoration:none;border:1px solid #44483d;padding:8px 13px;border-radius:30px}
+.hero{padding:76px 0 64px;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
+.kicker{font-size:10px;text-transform:uppercase;letter-spacing:.17em;color:var(--lime);font-weight:800}
+h1{font-size:clamp(42px,5.5vw,66px);line-height:.99;letter-spacing:-.065em;margin:18px 0 20px;font-weight:680;max-width:620px}
+h1 span{color:var(--lime)}.intro{font-size:16px;line-height:1.65;color:#b7bcb4;max-width:510px;margin:0}
+.meta{display:flex;gap:10px;align-items:center;margin-top:28px;color:#828980;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.dot{width:4px;height:4px;border-radius:50%;background:var(--lime)}
+.visual{height:340px;border:1px solid #363044;border-radius:22px;position:relative;overflow:hidden;background:radial-gradient(circle at 52% 48%,#7d2be955,transparent 34%),linear-gradient(135deg,#14121c,#090b10)}
+.visual:before,.visual:after{content:"";position:absolute;inset:48px 76px;border:1px solid #b46bff99;transform:rotate(28deg);border-radius:22px}.visual:after{inset:70px 105px;border-color:#c8ff4299;transform:rotate(-24deg)}
+.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:116px;height:116px;border-radius:50%;display:grid;place-content:center;text-align:center;background:var(--lime);color:#11140c;box-shadow:0 0 65px #c8ff4266;font-size:12px;font-weight:900;line-height:1.25}
+.node{position:absolute;border:1px solid #7656a0;background:#11131bd9;padding:7px 11px;border-radius:20px;font-size:10px;color:#eee}.n1{top:18%;left:9%}.n2{top:23%;right:8%}.n3{bottom:18%;left:12%}.n4{bottom:15%;right:10%}
+.section{padding:54px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:24px}.num{color:var(--lime);font-size:10px;letter-spacing:.15em;font-weight:800}.section h2{font-size:clamp(25px,3vw,36px);line-height:1.08;letter-spacing:-.045em;margin:8px 0 0;max-width:600px}.section-head p{color:var(--muted);max-width:360px;margin:0;font-size:13px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;min-height:150px}.card .small{font-size:10px;color:var(--lime);letter-spacing:.12em;text-transform:uppercase;font-weight:800}.card h3{font-size:17px;margin:12px 0 6px;letter-spacing:-.02em}.card p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.compare article{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}.compare h3{font-size:19px;margin:0 0 7px}.compare p{color:var(--muted);font-size:12px;margin:0}.pill{display:inline-block;border:1px solid #414735;color:var(--lime);border-radius:20px;padding:4px 9px;font-size:10px;margin-bottom:12px}
+.bridge{margin-top:12px;padding:16px 18px;border-left:2px solid var(--purple);background:#14121a;color:#c4c0cb;font-size:12px;border-radius:0 10px 10px 0}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.step{background:var(--panel);border:1px solid var(--line);padding:16px;border-radius:12px;position:relative}.step b{font-size:10px;color:var(--lime);letter-spacing:.12em}.step h3{font-size:15px;margin:9px 0 5px}.step p{font-size:11px;color:var(--muted);margin:0}
+.hypotheses{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.hypothesis{border-top:2px solid var(--lime);padding:16px 15px;background:#111318}.hypothesis b{font-size:13px}.hypothesis p{font-size:11px;color:var(--muted);margin:6px 0 0}
+details{border:1px solid var(--line);border-radius:12px;background:#101215;padding:15px 18px}summary{cursor:pointer;font-size:12px;font-weight:750;color:#e7eae2}summary::marker{color:var(--lime)}.sources{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}.sources a{font-size:11px;text-decoration:none;color:#b8beb4;padding:10px 12px;border:1px solid #292e30;border-radius:8px}.sources a:hover{border-color:var(--lime);color:var(--lime)}
+footer{padding:26px 0 38px;display:flex;justify-content:space-between;gap:15px;color:#777f76;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:52px 0 42px;gap:28px}.visual{height:290px}.section-head{display:block}.section-head p{margin-top:12px}.flow{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.wrap{width:calc(100% - 30px)}header{height:auto;padding:13px 0;flex-wrap:wrap}nav{order:3;width:100%;justify-content:space-between;gap:10px}nav a{font-size:11px}.back{font-size:11px}.hero{padding-top:40px}h1{font-size:43px}.intro{font-size:14px}.visual{height:250px}.section{padding:40px 0}.grid3,.compare,.flow,.hypotheses,.sources{grid-template-columns:1fr}.card{min-height:0}.section h2{font-size:27px}footer{display:block}footer span{display:block;margin-top:7px}}
 </style>
 </head>
 <body><div class="wrap">
-<header class="site-nav">
-  <a class="site-brand" href="../index.html"><span class="brand-mark">W</span><span>WEB3<br><b>GROWTH LAB</b></span></a>
-  <nav class="site-links"><a href="#ecosystem">Ecosystem</a><a href="#transaction">How it works</a><a href="#layers">Infrastructure</a><a href="#growth">Growth</a></nav>
-  <a class="nav-cta" href="#research-map">Explore research <span>↗</span></a>
+<header>
+<a class="brand" href="../index.html"><span class="mark">W</span><span>WEB3<br>GROWTH LAB</span></a>
+<nav aria-label="Main navigation"><a href="#ecosystem">Ecosystem</a><a href="#layers">Layer 1 / 2</a><a href="#adoption">Adoption</a></nav>
+<a class="back" href="../index.html">← Lab overview</a>
 </header>
 <main>
-<section class="project-hero" style="border:0">
-  <div class="hero-copy">
-    <div class="eyebrow"><span class="live-dot"></span> INDEPENDENT WEB3 RESEARCH PROJECT</div>
-    <h1>Understand the network.<br><em>Unlock the ecosystem.</em></h1>
-    <p class="lead">A visual exploration of blockchain infrastructure, the products built on it, and the human behaviours that turn technology into adoption.</p>
-    <div class="hero-actions"><a class="primary-action" href="#research-map">Explore the research <span>↗</span></a><a class="secondary-action" href="#growth">Explore ecosystem growth</a></div>
-    <div class="hero-meta"><span>01 / FOUNDATIONS</span><i></i><span>BLOCKCHAIN · L1 / L2 · ADOPTION</span></div>
-  </div>
-  <div class="hero-visual" aria-label="Abstract glowing geometric network visual">
-    <div class="hero-glow"></div><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div><div class="hero-prism prism-a"></div><div class="hero-prism prism-b"></div>
-    <div class="hero-node node-a">NETWORK</div><div class="hero-node node-b">APPLICATIONS</div><div class="hero-node node-c">PEOPLE</div>
-    <div class="hero-core"><span>WEB3</span><b>ECOSYSTEM</b></div>
-    <div class="visual-caption">FROM INFRASTRUCTURE<br>TO REAL-WORLD PARTICIPATION</div>
-  </div>
-</section>
-<nav class="contents" id="research-map"><span>EXPLORE THE RESEARCH</span><a href="#ecosystem">Ecosystem map <b>01</b></a><a href="#transaction">Transactions <b>02</b></a><a href="#building-blocks">Core concepts <b>03</b></a><a href="#layers">Layer 1 &amp; 2 <b>04</b></a><a href="#networks">Network landscape <b>05</b></a><a href="#growth">Adoption journey <b>06</b></a><a href="#strategy">Growth experiments <b>07</b></a></nav>
-
-<section id="ecosystem">
-<div class="section-top"><div class="chapter">01 / The big picture</div><div><h2>A blockchain is not the whole ecosystem.</h2><p>Think of a blockchain as shared digital infrastructure. The wider ecosystem includes the people, products and services that make that infrastructure useful.</p></div></div>
-<div class="intro"><article class="note"><div class="micro">In plain English</div><h3>What is a blockchain?</h3><p>A shared digital record that a network of computers helps maintain. Participants follow agreed rules to check and record updates, rather than relying on one company to hold the only copy.</p></article><article class="note dark"><div class="micro">The important distinction</div><h3>The network is the foundation. The experience is what people come for.</h3><p>Most people do not wake up wanting to use a blockchain. They want to send value, access an app, trade, play, collect or build something.</p></article></div>
-<div class="analogy"><div><strong>Imagine a city</strong><p>Roads, water and electricity are essential infrastructure. But a city becomes valuable through its homes, shops, schools, services and people.</p></div><div>↔</div><div><strong>Now imagine a blockchain ecosystem</strong><p>The network is infrastructure. Wallets, apps, developers, communities and users create the experiences around it.</p></div></div>
-<div class="figure"><div class="figure-head"><h3>Map the ecosystem</h3><p>Each part has a role. The parts connect — and the experience breaks down when one of them is difficult to use.</p></div>
-<svg class="ecosystem-svg" viewBox="0 0 1000 440" role="img" aria-label="Blockchain ecosystem map linking the underlying network to developers, applications, wallets, communities and users">
-<defs><linearGradient id="ecosys" x1="0" x2="1"><stop stop-color="#c3b8ff"/><stop offset="1" stop-color="#d2f477"/></linearGradient></defs>
-<g fill="none" stroke="#789096" stroke-width="2.5" stroke-dasharray="7 8"><path d="M500 218 175 88M500 218 500 78M500 218 825 88M500 218 175 360M500 218 825 360"/></g>
-<rect x="355" y="164" width="290" height="108" rx="20" fill="#203b45" stroke="url(#ecosys)" stroke-width="3"/><text x="500" y="207" fill="#d2f477" font-size="20" text-anchor="middle" font-weight="800">BLOCKCHAIN NETWORK</text><text x="500" y="235" fill="#f5f7f1" font-size="14" text-anchor="middle">Shared rules + transaction record</text>
-<g><rect x="65" y="35" width="220" height="105" rx="16" fill="#29444d" stroke="#c3b8ff" stroke-width="2"/><circle cx="103" cy="87" r="20" fill="#c3b8ff"/><path d="M94 88h18M103 79v18" stroke="#203b45" stroke-width="3"/><text x="137" y="82" fill="#fff" font-size="18" font-weight="700">Developers</text><text x="137" y="105" fill="#bdcbc5" font-size="13">Build and maintain</text></g>
-<g><rect x="390" y="22" width="220" height="105" rx="16" fill="#29444d" stroke="#d2f477" stroke-width="2"/><rect x="425" y="58" width="34" height="34" rx="7" fill="#d2f477"/><path d="M433 69h18M433 78h18" stroke="#203b45" stroke-width="3"/><text x="472" y="69" fill="#fff" font-size="18" font-weight="700">Applications</text><text x="472" y="92" fill="#bdcbc5" font-size="13">Create useful products</text></g>
-<g><rect x="715" y="35" width="220" height="105" rx="16" fill="#29444d" stroke="#f3a17d" stroke-width="2"/><rect x="751" y="68" width="34" height="27" rx="6" fill="none" stroke="#f3a17d" stroke-width="3"/><path d="M758 68v-7h20v7" stroke="#f3a17d" stroke-width="3" fill="none"/><text x="799" y="82" fill="#fff" font-size="18" font-weight="700">Wallets</text><text x="799" y="105" fill="#bdcbc5" font-size="13">Connect people to apps</text></g>
-<g><rect x="65" y="307" width="220" height="105" rx="16" fill="#29444d" stroke="#d2f477" stroke-width="2"/><circle cx="103" cy="357" r="20" fill="#d2f477"/><circle cx="96" cy="352" r="5" fill="#203b45"/><circle cx="110" cy="352" r="5" fill="#203b45"/><path d="M91 367q12-15 24 0" stroke="#203b45" stroke-width="3" fill="none"/><text x="137" y="352" fill="#fff" font-size="18" font-weight="700">Communities</text><text x="137" y="375" fill="#bdcbc5" font-size="13">Teach, share, support</text></g>
-<g><rect x="715" y="307" width="220" height="105" rx="16" fill="#29444d" stroke="#c3b8ff" stroke-width="2"/><circle cx="769" cy="355" r="19" fill="#c3b8ff"/><path d="M758 367q11-19 22 0" fill="none" stroke="#203b45" stroke-width="3"/><circle cx="769" cy="348" r="7" fill="#203b45"/><text x="799" y="352" fill="#fff" font-size="18" font-weight="700">Users</text><text x="799" y="375" fill="#bdcbc5" font-size="13">Use and give feedback</text></g></svg>
-<div class="key"><div class="key-item"><b>Network</b><span>Processes and records activity</span></div><div class="key-item"><b>Developers</b><span>Create the building blocks</span></div><div class="key-item"><b>Applications</b><span>Turn tools into experiences</span></div><div class="key-item"><b>Wallets</b><span>Manage access and approvals</span></div><div class="key-item"><b>People</b><span>Use, share and improve products</span></div></div>
-<div class="figcap">A simplified ecosystem map. Real networks include many additional participants, such as validators, infrastructure providers, exchanges, researchers and governance communities.</div></div>
+<section class="hero">
+<div><div class="kicker">FIELD NOTE 01 · BLOCKCHAIN ECOSYSTEMS</div>
+<h1>From discovery<br>to <span>on-chain habit.</span></h1>
+<p class="intro">A visual introduction to how blockchain networks work — and why understanding the technology is only the beginning of adoption.</p>
+<div class="meta"><span>Independent research</span><i class="dot"></i><span>Concepts · Networks · Growth</span></div></div>
+<div class="visual" role="img" aria-label="Abstract network diagram connecting applications, users and blockchain infrastructure"><div class="core">BLOCKCHAIN<br>NETWORK</div><span class="node n1">Applications</span><span class="node n2">Smart contracts</span><span class="node n3">Users & wallets</span><span class="node n4">Transactions</span></div>
 </section>
 
-<section id="transaction">
-<div class="section-top"><div class="chapter">02 / Follow the action</div><div><h2>What happens when someone makes a transaction?</h2><p>Let's follow a simple example: a person uses a wallet to send a digital token. This is a simplified explanation; exact steps vary by network and wallet.</p></div></div>
-<div class="figure"><div class="figure-head"><h3>From a tap to a network record</h3><p>The wallet prepares and signs an instruction. The network checks it against its rules, processes it and records the result.</p></div>
-<svg class="flow-svg" viewBox="0 0 1000 290" role="img" aria-label="Transaction flow from user wallet to network validators and confirmed record">
-<defs><marker id="flowarrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6" fill="#d2f477"/></marker></defs>
-<g stroke="#d2f477" stroke-width="3" fill="none" marker-end="url(#flowarrow)"><path d="M218 124H276M470 124H528M722 124H780"/></g>
-<g><rect x="25" y="48" width="193" height="150" rx="17" fill="#29444d" stroke="#c3b8ff" stroke-width="2"/><circle cx="121" cy="91" r="23" fill="#c3b8ff"/><path d="M109 87h24v18h-24zM114 82h14" stroke="#203b45" stroke-width="3" fill="none"/><text x="121" y="145" fill="#fff" font-size="18" text-anchor="middle" font-weight="700">1. Wallet</text><text x="121" y="169" fill="#bdcbc5" font-size="13" text-anchor="middle">User approves action</text></g>
-<g><rect x="276" y="48" width="194" height="150" rx="17" fill="#29444d" stroke="#f3a17d" stroke-width="2"/><circle cx="373" cy="91" r="23" fill="#f3a17d"/><path d="M362 91h22M373 80v22" stroke="#203b45" stroke-width="3"/><text x="373" y="145" fill="#fff" font-size="18" text-anchor="middle" font-weight="700">2. Instruction</text><text x="373" y="169" fill="#bdcbc5" font-size="13" text-anchor="middle">Signed and submitted</text></g>
-<g><rect x="528" y="48" width="194" height="150" rx="17" fill="#29444d" stroke="#d2f477" stroke-width="2"/><circle cx="625" cy="91" r="23" fill="#d2f477"/><path d="M614 91l8 8 15-17" stroke="#203b45" stroke-width="3" fill="none"/><text x="625" y="145" fill="#fff" font-size="18" text-anchor="middle" font-weight="700">3. Network</text><text x="625" y="169" fill="#bdcbc5" font-size="13" text-anchor="middle">Checks and processes</text></g>
-<g><rect x="780" y="48" width="194" height="150" rx="17" fill="#29444d" stroke="#9dc9ed" stroke-width="2"/><circle cx="877" cy="91" r="23" fill="#9dc9ed"/><path d="M866 91l8 8 15-17" stroke="#203b45" stroke-width="3" fill="none"/><text x="877" y="145" fill="#fff" font-size="18" text-anchor="middle" font-weight="700">4. Record</text><text x="877" y="169" fill="#bdcbc5" font-size="13" text-anchor="middle">Result is recorded</text></g>
-<path d="M121 220v25h756v-25" stroke="#789096" stroke-width="1.5" stroke-dasharray="5 6" fill="none"/><text x="500" y="270" fill="#c2d0ca" text-anchor="middle" font-size="13">The wallet can then show the transaction status to the user.</text></svg>
-<div class="figcap">Conceptual flow only. Network consensus, transaction ordering, fees and finality differ across blockchains.</div></div>
-<div class="sequence"><article><div class="step">STEP 01</div><h4>Choose an action</h4><p>For example, enter a recipient and amount in a wallet.</p></article><article><div class="step">STEP 02</div><h4>Review and approve</h4><p>The wallet asks the user to review details and sign with their key.</p></article><article><div class="step">STEP 03</div><h4>Network processing</h4><p>Network participants check and process the submitted transaction.</p></article><article><div class="step">STEP 04</div><h4>Check the outcome</h4><p>The user can inspect whether it succeeded, failed or is still pending.</p></article></div>
-<div class="callout"><strong>Why this matters for growth:</strong> every step is part of the user experience. Unclear fees, confusing approvals, network selection or long waits can cause someone to stop before reaching the value of the product.</div>
-</section>
-
-<section id="building-blocks">
-<div class="section-top"><div class="chapter">03 / The building blocks</div><div><h2>Seven ideas that make the rest easier to understand.</h2><p>Keep these definitions nearby. You do not need to master the technical detail to understand the basic user journey.</p></div></div>
-<div class="term-grid">
-<article class="term"><div class="num">01 / THE RECORD</div><h3>Blockchain</h3><p>A shared record of transactions and data maintained according to network rules.</p><span class="plain">Think: a shared record book.</span></article>
-<article class="term"><div class="num">02 / ACCESS</div><h3>Wallet</h3><p>Software that manages keys used to access assets and approve blockchain actions. It does not literally store coins inside the app.</p><span class="plain">Think: keys to your digital account.</span></article>
-<article class="term"><div class="num">03 / AN ACTION</div><h3>Transaction</h3><p>An instruction submitted to a blockchain, such as sending a token or interacting with an application.</p><span class="plain">Think: submitting a request.</span></article>
-<article class="term"><div class="num">04 / AUTOMATION</div><h3>Smart contract</h3><p>A program deployed on a blockchain that executes according to its code when called.</p><span class="plain">Think: a rule-based digital machine.</span></article>
-<article class="term"><div class="num">05 / THE PRODUCT</div><h3>dApp</h3><p>A decentralised application that uses blockchain networks or smart contracts for some of its functions.</p><span class="plain">Think: an app with blockchain components.</span></article>
-<article class="term"><div class="num">06 / THE RECORDING</div><h3>On-chain</h3><p>An action or data recorded or executed on a blockchain. Not every action inside a crypto product happens on-chain.</p><span class="plain">Think: visible in the network record.</span></article>
-<article class="term"><div class="num">07 / THE NETWORK LAYERS</div><h3>Layer 1 / Layer 2</h3><p>Layer 1 is a base blockchain. Layer 2 systems are built to extend a base network, with their own technical and security trade-offs.</p><span class="plain">Think: base network + scaling system.</span></article>
-</div>
-<div class="two-col">
-<div class="mini-figure"><h3>A wallet is more like a keyring</h3><p>Your assets are represented on the blockchain. The wallet helps manage the keys that let you access them and approve actions.</p><svg viewBox="0 0 440 175" role="img" aria-label="Wallet keyring illustration showing private key, wallet software and blockchain assets"><circle cx="80" cy="78" r="37" fill="#c3b8ff"/><circle cx="80" cy="78" r="15" fill="none" stroke="#253640" stroke-width="6"/><path d="M115 78H190v16h18V78h18" stroke="#253640" stroke-width="10" fill="none" stroke-linejoin="round"/><rect x="236" y="35" width="164" height="88" rx="14" fill="#fffefa" stroke="#cfd7cb" stroke-width="2"/><text x="318" y="68" text-anchor="middle" fill="#253640" font-size="14" font-weight="700">Wallet software</text><text x="318" y="91" text-anchor="middle" fill="#64747a" font-size="11">Manages keys + approvals</text><text x="80" y="143" text-anchor="middle" fill="#53624e" font-size="12" font-weight="700">Key access</text><text x="318" y="143" text-anchor="middle" fill="#53624e" font-size="12" font-weight="700">Blockchain record</text></svg></div>
-<div class="mini-figure"><h3>A smart contract follows rules</h3><p>It is not a human contract. It is code that carries out actions when the required conditions are met.</p><svg class="contract-svg" viewBox="0 0 440 175" role="img" aria-label="Smart contract diagram showing input, code rules and output"><rect x="4" y="43" width="112" height="82" rx="12" fill="#fffefa" stroke="#cfd7cb" stroke-width="2"/><text x="60" y="76" text-anchor="middle" fill="#253640" font-size="13" font-weight="700">INPUT</text><text x="60" y="98" text-anchor="middle" fill="#64747a" font-size="11">User action</text><path d="M120 84h40" stroke="#718a4d" stroke-width="3"/><path d="m152 76 10 8-10 8" fill="none" stroke="#718a4d" stroke-width="3"/><rect x="164" y="28" width="112" height="112" rx="12" fill="#243d47"/><text x="220" y="67" text-anchor="middle" fill="#d2f477" font-size="13" font-weight="700">CODE</text><text x="220" y="89" text-anchor="middle" fill="#fff" font-size="11">Checks rules</text><text x="220" y="108" text-anchor="middle" fill="#fff" font-size="11">Runs action</text><path d="M280 84h40" stroke="#718a4d" stroke-width="3"/><path d="m312 76 10 8-10 8" fill="none" stroke="#718a4d" stroke-width="3"/><rect x="324" y="43" width="112" height="82" rx="12" fill="#fffefa" stroke="#cfd7cb" stroke-width="2"/><text x="380" y="76" text-anchor="middle" fill="#253640" font-size="13" font-weight="700">OUTPUT</text><text x="380" y="98" text-anchor="middle" fill="#64747a" font-size="11">Result recorded</text></svg></div>
+<section class="section" id="ecosystem">
+<div class="section-head"><div><div class="num">01 / THE ECOSYSTEM</div><h2>A blockchain is infrastructure.<br>The ecosystem is everything built around it.</h2></div><p>People rarely come for the underlying protocol. They come to do something useful, interesting or valuable.</p></div>
+<div class="grid3">
+<article class="card"><div class="small">01 · Foundation</div><h3>Network</h3><p>Shared infrastructure that records and verifies activity.</p></article>
+<article class="card"><div class="small">02 · Access</div><h3>Wallet</h3><p>The tool people use to manage keys, assets and on-chain interactions.</p></article>
+<article class="card"><div class="small">03 · Utility</div><h3>Applications</h3><p>Products powered by smart contracts — from finance to games and identity.</p></article>
 </div>
 </section>
 
-<section id="layers">
-<div class="section-top"><div class="chapter">04 / Network design</div><div><h2>Ethereum is the railway. Layer 2s are different metro systems.</h2><p>Ethereum Mainnet is the underlying Layer 1. Layer 2 networks process transactions on their own networks, then connect back to Ethereum for important parts of data availability, security and settlement. They exist to help Ethereum support more activity without every user transaction needing to be executed directly on Mainnet.</p></div></div>
-
-<div class="intro">
-<article class="note"><div class="micro">Layer 1 · Ethereum Mainnet</div><h3>The city's core railway infrastructure.</h3><p>Ethereum provides the shared foundation: its consensus rules, validator network and settlement layer. It is highly secure and decentralised, but block space is limited. When demand is high, users compete to have transactions included, which can make fees rise.</p></article>
-<article class="note dark"><div class="micro">Layer 2 · Base, Arbitrum and ZKsync</div><h3>Separate metro systems connected to the main network.</h3><p>Each Layer 2 has its own transaction-processing environment, applications and operating design. It can handle many user actions without asking Ethereum Mainnet to execute each one individually, then submits data or proofs to Ethereum according to its design.</p></article>
-</div>
-
-<div class="figure">
-<div class="figure-head"><h3>One underlying railway. Different metro networks.</h3><p>The analogy: Ethereum is the shared foundation. Layer 2s run their own services and stations, while connecting back to the underlying system.</p></div>
-<svg class="metro-svg" viewBox="0 0 1000 470" role="img" aria-label="Metro analogy showing Ethereum Mainnet as the underlying central railway and three separate Layer 2 metro networks, Base, Arbitrum and ZKsync, connecting back to Ethereum">
-<defs><marker id="metroArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0L7 3L0 6" fill="#d2f477"/></marker></defs>
-<rect x="24" y="24" width="952" height="420" rx="20" fill="#1b3540" stroke="#49616a"/>
-<text x="58" y="62" fill="#d2f477" font-size="14" font-weight="800" letter-spacing="2">LAYER 2 NETWORKS · THEIR OWN TRANSACTION SYSTEMS</text>
-<g fill="none" stroke-width="12" stroke-linecap="round">
-<path d="M190 135H810" stroke="#c3b8ff"/><path d="M190 235H810" stroke="#f3a17d"/><path d="M190 335H810" stroke="#9dc9ed"/>
-</g>
-<g fill="#17252d" stroke-width="5">
-<circle cx="245" cy="135" r="13" stroke="#c3b8ff"/><circle cx="500" cy="135" r="13" stroke="#c3b8ff"/><circle cx="755" cy="135" r="13" stroke="#c3b8ff"/>
-<circle cx="245" cy="235" r="13" stroke="#f3a17d"/><circle cx="500" cy="235" r="13" stroke="#f3a17d"/><circle cx="755" cy="235" r="13" stroke="#f3a17d"/>
-<circle cx="245" cy="335" r="13" stroke="#9dc9ed"/><circle cx="500" cy="335" r="13" stroke="#9dc9ed"/><circle cx="755" cy="335" r="13" stroke="#9dc9ed"/>
-</g>
-<g fill="#fff" font-size="18" font-weight="800"><text x="80" y="141">BASE</text><text x="80" y="241">ARBITRUM</text><text x="80" y="341">ZKSYNC</text></g>
-<g fill="#bdcbc5" font-size="12"><text x="230" y="105">Apps</text><text x="480" y="105">Users</text><text x="725" y="105">Transactions</text><text x="230" y="205">Apps</text><text x="480" y="205">Users</text><text x="725" y="205">Transactions</text><text x="230" y="305">Apps</text><text x="480" y="305">Users</text><text x="725" y="305">Transactions</text></g>
-<path d="M500 151V384M500 251V384M500 351V384" stroke="#d2f477" stroke-width="3" stroke-dasharray="6 7" fill="none" marker-end="url(#metroArrow)"/>
-<rect x="160" y="385" width="680" height="42" rx="12" fill="#d2f477"/>
-<text x="500" y="412" text-anchor="middle" fill="#17252d" font-size="17" font-weight="900">ETHEREUM MAINNET · SHARED LAYER 1 FOUNDATION</text>
-</svg>
-<div class="figcap">A teaching analogy, not a literal network map. Each Layer 2 is a distinct blockchain network with its own design. The lines represent connections to Ethereum, not a claim that every transaction travels directly through Ethereum.</div>
-</div>
-
-<div class="callout"><strong>Why not just use Ethereum for everything?</strong> Every blockchain has limits on how much activity it can process. When demand for Ethereum block space rises, transactions can become more expensive. Layer 2s move much of the transaction execution away from Mainnet and bundle information or proofs back to Ethereum. This helps increase capacity and reduce costs, while retaining important connections to Ethereum's security and settlement. The exact guarantees depend on the Layer 2's design.</div>
-
-<div class="section-top" style="margin-top:48px"><div class="chapter">HOW THEY DIFFER</div><div><h2>Not all metro systems use the same technology.</h2><p>A major difference between Ethereum Layer 2s is how they show that transactions were processed correctly. Two common rollup approaches are optimistic rollups and zero-knowledge (ZK) rollups.</p></div></div>
-<div class="two-col">
-<div class="mini-figure"><h3>01 · Optimistic rollups</h3><p><strong>Think: accepted unless challenged.</strong> Transactions are processed on the Layer 2. The system assumes the submitted result is valid, while a fraud-proof process allows an invalid result to be challenged. The challenge and withdrawal rules depend on the network.</p><p><strong>Examples:</strong> Base and Arbitrum One.</p><svg viewBox="0 0 420 125" role="img" aria-label="Optimistic rollup process: execute on Layer 2, post data to Ethereum, allow a challenge if someone disputes the result"><rect x="8" y="28" width="112" height="62" rx="10" fill="#203b45"/><text x="64" y="53" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Execute</text><text x="64" y="71" text-anchor="middle" fill="#bdcbc5" font-size="11">on L2</text><path d="M122 59H153" stroke="#758d4d" stroke-width="3"/><path d="M147 53l8 6-8 6" fill="none" stroke="#758d4d" stroke-width="3"/><rect x="158" y="28" width="112" height="62" rx="10" fill="#203b45"/><text x="214" y="53" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Post data</text><text x="214" y="71" text-anchor="middle" fill="#bdcbc5" font-size="11">to Ethereum</text><path d="M272 59H303" stroke="#758d4d" stroke-width="3"/><path d="M297 53l8 6-8 6" fill="none" stroke="#758d4d" stroke-width="3"/><rect x="308" y="28" width="104" height="62" rx="10" fill="#d2f477"/><text x="360" y="53" text-anchor="middle" fill="#203b45" font-size="13" font-weight="700">Challenge</text><text x="360" y="71" text-anchor="middle" fill="#203b45" font-size="11">if disputed</text></svg></div>
-<div class="mini-figure"><h3>02 · ZK rollups</h3><p><strong>Think: prove the result mathematically.</strong> Transactions are processed on the Layer 2 and grouped into batches. A cryptographic validity proof is generated and checked by a smart contract on Ethereum.</p><p><strong>Example:</strong> ZKsync Era.</p><svg viewBox="0 0 420 125" role="img" aria-label="ZK rollup process: execute and batch transactions on Layer 2, generate a validity proof, verify it on Ethereum"><rect x="8" y="28" width="112" height="62" rx="10" fill="#203b45"/><text x="64" y="53" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Execute</text><text x="64" y="71" text-anchor="middle" fill="#bdcbc5" font-size="11">on L2</text><path d="M122 59H153" stroke="#758d4d" stroke-width="3"/><path d="M147 53l8 6-8 6" fill="none" stroke="#758d4d" stroke-width="3"/><rect x="158" y="28" width="112" height="62" rx="10" fill="#203b45"/><text x="214" y="53" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Create proof</text><text x="214" y="71" text-anchor="middle" fill="#bdcbc5" font-size="11">for the batch</text><path d="M272 59H303" stroke="#758d4d" stroke-width="3"/><path d="M297 53l8 6-8 6" fill="none" stroke="#758d4d" stroke-width="3"/><rect x="308" y="28" width="104" height="62" rx="10" fill="#c3b8ff"/><text x="360" y="53" text-anchor="middle" fill="#203b45" font-size="13" font-weight="700">Verify</text><text x="360" y="71" text-anchor="middle" fill="#203b45" font-size="11">on Ethereum</text></svg></div>
-</div>
-<div class="callout"><strong>Important:</strong> “Optimistic” does not mean careless, and “zero-knowledge” does not mean the network hides all transaction information. These are names for different proof systems. Both approaches have technical trade-offs, and a network's full security also depends on data availability, upgrade controls, sequencers, bridges and other design choices.</div>
-
-<div class="section-top" style="margin-top:48px"><div class="chapter">NETWORK EXAMPLES</div><div><h2>Base, Arbitrum and ZKsync: same broad goal, different systems.</h2><p>These are examples of Ethereum Layer 2 rollups, not a ranking. Base and Arbitrum One use optimistic rollup designs; ZKsync Era uses validity proofs.</p></div></div>
-<div class="compare l2-compare">
-<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">B</div><div class="type">Optimistic rollup</div><h3>Base</h3><p>Built using the OP Stack. It has its own applications, users and developer ecosystem. It may be a practical choice when the app or community you want to use is on Base.</p><div class="question">Check: app support, fees, liquidity, wallet support and current network security status.</div></div></article>
-<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">A</div><div class="type">Optimistic rollup</div><h3>Arbitrum One</h3><p>Uses the Arbitrum rollup protocol and fraud-proof dispute process. It has a substantial DeFi ecosystem. It may suit users whose chosen protocols and liquidity are on Arbitrum One.</p><div class="question">Check: protocol availability, liquidity, fees and withdrawal route.</div></div></article>
-<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">Z</div><div class="type">ZK rollup</div><h3>ZKsync Era</h3><p>Uses validity proofs to verify batches of transactions on Ethereum. It may suit users whose chosen applications use ZKsync Era or its account and developer features.</p><div class="question">Check: app support, token availability, wallet compatibility and proof / data design.</div></div></article>
-</div>
-<div class="callout"><strong>Same category does not mean identical.</strong> Base and Arbitrum both use optimistic rollup approaches, but they are separate networks with different applications, liquidity, infrastructure, governance and user experiences. ZKsync Era uses a different proof mechanism. That alone does not make it automatically faster, cheaper or better.</div>
-
-<div class="section-top" style="margin-top:48px"><div class="chapter">PICKING A NETWORK</div><div><h2>So, which Layer 2 should you use?</h2><p>There is no single best Layer 2 for everyone. Start with what you want to do, then compare the network that supports it.</p></div></div>
-<div class="sequence l2-choice">
-<article><div class="step">01 / APP</div><h4>Does the app support it?</h4><p>Start with the application you want to use. Not every app, token or service exists on every network.</p></article>
-<article><div class="step">02 / COST</div><h4>What will the action cost?</h4><p>Compare the current transaction fee and any deposit, withdrawal or bridge costs. Fees change with demand.</p></article>
-<article><div class="step">03 / ASSETS</div><h4>Are your assets and liquidity there?</h4><p>Check that the token, trading pair, lending market or other service you need is available on that network.</p></article>
-<article><div class="step">04 / TRUST</div><h4>Understand the trade-offs.</h4><p>Check the network's security model, data availability, upgrade controls, bridge route and withdrawal process.</p></article>
-</div>
-<div class="two-col">
-<div class="mini-figure"><h3>Example: you want to use a DeFi app</h3><p>If the protocol and the liquidity you need are on Arbitrum One, Arbitrum may be the sensible choice. The fact that another network has a lower advertised fee won't help if the app or market you need isn't there.</p></div>
-<div class="mini-figure"><h3>Example: you want to try a consumer app</h3><p>If the app is built on Base and supports your wallet and assets there, Base may be the simplest route. Choose the network that makes the task possible and practical, not the one with the most impressive slogan.</p></div>
-</div>
-<div class="callout"><strong>One more distinction: a Layer 2 is not a bridge.</strong> Base is a Layer 2 network. A bridge is a separate mechanism for moving assets or messages between networks, such as Ethereum and Base. Bridges have their own risks and fees; they are not the Layer 2 itself.</div>
-</section>
-<section id="networks">
-<div class="section-top"><div class="chapter">05 / Compare ecosystems</div><div><h2>Explore different blockchain ecosystems.</h2><p>These examples help illustrate the range of blockchain ecosystems. The aim is not to rank them, but to understand what each one is and what a growth strategist might investigate.</p></div></div>
+<section class="section" id="layers">
+<div class="section-head"><div><div class="num">02 / SCALING</div><h2>Layer 1 and Layer 2, in simple terms.</h2></div><p>Different layers can work together to support activity, while making different trade-offs.</p></div>
 <div class="compare">
-<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">Ξ</div><div class="type">Layer 1</div><h3>Ethereum</h3><p>A programmable blockchain that supports smart contracts and a broad ecosystem of applications and scaling networks.</p><div class="question">Explore: How do newcomers navigate a large, diverse ecosystem?</div></div></article>
-<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">≋</div><div class="type">Layer 1</div><h3>Solana</h3><p>A Layer 1 blockchain with its own architecture, developer ecosystem and user-facing applications.</p><div class="question">Explore: How does a first-time user move from learning to safe first use?</div></div></article>
-<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">B</div><div class="type">Ethereum Layer 2</div><h3>Base</h3><p>An Ethereum Layer 2 incubated by Coinbase, with developer resources and a growing range of consumer applications.</p><div class="question">Explore: How can familiar experiences make on-chain apps easier to discover?</div></div></article>
-
+<article><span class="pill">LAYER 1</span><h3>Ethereum</h3><p>The base network: it provides core security and settlement for activity on its ecosystem.</p></article>
+<article><span class="pill">LAYER 2</span><h3>Base · Arbitrum · ZKsync</h3><p>Separate execution environments that process transactions and use Ethereum for settlement or security, depending on their design.</p></article>
 </div>
-<p class="caution">Descriptions are simplified and based on official materials. They are not an independent assessment of performance, adoption, decentralisation, security or retention. Network architectures and product offerings can change; consult current technical documentation for details.</p>
+<div class="bridge"><strong>Think of it this way:</strong> Ethereum is the shared railway foundation. Layer 2s are different metro systems connected to it. They are not all identical, and their security models still need to be understood.</div>
 </section>
 
-<section id="growth">
-<div class="section-top"><div class="chapter">06 / The growth challenge</div><div><h2>Getting attention is not the same as creating adoption.</h2><p>A person can see a campaign, open a wallet and still never use an application. Sustainable growth means helping people understand the product, experience value and find a reason to return.</p></div></div>
-<div class="growth-loop"><h3>The journey from discovery to habit</h3><p>A practical framework for examining where people progress — and where they get stuck.</p>
-<div class="journey"><article><div class="n">01 / DISCOVER</div><h4>“What is this?”</h4><p>Someone hears about a network or finds an app that appears relevant.</p><div class="friction">Possible friction: unclear audience or value proposition.</div></article><article><div class="n">02 / UNDERSTAND</div><h4>“Is this for me?”</h4><p>They understand what it does, how to start, what it costs and what risks exist.</p><div class="friction">Possible friction: jargon, uncertainty or low trust.</div></article><article><div class="n">03 / ACTIVATE</div><h4>“I did it.”</h4><p>They complete a meaningful first action and experience the product's value.</p><div class="friction">Possible friction: wallet setup, fees or confusing steps.</div></article><article><div class="n">04 / RETURN</div><h4>“I'll use this again.”</h4><p>They find ongoing utility, community or a reason to return.</p><div class="friction">Possible friction: no repeat use case or weak product value.</div></article></div></div>
-<div class="figure"><div class="figure-head"><h3>Where should a growth team look?</h3><p>Measure the movement between stages, then investigate the reasons behind drop-off. Do not assume every user needs the same journey.</p></div>
-<svg class="loop-svg" viewBox="0 0 900 210" role="img" aria-label="Growth measurement map connecting reach, education, activation and retention with feedback">
-<g fill="none" stroke="#d2f477" stroke-width="3"><path d="M160 75H280M380 75H500M600 75H720"/></g>
-<g fill="#29444d" stroke-width="2"><rect x="35" y="35" width="125" height="80" rx="13" stroke="#c3b8ff"/><rect x="280" y="35" width="100" height="80" rx="13" stroke="#d2f477"/><rect x="500" y="35" width="100" height="80" rx="13" stroke="#f3a17d"/><rect x="720" y="35" width="145" height="80" rx="13" stroke="#9dc9ed"/></g>
-<g fill="#fff" font-size="15" font-weight="700" text-anchor="middle"><text x="97" y="69">Reach</text><text x="97" y="91" fill="#bdcbc5" font-size="11" font-weight="400">Right audience</text><text x="330" y="69">Learn</text><text x="330" y="91" fill="#bdcbc5" font-size="11" font-weight="400">Clarity + trust</text><text x="550" y="69">Activate</text><text x="550" y="91" fill="#bdcbc5" font-size="11" font-weight="400">First value</text><text x="792" y="69">Retain</text><text x="792" y="91" fill="#bdcbc5" font-size="11" font-weight="400">Repeat value</text></g>
-<path d="M792 130v38H97v-38" stroke="#c3b8ff" stroke-width="2" stroke-dasharray="7 6" fill="none"/><text x="445" y="190" fill="#bdcbc5" font-size="12" text-anchor="middle">User feedback and product improvements feed the next cycle</text></svg>
-<div class="figcap">An analytical framework, not a measured funnel or benchmark from any one blockchain.</div></div>
-<div class="metric-grid"><div class="metric"><b>Discovery</b><span>Qualified visits, relevant audience reach, app-page visits.</span></div><div class="metric"><b>Understanding</b><span>Guide completion, support questions, onboarding comprehension.</span></div><div class="metric"><b>Activation</b><span>First successful action, onboarding completion, time to first value.</span></div><div class="metric"><b>Retention</b><span>Repeat meaningful actions, returning users, cohort retention.</span></div><div class="metric"><b>Community</b><span>Helpful participation, contributor activity, support resolution.</span></div><div class="metric"><b>Quality</b><span>Task success, user feedback, safety incidents and failed actions.</span></div></div>
-<div class="callout"><strong>A note on metrics:</strong> wallet creation or transaction volume alone does not prove healthy adoption. Incentives, bots, duplicate wallets and one-off campaigns can distort activity. Define meaningful use carefully and establish a baseline before setting targets.</div>
-</section>
-
-<section id="strategy">
-<div class="section-top"><div class="chapter">07 / From insight to action</div><div><h2>Three experiments I would test next.</h2><p>These are strategic hypotheses derived from the research — not campaigns that have already been launched or results that have already been achieved.</p></div></div>
-<div class="experiments">
-<article class="experiment"><div class="letter">A</div><div class="micro">Discovery</div><h3>Organise discovery around user needs</h3><p>Replace a technical list of protocols with clear pathways such as “make a payment”, “explore a game”, “trade” or “start building”.</p><div class="measure">Test: Do more relevant visitors reach an app or useful next step?</div></article>
-<article class="experiment"><div class="letter">B</div><div class="micro">Activation</div><h3>Build a first-success walkthrough</h3><p>Show wallet setup, network choice, fees and approvals in plain language. Help a newcomer complete one appropriate, low-risk task.</p><div class="measure">Test: Do more users complete the first meaningful action?</div></article>
-<article class="experiment"><div class="letter">C</div><div class="micro">Retention</div><h3>Create a reason to return</h3><p>Connect users with recurring utility, useful product updates or ongoing community learning — beyond a short-term reward.</p><div class="measure">Test: Does meaningful repeat activity improve over time?</div></article>
+<section class="section" id="adoption">
+<div class="section-head"><div><div class="num">03 / THE GROWTH CHALLENGE</div><h2>Attention is not adoption.</h2></div><p>Growth happens when people understand the value, complete a meaningful first action and have a reason to return.</p></div>
+<div class="flow">
+<article class="step"><b>01 / DISCOVER</b><h3>Find it</h3><p>The product reaches the right audience.</p></article>
+<article class="step"><b>02 / UNDERSTAND</b><h3>Trust it</h3><p>People understand what it does and what to expect.</p></article>
+<article class="step"><b>03 / ACTIVATE</b><h3>Try it</h3><p>They complete a useful first action.</p></article>
+<article class="step"><b>04 / RETURN</b><h3>Value it</h3><p>There is a genuine reason to come back.</p></article>
 </div>
-<div class="note dark" style="margin-top:14px"><div class="micro">How I would approach measurement</div><h3>Start with a baseline. Then test one friction point at a time.</h3><p>Set a clear audience, define the desired action, observe where users struggle, run a small experiment and compare outcomes. Targets should come from evidence, not invented benchmarks.</p></div>
 </section>
 
-<section>
-<div class="section-top"><div class="chapter">08 / Further reading</div><div><h2>Go to the original sources.</h2><p>This is an introductory synthesis of selected official educational and technical materials. The links below are a starting point for deeper research, not an exhaustive source list.</p></div></div>
+<section class="section">
+<div class="section-head"><div><div class="num">04 / STRATEGIC HYPOTHESES</div><h2>Three places a growth team can start.</h2></div><p>These are hypotheses to test — not campaigns launched or results achieved.</p></div>
+<div class="hypotheses">
+<article class="hypothesis"><b>Make discovery useful</b><p>Organise entry points around what people want to do, not protocol jargon.</p></article>
+<article class="hypothesis"><b>Design for first success</b><p>Reduce friction in wallet setup, network choice, fees and the first task.</p></article>
+<article class="hypothesis"><b>Build a reason to return</b><p>Connect the product to recurring utility, not one-off incentives.</p></article>
+</div>
+</section>
+
+<section class="section">
+<details>
+<summary>Explore original sources & research notes</summary>
 <div class="sources">
-<a class="source" href="https://ethereum.org/developers/docs/intro-to-ethereum/" target="_blank" rel="noopener"><div><strong>Ethereum — Technical introduction</strong><span>Blockchain, Ethereum and smart contracts</span></div><b>↗</b></a>
-<a class="source" href="https://ethereum.org/guides/" target="_blank" rel="noopener"><div><strong>Ethereum — Beginner guides</strong><span>Wallets, transactions, security and Layer 2</span></div><b>↗</b></a>
-<a class="source" href="https://ethereum.org/layer-2/learn/" target="_blank" rel="noopener"><div><strong>Ethereum — Learn about Layer 2</strong><span>Layer 1 and Layer 2 concepts</span></div><b>↗</b></a>
-<a class="source" href="https://ethereum.org/developers/docs/scaling/optimistic-rollups/" target="_blank" rel="noopener"><div><strong>Ethereum — Optimistic rollups</strong><span>How fraud proofs and data posting work</span></div><b>↗</b></a>
-<a class="source" href="https://docs.arbitrum.io/get-started/arbitrum-introduction" target="_blank" rel="noopener"><div><strong>Arbitrum — Introduction</strong><span>Execution, settlement and fraud proofs</span></div><b>↗</b></a>
-<a class="source" href="https://docs.zksync.io/zksync-network/zksync-era" target="_blank" rel="noopener"><div><strong>ZKsync — About Era</strong><span>Validity proofs and network architecture</span></div><b>↗</b></a>
-<a class="source" href="https://solana.com/learn" target="_blank" rel="noopener"><div><strong>Solana — Learn</strong><span>Wallets, fees, tokens and applications</span></div><b>↗</b></a>
-<a class="source" href="https://www.coinbase.com/developer-platform/products/base" target="_blank" rel="noopener"><div><strong>Base — Developer platform</strong><span>Base network and developer resources</span></div><b>↗</b></a>
+<a href="https://ethereum.org/developers/docs/intro-to-ethereum/" target="_blank" rel="noopener">Ethereum · Technical introduction ↗</a>
+<a href="https://ethereum.org/layer-2/learn/" target="_blank" rel="noopener">Ethereum · Learn about Layer 2 ↗</a>
+<a href="https://ethereum.org/developers/docs/scaling/optimistic-rollups/" target="_blank" rel="noopener">Ethereum · Optimistic rollups ↗</a>
+<a href="https://docs.arbitrum.io/get-started/arbitrum-introduction" target="_blank" rel="noopener">Arbitrum · Introduction ↗</a>
+<a href="https://docs.zksync.io/zksync-network/zksync-era" target="_blank" rel="noopener">ZKsync · About Era ↗</a>
+<a href="https://solana.com/learn" target="_blank" rel="noopener">Solana · Learn ↗</a>
+<a href="https://www.coinbase.com/developer-platform/products/base" target="_blank" rel="noopener">Base · Developer platform ↗</a>
 </div>
-<div class="method"><strong>Method, scope and limitations</strong><p>Prepared 18 November 2026 as a qualitative desk-research explainer based on selected official educational and ecosystem materials. It is intended to introduce concepts and frame questions for further investigation, not to provide a technical audit or comprehensive comparison. No chain analytics, user interviews, usability tests or independently audited adoption and retention data were collected for this publication.</p><p>Network descriptions are simplified and may change as products and architectures evolve. Growth ideas are hypotheses, not proven outcomes. The next research phase should include hands-on product walkthroughs, user interviews, journey observations and independent data sources.</p><p><strong>Independence:</strong> This is an independent learning and growth strategy project. It is not affiliated with or endorsed by Ethereum, Solana, Base or any other company or protocol.</p></div>
+<p style="font-size:11px;color:#8f968d;margin:16px 0 0">A qualitative learning project based on selected official educational and technical materials. Network descriptions are simplified. Growth ideas are hypotheses, not validated outcomes. No independent chain analytics, user interviews or usability tests were conducted for this field note.</p>
+</details>
 </section>
 </main>
-<footer class="endnote"><span>WEB3 ECOSYSTEM GROWTH LAB · FIELD GUIDE 01</span><span>Independent research · Concepts simplified for learning</span></footer>
+<footer><span>WEB3 ECOSYSTEM GROWTH LAB</span><span>Independent research · Field Note 01</span></footer>
 </div></body></html>
