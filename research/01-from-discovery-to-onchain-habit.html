@@ -75,16 +75,92 @@ a:hover{color:var(--lime)}
 @media(max-width:800px){.wrap{width:calc(100% - 36px)}.cover{padding-top:48px}.cover-art{min-height:390px}}
 @media(max-width:540px){.wrap{width:calc(100% - 28px)}.cover h1{font-size:3.55rem}.cover-art{min-height:330px}.top{align-items:flex-start;gap:12px}.top a{font-size:.7rem}}
 
+
+/* PRODUCT WEBSITE REBUILD — inspired by the supplied Consensys-style reference */
+:root{--canvas:#070809;--ink:#f5f6f3;--paper:#111315;--muted:#a6aaa4;--line:#292c2e;--lime:#c8ff42;--lilac:#a84dff;--blue:#394dff}
+body{background:#070809;color:#f5f6f3}
+.wrap{width:min(1440px,calc(100% - 64px))}
+.site-nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px;border-bottom:1px solid #25282a;position:relative;z-index:5}
+.site-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#f5f6f3;font-size:.64rem;line-height:1.05;letter-spacing:.12em;font-weight:700}
+.site-brand b{font-size:.73rem;letter-spacing:.08em}
+.brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:50%;background:var(--lime);color:#111;font-size:1.2rem;font-weight:950;letter-spacing:-.08em}
+.site-links{display:flex;align-items:center;gap:30px;background:#151719;border:1px solid #292c2e;border-radius:50px;padding:13px 24px}
+.site-links a{font-size:.8rem;color:#c3c6c1;text-decoration:none;transition:color .2s}
+.site-links a:hover{color:var(--lime)}
+.nav-cta,.primary-action{display:inline-flex;align-items:center;gap:20px;border-radius:50px;background:var(--lime);color:#10120c;text-decoration:none;font-weight:750;font-size:.82rem;padding:14px 20px}
+.nav-cta span,.primary-action span{font-size:1rem}
+.project-hero{min-height:660px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:10px;padding:45px 0 56px;position:relative;overflow:hidden}
+.hero-copy{position:relative;z-index:2;padding:22px 0}
+.hero-copy .eyebrow{font-size:.68rem;letter-spacing:.14em;color:#c6cbc2;display:flex;align-items:center;gap:10px}
+.live-dot{width:8px;height:8px;background:var(--lime);border-radius:50%;box-shadow:0 0 16px var(--lime)}
+.project-hero h1{font:650 clamp(3.8rem,6.8vw,7.1rem)/.99 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-.075em;margin:30px 0 24px;max-width:780px}
+.project-hero h1 em{font-style:normal;color:var(--lime)}
+.project-hero .lead{font-size:1.08rem;color:#b9beb7;max-width:600px;line-height:1.65}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.secondary-action{display:inline-flex;align-items:center;border:1px solid #777b79;border-radius:50px;padding:13px 20px;color:#f2f3ef;text-decoration:none;font-size:.82rem}
+.hero-meta{display:flex;align-items:center;gap:14px;margin-top:62px;color:#888e87;font-size:.64rem;letter-spacing:.13em;font-weight:700}
+.hero-meta i{width:25px;height:1px;background:#62675f}
+.hero-visual{height:570px;position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(ellipse at 65% 40%,#6b16a9 0,transparent 34%),radial-gradient(ellipse at 72% 78%,#1726a5 0,transparent 37%),linear-gradient(135deg,#101114,#070809 68%);border:1px solid #282b31;box-shadow:inset 0 0 100px #6720a322}
+.hero-glow{position:absolute;width:390px;height:390px;right:7%;top:13%;border-radius:50%;background:#b500ff30;filter:blur(70px)}
+.hero-orbit{position:absolute;border:1px solid #a45bff80;transform:rotate(-28deg);border-radius:30px}
+.orbit-a{width:78%;height:65%;right:-7%;top:12%;box-shadow:0 0 45px #9b2bff25}
+.orbit-b{width:55%;height:86%;right:12%;top:5%;border-color:#c8ff4280;transform:rotate(32deg)}
+.hero-prism{position:absolute;width:0;height:0;border-left:170px solid transparent;border-right:170px solid transparent;border-bottom:300px solid #6423a544;filter:drop-shadow(0 0 22px #9c2aff);transform:rotate(28deg)}
+.prism-a{right:8%;top:9%}
+.prism-b{left:2%;bottom:-27%;transform:rotate(205deg);border-bottom-color:#2636b866}
+.hero-core{position:absolute;top:47%;left:50%;transform:translate(-50%,-50%);width:170px;height:170px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#e0ff9a,#c8ff42 60%,#88b923);color:#111;box-shadow:0 0 65px #c8ff4270,0 0 0 20px #c8ff4210,0 0 0 48px #c8ff4208}
+.hero-core span{font-size:.8rem;letter-spacing:.2em;font-weight:850}.hero-core b{font-size:.68rem;letter-spacing:.08em}
+.hero-node{position:absolute;z-index:2;border:1px solid #a85cff88;background:#11121bd9;backdrop-filter:blur(10px);border-radius:30px;padding:10px 15px;color:#f2eff8;font-size:.63rem;letter-spacing:.12em}
+.node-a{top:19%;left:9%}.node-b{top:28%;right:6%}.node-c{bottom:22%;left:13%}
+.visual-caption{position:absolute;bottom:24px;right:25px;text-align:right;color:#aeb3ad;font-size:.62rem;line-height:1.6;letter-spacing:.14em}
+.contents{position:sticky;top:0;z-index:4;background:#0b0c0deF;backdrop-filter:blur(16px);border-top:1px solid #272a2b;border-bottom:1px solid #272a2b;padding:14px 0;gap:8px;align-items:center}
+.contents span{width:100%;font-size:.6rem;letter-spacing:.15em;color:#858b83;font-weight:800}
+.contents a{display:flex;align-items:center;gap:8px;border-radius:8px;background:#141617;border:1px solid #2a2e2f;padding:9px 12px;color:#d7dbd3;font-size:.72rem}
+.contents a b{color:var(--lime);font-size:.61rem}
+main section:not(.project-hero){padding:86px 0;border-bottom:1px solid #25292a}
+.section-top{grid-template-columns:190px 1fr;gap:45px}
+.chapter{color:var(--lime);font-size:.66rem}
+.section-top h2{font-size:clamp(2.5rem,4.8vw,4.8rem);font-weight:650;line-height:1.02;letter-spacing:-.065em;max-width:900px}
+.section-top p{color:#aeb3ac;font-size:1rem;max-width:790px}
+.note,.term,.sequence article,.network,.metric,.experiment,.source{background:#111416;border-color:#2a2f31}
+.note.dark,.figure,.growth-loop{background:linear-gradient(140deg,#17131f,#101315 72%);border:1px solid #39303f}
+.analogy,.callout,.mini-figure,.method{background:#151819;color:#dfe3dc;border:1px solid #303637}
+.figure{border-radius:24px;padding:30px}
+.key-item,.journey article{background:#1a1d20;border-color:#414247}
+.term .num,.sequence .step,.network .type,.network .question,.metric b,.experiment .measure{color:var(--lime)}
+.callout{border-left:4px solid var(--lime)}
+.network .stripe{background:var(--lime)}
+.network:nth-child(2) .stripe{background:#a78bfa}.network:nth-child(3) .stripe{background:#7d8cff}.network:nth-child(4) .stripe{background:#ff77c8}
+.source b{color:var(--lime)}
+.endnote{border-color:#282c2d}
+@media(max-width:900px){.site-links{gap:14px;padding:11px 15px}.site-links a{font-size:.72rem}.project-hero{grid-template-columns:1fr;gap:25px}.hero-visual{height:420px}.hero-meta{margin-top:38px}}
+@media(max-width:600px){.wrap{width:calc(100% - 28px)}.site-nav{height:auto;padding:15px 0;flex-wrap:wrap}.site-links{order:3;width:100%;justify-content:space-between;gap:8px;overflow:auto}.site-links a{white-space:nowrap;font-size:.68rem}.nav-cta{font-size:.7rem;padding:11px 13px}.project-hero{padding:35px 0 38px;min-height:0}.project-hero h1{font-size:3.55rem}.hero-visual{height:330px}.hero-core{width:125px;height:125px}.hero-prism{border-left-width:110px;border-right-width:110px;border-bottom-width:220px}.hero-meta{font-size:.55rem;gap:8px}.contents{position:relative}.contents a{font-size:.66rem}main section:not(.project-hero){padding:56px 0}.section-top{grid-template-columns:1fr;gap:10px}.figure{padding:17px}}
+
 </style>
 </head>
 <body><div class="wrap">
-<header class="top"><div class="brand">Web3 Ecosystem Growth Lab</div><a href="../index.html">← Back to project overview</a></header>
+<header class="site-nav">
+  <a class="site-brand" href="../index.html"><span class="brand-mark">W</span><span>WEB3<br><b>GROWTH LAB</b></span></a>
+  <nav class="site-links"><a href="#ecosystem">Ecosystem</a><a href="#transaction">How it works</a><a href="#layers">Infrastructure</a><a href="#growth">Growth</a></nav>
+  <a class="nav-cta" href="#research-map">Explore research <span>↗</span></a>
+</header>
 <main>
-<section class="cover" style="border:0">
-<div><div class="eyebrow">Field guide 01 · Illustrated research</div><h1>Inside a <em>blockchain</em> ecosystem</h1><p class="lead">What is a blockchain, how do people use it, and why do some networks attract thriving communities of builders and users? A visual guide for people starting from zero.</p><div class="meta"><span class="tag">Beginner-friendly</span><span class="tag">Concepts + ecosystem comparison</span><span class="tag">Independent research</span><span class="tag">18 November 2026</span></div></div>
-<div class="cover-art"><div class="cover-note">A visual field guide to Web3</div><span class="orbit o1">PEOPLE</span><span class="orbit o2">APPLICATIONS</span><span class="orbit o3">WALLETS</span><span class="orbit o4">BUILDERS</span><div class="core">BLOCKCHAIN<br>ECOSYSTEM</div><div class="cover-foot">A network is the foundation. The ecosystem is everything people build around it.</div></div>
+<section class="project-hero" style="border:0">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="live-dot"></span> INDEPENDENT WEB3 RESEARCH PROJECT</div>
+    <h1>Understand the network.<br><em>Unlock the ecosystem.</em></h1>
+    <p class="lead">A visual exploration of blockchain infrastructure, the products built on it, and the human behaviours that turn technology into adoption.</p>
+    <div class="hero-actions"><a class="primary-action" href="#research-map">Explore the research <span>↗</span></a><a class="secondary-action" href="#growth">Explore ecosystem growth</a></div>
+    <div class="hero-meta"><span>01 / FOUNDATIONS</span><i></i><span>BLOCKCHAIN · L1 / L2 · ADOPTION</span></div>
+  </div>
+  <div class="hero-visual" aria-label="Abstract glowing geometric network visual">
+    <div class="hero-glow"></div><div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div><div class="hero-prism prism-a"></div><div class="hero-prism prism-b"></div>
+    <div class="hero-node node-a">NETWORK</div><div class="hero-node node-b">APPLICATIONS</div><div class="hero-node node-c">PEOPLE</div>
+    <div class="hero-core"><span>WEB3</span><b>ECOSYSTEM</b></div>
+    <div class="visual-caption">FROM INFRASTRUCTURE<br>TO REAL-WORLD PARTICIPATION</div>
+  </div>
 </section>
-<nav class="contents"><span>IN THIS GUIDE</span><a href="#ecosystem">01 The ecosystem</a><a href="#transaction">02 A transaction</a><a href="#building-blocks">03 Building blocks</a><a href="#layers">04 Layer 1 &amp; 2</a><a href="#networks">05 Four networks</a><a href="#growth">06 Growth journey</a><a href="#strategy">07 Experiments</a></nav>
+<nav class="contents" id="research-map"><span>EXPLORE THE RESEARCH</span><a href="#ecosystem">Ecosystem map <b>01</b></a><a href="#transaction">Transactions <b>02</b></a><a href="#building-blocks">Core concepts <b>03</b></a><a href="#layers">Layer 1 &amp; 2 <b>04</b></a><a href="#networks">Network landscape <b>05</b></a><a href="#growth">Adoption journey <b>06</b></a><a href="#strategy">Growth experiments <b>07</b></a></nav>
 
 <section id="ecosystem">
 <div class="section-top"><div class="chapter">01 / The big picture</div><div><h2>A blockchain is not the whole ecosystem.</h2><p>Think of a blockchain as shared digital infrastructure. The wider ecosystem includes the people, products and services that make that infrastructure useful.</p></div></div>
