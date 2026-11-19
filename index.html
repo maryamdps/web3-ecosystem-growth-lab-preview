@@ -110,6 +110,54 @@ section{padding:78px 0}
 .step h3{font-size:.98rem;margin:20px 0 7px}
 .closing h2{font-size:clamp(1.65rem,3vw,2.5rem)}
 @media(max-width:760px){h1{font-size:clamp(2.35rem,9vw,3.4rem)}h2{font-size:1.8rem}.section-head{gap:12px}section{padding:62px 0}.hero{padding-top:38px}}
+
+/* Spacious layout and a clean, non-overlapping hero illustration */
+section{padding:104px 0}
+.section-head{margin-bottom:46px}
+.hero{padding-top:34px}
+.hero-art{
+  min-height:455px;
+  padding:26px;
+  display:grid;
+  grid-template-rows:auto 1fr auto auto;
+  gap:18px;
+  justify-items:stretch;
+  align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 34%,#273b4d 0,#172635 45%,#10151d 100%);
+  border:1px solid #344454;
+  border-radius:22px;
+}
+.hero-art:before,.hero-art:after{display:none}
+.hero-visual-heading{display:flex;align-items:center;gap:9px;font-size:.7rem;letter-spacing:.14em;font-weight:850;color:#dce6df}
+.visual-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px #c8ff42aa}
+.hero-visual-core{display:grid;justify-items:center;align-content:center;gap:8px;min-height:168px;position:relative}
+.core-orbit{width:118px;height:118px;border:1px solid #c8ff4280;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 13px #c8ff4210,0 0 0 27px #a56bff0d}
+.core-orbit span{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#d8ff83,#a9e83d);color:#111a12;font-size:1.65rem;font-weight:950;letter-spacing:-.07em}
+.core-caption{font-size:.66rem;letter-spacing:.2em;font-weight:850;color:#d5dfd9}
+.hero-visual-links{height:15px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:310px;width:80%;margin:-7px auto 0}
+.hero-visual-links i{display:block;width:1px;height:15px;background:linear-gradient(#c8ff42,#a56bff);justify-self:center}
+.hero-visual-nodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.hero-node{min-width:0;min-height:104px;padding:12px 8px;border:1px solid #40515d;background:#ffffff0a;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:5px}
+.node-symbol{font-size:1.05rem;color:var(--accent);line-height:1.2}
+.hero-node b{font-size:.68rem;letter-spacing:.08em;color:#f2f6ef}
+.hero-node small{font-size:.62rem;line-height:1.35;color:#b8c5c2}
+.hero-visual-foot{font-size:.62rem;letter-spacing:.11em;font-weight:800;color:#aab9b7;text-align:center;padding-top:2px}
+@media(max-width:760px){
+  section{padding:76px 0}
+  .section-head{margin-bottom:30px}
+  .hero{padding-top:28px}
+  .hero-art{min-height:410px;padding:22px}
+}
+@media(max-width:420px){
+  .hero-art{padding:17px;min-height:390px}
+  .hero-visual-nodes{gap:6px}
+  .hero-node{padding:10px 5px}
+  .hero-node b{font-size:.61rem}
+  .hero-node small{font-size:.56rem}
+}
+
 </style>
 </head>
 <body>
@@ -127,12 +175,19 @@ section{padding:78px 0}
         <p class="lead">An independent go-to-market case study exploring how an Ethereum Layer 2 ecosystem could attract users, support builders and grow real-world adoption.</p>
         <div class="hero-meta"><span class="chip">Ecosystem research</span><span class="chip">Audience & positioning</span><span class="chip">GTM campaign</span></div>
       </div>
-      <div class="hero-art" aria-label="Layer 2 ecosystem growth concept">
-        <div class="art-top">FROM INFRASTRUCTURE TO ADOPTION</div>
-        <div class="orbit-core">LAYER 2<br><small style="font-size:.62rem;letter-spacing:.1em">ECOSYSTEM</small></div>
-        <span class="orbit-tag t1">BUILDERS</span><span class="orbit-tag t2">APPS</span><span class="orbit-tag t3">USERS</span><span class="orbit-tag t4">USE CASES</span>
-        <div class="art-bottom">Make the technology useful. Make adoption meaningful.</div>
-        <small>Illustrative strategy · Not a live client campaign</small>
+      <div class="hero-art" aria-label="Illustration of a Layer 2 ecosystem connecting applications, builders and users">
+        <div class="hero-visual-heading"><span class="visual-dot"></span> THE LAYER 2 ECOSYSTEM</div>
+        <div class="hero-visual-core">
+          <div class="core-orbit"><span> L2 </span></div>
+          <div class="core-caption">NETWORK</div>
+        </div>
+        <div class="hero-visual-links" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="hero-visual-nodes">
+          <div class="hero-node"><span class="node-symbol">⌘</span><b>BUILDERS</b><small>Create applications</small></div>
+          <div class="hero-node"><span class="node-symbol">▦</span><b>APPS</b><small>Deliver useful services</small></div>
+          <div class="hero-node"><span class="node-symbol">◎</span><b>USERS</b><small>Drive real adoption</small></div>
+        </div>
+        <div class="hero-visual-foot">FROM INFRASTRUCTURE TO EVERYDAY UTILITY</div>
       </div>
     </section>
     <div class="summary">
