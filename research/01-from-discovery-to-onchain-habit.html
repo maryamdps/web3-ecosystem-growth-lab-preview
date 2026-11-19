@@ -33,7 +33,7 @@ main section{padding:74px 0;border-bottom:1px solid var(--line)}.section-top{dis
 <div><div class="eyebrow">Field guide 01 · Illustrated research</div><h1>Inside a <em>blockchain</em> ecosystem</h1><p class="lead">What is a blockchain, how do people use it, and why do some networks attract thriving communities of builders and users? A visual guide for people starting from zero.</p><div class="meta"><span class="tag">Beginner-friendly</span><span class="tag">Concepts + ecosystem comparison</span><span class="tag">Independent research</span><span class="tag">18 November 2026</span></div></div>
 <div class="cover-art"><div class="cover-note">A visual field guide to Web3</div><span class="orbit o1">PEOPLE</span><span class="orbit o2">APPLICATIONS</span><span class="orbit o3">WALLETS</span><span class="orbit o4">BUILDERS</span><div class="core">BLOCKCHAIN<br>ECOSYSTEM</div><div class="cover-foot">A network is the foundation. The ecosystem is everything people build around it.</div></div>
 </section>
-<nav class="contents"><span>IN THIS GUIDE</span><a href="#ecosystem">01 The ecosystem</a><a href="#transaction">02 A transaction</a><a href="#building-blocks">03 Building blocks</a><a href="#networks">04 Four networks</a><a href="#growth">05 Growth journey</a><a href="#strategy">06 Experiments</a></nav>
+<nav class="contents"><span>IN THIS GUIDE</span><a href="#ecosystem">01 The ecosystem</a><a href="#transaction">02 A transaction</a><a href="#building-blocks">03 Building blocks</a><a href="#layers">04 Layer 1 &amp; 2</a><a href="#networks">05 Four networks</a><a href="#growth">06 Growth journey</a><a href="#strategy">07 Experiments</a></nav>
 
 <section id="ecosystem">
 <div class="section-top"><div class="chapter">01 / The big picture</div><div><h2>A blockchain is not the whole ecosystem.</h2><p>Think of a blockchain as shared digital infrastructure. The wider ecosystem includes the people, products and services that make that infrastructure useful.</p></div></div>
@@ -87,60 +87,65 @@ main section{padding:74px 0;border-bottom:1px solid var(--line)}.section-top{dis
 </section>
 
 <section id="layers">
-<div class="section-top"><div class="chapter">04 / Network design</div><div><h2>Layer 1 and Layer 2: picture a main road and an expressway.</h2><p>A Layer 1 is the base network. A Layer 2 is a separate network built on top of it to process activity more efficiently, while relying on the Layer 1 for important parts of its security and final settlement.</p></div></div>
+<div class="section-top"><div class="chapter">04 / Network design</div><div><h2>Ethereum is the railway. Layer 2s are different metro systems.</h2><p>Ethereum Mainnet is the underlying Layer 1. Layer 2 networks process transactions on their own networks, then connect back to Ethereum for important parts of data availability, security and settlement. They exist to help Ethereum support more activity without every user transaction needing to be executed directly on Mainnet.</p></div></div>
+
 <div class="intro">
-<article class="note"><div class="micro">Layer 1 · The foundation</div><h3>Ethereum is the main road network.</h3><p>Ethereum is the underlying blockchain. It provides the core rules and infrastructure that applications and Layer 2 networks can build on.</p></article>
-<article class="note dark"><div class="micro">Layer 2 · The extra capacity</div><h3>Base is an expressway built on Ethereum.</h3><p>Base processes transactions on its own network, then regularly sends transaction data back to Ethereum. This helps handle activity without asking Ethereum to process every individual user action directly.</p></article>
+<article class="note"><div class="micro">Layer 1 · Ethereum Mainnet</div><h3>The city's core railway infrastructure.</h3><p>Ethereum provides the shared foundation: its consensus rules, validator network and settlement layer. It is highly secure and decentralised, but block space is limited. When demand is high, users compete to have transactions included, which can make fees rise.</p></article>
+<article class="note dark"><div class="micro">Layer 2 · Base, Arbitrum and ZKsync</div><h3>Separate metro systems connected to the main network.</h3><p>Each Layer 2 has its own transaction-processing environment, applications and operating design. It can handle many user actions without asking Ethereum Mainnet to execute each one individually, then submits data or proofs to Ethereum according to its design.</p></article>
 </div>
+
 <div class="figure">
-<div class="figure-head"><h3>One foundation. An additional route.</h3><p>Imagine Ethereum as a strong, established highway. Base adds another route for traffic, while staying connected to the underlying road system.</p></div>
-<svg class="road-svg" viewBox="0 0 1000 490" role="img" aria-label="Road and bridge analogy: Ethereum is the foundational main road and Base is an elevated Layer 2 expressway connected by ramps, with batches of transaction data returning to Ethereum">
-<defs>
-<linearGradient id="roadDeck" x1="0" x2="1"><stop stop-color="#c3b8ff"/><stop offset="1" stop-color="#d2f477"/></linearGradient>
-<marker id="roadArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6" fill="#d2f477"/></marker>
-<marker id="dataArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6" fill="#f3a17d"/></marker>
-</defs>
-<!-- sky and distant city -->
-<circle cx="840" cy="76" r="34" fill="#d2f477" opacity=".16"/>
-<g fill="#29444d"><rect x="35" y="105" width="55" height="92" rx="5"/><rect x="99" y="75" width="70" height="122" rx="5"/><rect x="178" y="122" width="46" height="75" rx="5"/><rect x="790" y="113" width="52" height="84" rx="5"/><rect x="850" y="84" width="75" height="113" rx="5"/><rect x="933" y="130" width="38" height="67" rx="5"/></g>
-<g fill="#d2f477" opacity=".55"><path d="M48 122h9v9h-9zm20 0h9v9h-9zm-20 20h9v9h-9zm64-27h10v10h-10zm22 0h10v10h-10zm-22 23h10v10h-10zm22 0h10v10h-10zm-22 23h10v10h-10zm22 0h10v10h-10zM804 130h9v9h-9zm20 0h9v9h-9zm47-24h10v10h-10zm22 0h10v10h-10zm-22 23h10v10h-10zm22 0h10v10h-10z"/></g>
-<!-- elevated Layer 2 bridge deck -->
-<path d="M95 230 Q190 230 250 184 L750 184 Q810 230 905 230" fill="none" stroke="#6e7780" stroke-width="28" stroke-linecap="round"/>
-<path d="M95 219 Q190 219 250 173 L750 173 Q810 219 905 219" fill="none" stroke="url(#roadDeck)" stroke-width="12" stroke-linecap="round"/>
-<path d="M285 173H715" stroke="#263943" stroke-width="3" stroke-dasharray="28 20"/>
-<!-- bridge supports -->
-<path d="M300 188V352M700 188V352" stroke="#758a8e" stroke-width="14"/>
-<path d="M275 352H325M675 352H725" stroke="#758a8e" stroke-width="10" stroke-linecap="round"/>
-<!-- traffic on L2 -->
-<g><rect x="365" y="142" width="54" height="24" rx="7" fill="#f3a17d"/><rect x="376" y="147" width="16" height="8" rx="2" fill="#203b45"/><rect x="395" y="147" width="15" height="8" rx="2" fill="#203b45"/><circle cx="378" cy="167" r="5" fill="#101e26"/><circle cx="405" cy="167" r="5" fill="#101e26"/></g>
-<g><rect x="570" y="142" width="54" height="24" rx="7" fill="#d2f477"/><rect x="581" y="147" width="16" height="8" rx="2" fill="#203b45"/><rect x="600" y="147" width="15" height="8" rx="2" fill="#203b45"/><circle cx="583" cy="167" r="5" fill="#101e26"/><circle cx="610" cy="167" r="5" fill="#101e26"/></g>
-<!-- base road foundation -->
-<rect x="0" y="366" width="1000" height="95" rx="10" fill="#263f49"/>
-<path d="M0 378H1000" stroke="#d2f477" stroke-width="3" opacity=".8"/>
-<path d="M0 413H1000" stroke="#e7e8dc" stroke-width="3" stroke-dasharray="36 24" opacity=".75"/>
-<g><rect x="110" y="398" width="64" height="28" rx="7" fill="#c3b8ff"/><rect x="124" y="403" width="17" height="9" rx="2" fill="#203b45"/><rect x="144" y="403" width="17" height="9" rx="2" fill="#203b45"/><circle cx="126" cy="428" r="5" fill="#101e26"/><circle cx="159" cy="428" r="5" fill="#101e26"/></g>
-<g><rect x="817" y="398" width="64" height="28" rx="7" fill="#9dc9ed"/><rect x="831" y="403" width="17" height="9" rx="2" fill="#203b45"/><rect x="851" y="403" width="17" height="9" rx="2" fill="#203b45"/><circle cx="833" cy="428" r="5" fill="#101e26"/><circle cx="866" cy="428" r="5" fill="#101e26"/></g>
-<!-- labels -->
-<rect x="338" y="35" width="324" height="78" rx="14" fill="#203b45" stroke="#d2f477" stroke-width="2"/>
-<text x="500" y="65" text-anchor="middle" fill="#d2f477" font-size="17" font-weight="800">LAYER 2 · BASE</text>
-<text x="500" y="89" text-anchor="middle" fill="#f5f7f1" font-size="13">The additional expressway</text>
-<path d="M500 114V145" stroke="#d2f477" stroke-width="2" marker-end="url(#roadArrow)"/>
-<text x="500" y="344" text-anchor="middle" fill="#d2f477" font-size="17" font-weight="800">LAYER 1 · ETHEREUM</text>
-<text x="500" y="438" text-anchor="middle" fill="#f5f7f1" font-size="16" font-weight="800">THE UNDERLYING FOUNDATION</text>
-<!-- data batches back to L1 -->
-<path d="M730 242 Q810 278 790 350" stroke="#f3a17d" stroke-width="3" fill="none" stroke-dasharray="7 6" marker-end="url(#dataArrow)"/>
-<rect x="782" y="265" width="174" height="58" rx="10" fill="#3b4245" stroke="#f3a17d"/>
-<text x="869" y="288" text-anchor="middle" fill="#f3a17d" font-size="12" font-weight="800">DATA / PROOFS</text>
-<text x="869" y="307" text-anchor="middle" fill="#fff" font-size="11">Sent back to Ethereum</text>
+<div class="figure-head"><h3>One underlying railway. Different metro networks.</h3><p>The analogy: Ethereum is the shared foundation. Layer 2s run their own services and stations, while connecting back to the underlying system.</p></div>
+<svg class="metro-svg" viewBox="0 0 1000 470" role="img" aria-label="Metro analogy showing Ethereum Mainnet as the underlying central railway and three separate Layer 2 metro networks, Base, Arbitrum and ZKsync, connecting back to Ethereum">
+<defs><marker id="metroArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0L7 3L0 6" fill="#d2f477"/></marker></defs>
+<rect x="24" y="24" width="952" height="420" rx="20" fill="#1b3540" stroke="#49616a"/>
+<text x="58" y="62" fill="#d2f477" font-size="14" font-weight="800" letter-spacing="2">LAYER 2 NETWORKS · THEIR OWN TRANSACTION SYSTEMS</text>
+<g fill="none" stroke-width="12" stroke-linecap="round">
+<path d="M190 135H810" stroke="#c3b8ff"/><path d="M190 235H810" stroke="#f3a17d"/><path d="M190 335H810" stroke="#9dc9ed"/>
+</g>
+<g fill="#17252d" stroke-width="5">
+<circle cx="245" cy="135" r="13" stroke="#c3b8ff"/><circle cx="500" cy="135" r="13" stroke="#c3b8ff"/><circle cx="755" cy="135" r="13" stroke="#c3b8ff"/>
+<circle cx="245" cy="235" r="13" stroke="#f3a17d"/><circle cx="500" cy="235" r="13" stroke="#f3a17d"/><circle cx="755" cy="235" r="13" stroke="#f3a17d"/>
+<circle cx="245" cy="335" r="13" stroke="#9dc9ed"/><circle cx="500" cy="335" r="13" stroke="#9dc9ed"/><circle cx="755" cy="335" r="13" stroke="#9dc9ed"/>
+</g>
+<g fill="#fff" font-size="18" font-weight="800"><text x="80" y="141">BASE</text><text x="80" y="241">ARBITRUM</text><text x="80" y="341">ZKSYNC</text></g>
+<g fill="#bdcbc5" font-size="12"><text x="230" y="105">Apps</text><text x="480" y="105">Users</text><text x="725" y="105">Transactions</text><text x="230" y="205">Apps</text><text x="480" y="205">Users</text><text x="725" y="205">Transactions</text><text x="230" y="305">Apps</text><text x="480" y="305">Users</text><text x="725" y="305">Transactions</text></g>
+<path d="M500 151V384M500 251V384M500 351V384" stroke="#d2f477" stroke-width="3" stroke-dasharray="6 7" fill="none" marker-end="url(#metroArrow)"/>
+<rect x="160" y="385" width="680" height="42" rx="12" fill="#d2f477"/>
+<text x="500" y="412" text-anchor="middle" fill="#17252d" font-size="17" font-weight="900">ETHEREUM MAINNET · SHARED LAYER 1 FOUNDATION</text>
 </svg>
-<div class="figcap">Analogy, not literal architecture: Base is a separate Layer 2 network, not a physical bridge. It executes transactions on Base and posts transaction data to Ethereum. The precise security and settlement design is more technical than this simplified illustration.</div>
+<div class="figcap">A teaching analogy, not a literal network map. Each Layer 2 is a distinct blockchain network with its own design. The lines represent connections to Ethereum, not a claim that every transaction travels directly through Ethereum.</div>
+</div>
+
+<div class="callout"><strong>Why not just use Ethereum for everything?</strong> Every blockchain has limits on how much activity it can process. When demand for Ethereum block space rises, transactions can become more expensive. Layer 2s move much of the transaction execution away from Mainnet and bundle information or proofs back to Ethereum. This helps increase capacity and reduce costs, while retaining important connections to Ethereum's security and settlement. The exact guarantees depend on the Layer 2's design.</div>
+
+<div class="section-top" style="margin-top:48px"><div class="chapter">HOW THEY DIFFER</div><div><h2>Not all metro systems use the same technology.</h2><p>A major difference between Ethereum Layer 2s is how they show that transactions were processed correctly. Two common rollup approaches are optimistic rollups and zero-knowledge (ZK) rollups.</p></div></div>
+<div class="two-col">
+<div class="mini-figure"><h3>01 · Optimistic rollups</h3><p><strong>Think: accepted unless challenged.</strong> Transactions are processed on the Layer 2. The system assumes the submitted result is valid, while a fraud-proof process allows an invalid result to be challenged. The challenge and withdrawal rules depend on the network.</p><p><strong>Examples:</strong> Base and Arbitrum One.</p><svg viewBox="0 0 420 125" role="img" aria-label="Optimistic rollup process: execute on Layer 2, post data to Ethereum, allow a challenge if someone disputes the result"><rect x="8" y="28" width="112" height="62" rx="10" fill="#203b45"/><text x="64" y="53" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Execute</text><text x="64" y="71" text-anchor="middle" fill="#bdcbc5" font-size="11">on L2</text><path d="M122 59H153" stroke="#758d4d" stroke-width="3"/><path d="M147 53l8 6-8 6" fill="none" stroke="#758d4d" stroke-width="3"/><rect x="158" y="28" width="112" height="62" rx="10" fill="#203b45"/><text x="214" y="53" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Post data</text><text x="214" y="71" text-anchor="middle" fill="#bdcbc5" font-size="11">to Ethereum</text><path d="M272 59H303" stroke="#758d4d" stroke-width="3"/><path d="M297 53l8 6-8 6" fill="none" stroke="#758d4d" stroke-width="3"/><rect x="308" y="28" width="104" height="62" rx="10" fill="#d2f477"/><text x="360" y="53" text-anchor="middle" fill="#203b45" font-size="13" font-weight="700">Challenge</text><text x="360" y="71" text-anchor="middle" fill="#203b45" font-size="11">if disputed</text></svg></div>
+<div class="mini-figure"><h3>02 · ZK rollups</h3><p><strong>Think: prove the result mathematically.</strong> Transactions are processed on the Layer 2 and grouped into batches. A cryptographic validity proof is generated and checked by a smart contract on Ethereum.</p><p><strong>Example:</strong> ZKsync Era.</p><svg viewBox="0 0 420 125" role="img" aria-label="ZK rollup process: execute and batch transactions on Layer 2, generate a validity proof, verify it on Ethereum"><rect x="8" y="28" width="112" height="62" rx="10" fill="#203b45"/><text x="64" y="53" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Execute</text><text x="64" y="71" text-anchor="middle" fill="#bdcbc5" font-size="11">on L2</text><path d="M122 59H153" stroke="#758d4d" stroke-width="3"/><path d="M147 53l8 6-8 6" fill="none" stroke="#758d4d" stroke-width="3"/><rect x="158" y="28" width="112" height="62" rx="10" fill="#203b45"/><text x="214" y="53" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Create proof</text><text x="214" y="71" text-anchor="middle" fill="#bdcbc5" font-size="11">for the batch</text><path d="M272 59H303" stroke="#758d4d" stroke-width="3"/><path d="M297 53l8 6-8 6" fill="none" stroke="#758d4d" stroke-width="3"/><rect x="308" y="28" width="104" height="62" rx="10" fill="#c3b8ff"/><text x="360" y="53" text-anchor="middle" fill="#203b45" font-size="13" font-weight="700">Verify</text><text x="360" y="71" text-anchor="middle" fill="#203b45" font-size="11">on Ethereum</text></svg></div>
+</div>
+<div class="callout"><strong>Important:</strong> “Optimistic” does not mean careless, and “zero-knowledge” does not mean the network hides all transaction information. These are names for different proof systems. Both approaches have technical trade-offs, and a network's full security also depends on data availability, upgrade controls, sequencers, bridges and other design choices.</div>
+
+<div class="section-top" style="margin-top:48px"><div class="chapter">NETWORK EXAMPLES</div><div><h2>Base, Arbitrum and ZKsync: same broad goal, different systems.</h2><p>These are examples of Ethereum Layer 2 rollups, not a ranking. Base and Arbitrum One use optimistic rollup designs; ZKsync Era uses validity proofs.</p></div></div>
+<div class="compare l2-compare">
+<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">B</div><div class="type">Optimistic rollup</div><h3>Base</h3><p>Built using the OP Stack. It has its own applications, users and developer ecosystem. It may be a practical choice when the app or community you want to use is on Base.</p><div class="question">Check: app support, fees, liquidity, wallet support and current network security status.</div></div></article>
+<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">A</div><div class="type">Optimistic rollup</div><h3>Arbitrum One</h3><p>Uses the Arbitrum rollup protocol and fraud-proof dispute process. It has a substantial DeFi ecosystem. It may suit users whose chosen protocols and liquidity are on Arbitrum One.</p><div class="question">Check: protocol availability, liquidity, fees and withdrawal route.</div></div></article>
+<article class="network"><div class="stripe"></div><div class="network-body"><div class="symbol">Z</div><div class="type">ZK rollup</div><h3>ZKsync Era</h3><p>Uses validity proofs to verify batches of transactions on Ethereum. It may suit users whose chosen applications use ZKsync Era or its account and developer features.</p><div class="question">Check: app support, token availability, wallet compatibility and proof / data design.</div></div></article>
+</div>
+<div class="callout"><strong>Same category does not mean identical.</strong> Base and Arbitrum both use optimistic rollup approaches, but they are separate networks with different applications, liquidity, infrastructure, governance and user experiences. ZKsync Era uses a different proof mechanism. That alone does not make it automatically faster, cheaper or better.</div>
+
+<div class="section-top" style="margin-top:48px"><div class="chapter">PICKING A NETWORK</div><div><h2>So, which Layer 2 should you use?</h2><p>There is no single best Layer 2 for everyone. Start with what you want to do, then compare the network that supports it.</p></div></div>
+<div class="sequence l2-choice">
+<article><div class="step">01 / APP</div><h4>Does the app support it?</h4><p>Start with the application you want to use. Not every app, token or service exists on every network.</p></article>
+<article><div class="step">02 / COST</div><h4>What will the action cost?</h4><p>Compare the current transaction fee and any deposit, withdrawal or bridge costs. Fees change with demand.</p></article>
+<article><div class="step">03 / ASSETS</div><h4>Are your assets and liquidity there?</h4><p>Check that the token, trading pair, lending market or other service you need is available on that network.</p></article>
+<article><div class="step">04 / TRUST</div><h4>Understand the trade-offs.</h4><p>Check the network's security model, data availability, upgrade controls, bridge route and withdrawal process.</p></article>
 </div>
 <div class="two-col">
-<div class="mini-figure"><h3>What happens on Base?</h3><p>Users interact with apps on Base. Base processes those transactions as its own network, rather than sending every individual transaction to Ethereum for direct execution.</p></div>
-<div class="mini-figure"><h3>Why connect it to Ethereum?</h3><p>Base posts transaction data to Ethereum so the underlying Layer 1 can support important parts of the system's security and settlement. The exact guarantees depend on the rollup design and its current configuration.</p></div>
+<div class="mini-figure"><h3>Example: you want to use a DeFi app</h3><p>If the protocol and the liquidity you need are on Arbitrum One, Arbitrum may be the sensible choice. The fact that another network has a lower advertised fee won't help if the app or market you need isn't there.</p></div>
+<div class="mini-figure"><h3>Example: you want to try a consumer app</h3><p>If the app is built on Base and supports your wallet and assets there, Base may be the simplest route. Choose the network that makes the task possible and practical, not the one with the most impressive slogan.</p></div>
 </div>
-<div class="callout"><strong>One important distinction: a Layer 2 is not the same thing as a bridge.</strong> Base is the Layer 2 network. A bridge is a tool or mechanism that can move assets between networks, such as Ethereum and Base. The bridge connects the roads; it is not the expressway itself.</div>
-<div class="callout"><strong>Why build Layer 2s?</strong> They aim to offer more capacity and often lower transaction costs or faster experiences, while remaining connected to an underlying Layer 1. These benefits come with design trade-offs, and not all Layer 2 networks work in exactly the same way.</div>
+<div class="callout"><strong>One more distinction: a Layer 2 is not a bridge.</strong> Base is a Layer 2 network. A bridge is a separate mechanism for moving assets or messages between networks, such as Ethereum and Base. Bridges have their own risks and fees; they are not the Layer 2 itself.</div>
 </section>
 <section id="networks">
 <div class="section-top"><div class="chapter">05 / Compare ecosystems</div><div><h2>Four networks. Different designs and growth questions.</h2><p>These examples help illustrate the range of blockchain ecosystems. The aim is not to rank them, but to understand what each one is and what a growth strategist might investigate.</p></div></div>
@@ -184,6 +189,9 @@ main section{padding:74px 0;border-bottom:1px solid var(--line)}.section-top{dis
 <a class="source" href="https://ethereum.org/developers/docs/intro-to-ethereum/" target="_blank" rel="noopener"><div><strong>Ethereum — Technical introduction</strong><span>Blockchain, Ethereum and smart contracts</span></div><b>↗</b></a>
 <a class="source" href="https://ethereum.org/guides/" target="_blank" rel="noopener"><div><strong>Ethereum — Beginner guides</strong><span>Wallets, transactions, security and Layer 2</span></div><b>↗</b></a>
 <a class="source" href="https://ethereum.org/layer-2/learn/" target="_blank" rel="noopener"><div><strong>Ethereum — Learn about Layer 2</strong><span>Layer 1 and Layer 2 concepts</span></div><b>↗</b></a>
+<a class="source" href="https://ethereum.org/developers/docs/scaling/optimistic-rollups/" target="_blank" rel="noopener"><div><strong>Ethereum — Optimistic rollups</strong><span>How fraud proofs and data posting work</span></div><b>↗</b></a>
+<a class="source" href="https://docs.arbitrum.io/get-started/arbitrum-introduction" target="_blank" rel="noopener"><div><strong>Arbitrum — Introduction</strong><span>Execution, settlement and fraud proofs</span></div><b>↗</b></a>
+<a class="source" href="https://docs.zksync.io/zksync-network/zksync-era" target="_blank" rel="noopener"><div><strong>ZKsync — About Era</strong><span>Validity proofs and network architecture</span></div><b>↗</b></a>
 <a class="source" href="https://solana.com/learn" target="_blank" rel="noopener"><div><strong>Solana — Learn</strong><span>Wallets, fees, tokens and applications</span></div><b>↗</b></a>
 <a class="source" href="https://www.coinbase.com/developer-platform/products/base" target="_blank" rel="noopener"><div><strong>Base — Developer platform</strong><span>Base network and developer resources</span></div><b>↗</b></a>
 <a class="source" href="https://web3.okx.com/xlayer" target="_blank" rel="noopener"><div><strong>X Layer — Official site</strong><span>Network overview and ecosystem information</span></div><b>↗</b></a>
