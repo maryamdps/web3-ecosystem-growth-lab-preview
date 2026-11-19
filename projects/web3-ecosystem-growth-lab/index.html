@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An independent Web3 product exploration and ecosystem growth research project by Maryam Khan.">
+<meta name="robots" content="noindex,nofollow">
+<title>Web3 Ecosystem Growth Lab | Maryam Khan</title>
+<style>
+:root{--bg:#f7f6f2;--paper:#fffefa;--ink:#20221f;--muted:#686d65;--line:#dedfd7;--accent:#c4f06b;--soft:#ecefe5;--dark:#202821;--green:#697f4a;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:21px 0;border-bottom:1px solid var(--line)}.brand{font-size:.92rem;font-weight:850;letter-spacing:-.03em}.mark{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--accent);border-radius:50%;margin-right:8px}.back{font-size:.9rem;color:var(--muted)}
+.hero{padding:76px 0 58px;display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center}.eyebrow,.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;font-weight:850;color:var(--muted)}.status{display:inline-flex;align-items:center;gap:9px;border:1px solid #cbd6b8;background:#eff4e6;border-radius:99px;padding:8px 13px;font-size:.78rem;font-weight:800;color:#425332}.status:before{content:"";width:8px;height:8px;border-radius:50%;background:#7b9c48}h1{font-size:clamp(3.1rem,7vw,6.4rem);line-height:.94;letter-spacing:-.078em;margin:22px 0 24px;font-weight:790;max-width:800px}h1 em{font-style:normal;color:var(--green)}.lead{font-size:1.16rem;color:var(--muted);max-width:690px}.hero-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}.chip{font-size:.8rem;border:1px solid var(--line);border-radius:99px;padding:8px 12px;background:#ffffffa6}.hero-art{min-height:420px;background:var(--dark);border-radius:24px;padding:25px;color:#eff5e5;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #c4f06b66;border-radius:50%;width:310px;height:310px;right:-60px;top:42px}.hero-art:after{width:220px;height:220px;right:-15px;top:87px}.orbit-core{position:absolute;width:112px;height:112px;right:90px;top:142px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:var(--dark);font-size:1.1rem;font-weight:900;box-shadow:0 0 0 18px #c4f06b16,0 0 0 42px #c4f06b0b}.art-top,.art-bottom{position:relative;z-index:1}.art-top{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:850}.art-bottom{font-size:1.7rem;line-height:1.08;letter-spacing:-.05em;font-weight:800;max-width:270px}.hero-art small{font-size:.8rem;color:#c5cebb}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 18px}.summary-card{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:21px}.summary-card strong{display:block;font-size:1.02rem;margin-bottom:6px}.summary-card span{font-size:.88rem;color:var(--muted)}
+section{padding:82px 0}.section-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start;margin-bottom:34px}h2{font-size:clamp(2.15rem,4.4vw,3.8rem);line-height:1.02;letter-spacing:-.07em;margin:10px 0 0}h3{letter-spacing:-.035em}.section-intro{font-size:1.02rem;color:var(--muted);margin:0;max-width:680px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:19px;padding:25px}.panel h3{font-size:1.22rem;margin:0 0 10px}.panel p,.panel li{color:var(--muted);font-size:.94rem}.panel ul{padding-left:20px;margin-bottom:0}.panel li{margin:8px 0}.dark{background:var(--dark);color:#f7f6f2;border-color:var(--dark)}.dark p,.dark li{color:#c7cec0}.dark .kicker{color:var(--accent)}
+.baseline{display:grid;grid-template-columns:1fr 1fr;gap:14px}.baseline-item{background:var(--soft);border-radius:16px;padding:22px}.baseline-item strong{display:block;margin-bottom:6px}.baseline-item p{margin:0;color:#5c6554;font-size:.91rem}
+.workstreams{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.workstream{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:225px;display:flex;flex-direction:column}.workstream-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.number{font-size:.78rem;letter-spacing:.1em;font-weight:900;color:var(--green)}.stage{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:850;border-radius:99px;background:var(--soft);padding:6px 9px;color:#59634f}.workstream h3{font-size:1.35rem;line-height:1.15;margin:22px 0 9px}.workstream p{font-size:.92rem;color:var(--muted);margin:0}.deliverable{margin-top:auto;padding-top:19px;font-size:.82rem;font-weight:800}
+.process{background:var(--dark);color:#f7f6f2}.process .kicker,.process .section-intro{color:#c7cec0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#4b5146;border:1px solid #4b5146;border-radius:19px;overflow:hidden;margin-top:32px}.step{padding:22px;background:var(--dark);min-height:185px}.step b{font-size:.8rem;color:var(--accent)}.step h3{font-size:1.03rem;margin:26px 0 7px}.step p{font-size:.84rem;color:#c7cec0;margin:0}
+.evidence{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.evidence-table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}.evidence-table th,.evidence-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:.87rem;vertical-align:top}.evidence-table th{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:#f0f1eb}.evidence-table tr:last-child td{border-bottom:0}.evidence-note{background:var(--soft);border-radius:17px;padding:23px}.evidence-note h3{margin:0 0 10px}.evidence-note p{color:#59634f;font-size:.91rem}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.principle{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--paper)}.principle .icon{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:var(--accent);font-weight:900;margin-bottom:18px}.principle h3{font-size:1.04rem;margin:0 0 7px}.principle p{font-size:.87rem;color:var(--muted);margin:0}
+.closing{background:var(--accent);padding:42px;border-radius:24px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.closing h2{font-size:clamp(2rem,4vw,3.1rem);max-width:700px}.closing p{color:#48543b;max-width:620px}.closing-note{border-left:1px solid #849c54;padding-left:22px;font-size:.9rem;color:#48543b}
+footer{padding:28px 0 38px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:.82rem}
+@media(max-width:760px){.wrap{width:calc(100% - 28px)}.hero{grid-template-columns:1fr;padding:52px 0 40px;gap:24px}.hero-art{min-height:300px}.orbit-core{right:76px;top:100px}.summary,.principles{grid-template-columns:1fr}.section-head{grid-template-columns:1fr;gap:16px}section{padding:60px 0}.two-col,.baseline,.workstreams,.evidence,.closing{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.closing{padding:27px}.closing-note{border-left:0;border-top:1px solid #849c54;padding:17px 0 0}footer{flex-direction:column}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}.evidence-table th,.evidence-table td{padding:11px 10px;font-size:.8rem}}
+
+/* Web3 Explained video series */
+.video-lab{background:#101b27;color:#f5f7f2}
+.video-lab .kicker{color:#c7f36b}
+.video-lab .section-intro{color:#c4ceca}
+.video-feature{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:stretch}
+.video-main{background:#1b2b38;border:1px solid #344653;border-radius:16px;padding:27px}
+.video-main .video-status{display:inline-flex;border:1px solid #71836d;background:#283b3c;color:#dff8a7;border-radius:99px;padding:6px 10px;font-size:.72rem;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
+.video-main h3{font-size:1.75rem;line-height:1.1;letter-spacing:-.05em;margin:22px 0 10px;color:#fff}
+.video-main p{color:#c4ceca;font-size:.94rem}
+.video-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.video-meta span{font-size:.75rem;border:1px solid #52636a;border-radius:99px;padding:6px 10px;color:#e3e9e2}
+.video-side{display:grid;gap:12px}
+.video-side-card{background:#1b2b38;border:1px solid #344653;border-radius:14px;padding:20px}
+.video-side-card b{display:block;color:#c7f36b;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.video-side-card p{margin:0;color:#d0d9d4;font-size:.88rem}
+.episode-list{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+.episode{background:#1b2b38;border:1px solid #344653;border-radius:12px;padding:15px}
+.episode small{display:block;color:#c7f36b;font-size:.68rem;letter-spacing:.08em;font-weight:850;text-transform:uppercase}
+.episode strong{display:block;color:#f7f8f3;font-size:.9rem;line-height:1.25;margin:9px 0 5px}
+.episode span{font-size:.75rem;color:#aebdbb}
+.video-footnote{font-size:.78rem;color:#aebdbb;margin:16px 0 0}
+@media(max-width:760px){.video-feature{grid-template-columns:1fr}.episode-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.episode-list{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header class="wrap">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="../../index.html"><span class="mark">M</span>MARYAM KHAN</a>
+    <a class="back" href="../../index.html">← Back to portfolio</a>
+  </nav>
+</header>
+<main>
+  <div class="wrap">
+    <section class="hero" style="padding-bottom:42px">
+      <div>
+        <span class="status">Independent project · In development</span>
+        <p class="eyebrow" style="margin-top:25px">Web3 · Product exploration · Ecosystem growth</p>
+        <h1>Web3 Ecosystem <em>Growth Lab</em></h1>
+        <p class="lead">A hands-on learning and research initiative exploring how people discover, understand and adopt on-chain products — and how ecosystems can turn first interactions into lasting participation.</p>
+        <div class="hero-meta"><span class="chip">Wallet & dApp exploration</span><span class="chip">Ecosystem intelligence</span><span class="chip">Growth strategy</span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract illustration of a connected Web3 ecosystem">
+        <div class="art-top">Research · Explore · Activate · Retain</div>
+        <div class="orbit-core">WEB3</div>
+        <div class="art-bottom">From first interaction to meaningful participation.</div>
+        <small>Independent research project by Maryam Khan</small>
+      </div>
+    </section>
+    <div class="summary">
+      <div class="summary-card"><strong>01 / Product fluency</strong><span>Build practical understanding of wallets, transactions and decentralised applications.</span></div>
+      <div class="summary-card"><strong>02 / Ecosystem intelligence</strong><span>Research protocols, user segments and opportunities across emerging ecosystems.</span></div>
+      <div class="summary-card"><strong>03 / Growth execution thinking</strong><span>Translate product and user insights into acquisition, activation and retention strategies.</span></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker">01 / Project overview</p><h2>Learning the ecosystem by experiencing it.</h2></div><p class="section-intro">This project connects practical product exploration with the growth skills I have developed across marketing, community building, content and go-to-market work. The aim is to understand both the mechanics of on-chain products and the reasons people choose to use them — or drop off.</p></div>
+      <div class="two-col">
+        <article class="panel"><h3>Research questions</h3><ul><li>What makes a first wallet or dApp interaction understandable and approachable?</li><li>Where do users encounter friction across discovery, connection and transaction flows?</li><li>What motivates users to return after their first on-chain action?</li><li>How can ecosystem campaigns create useful participation rather than one-off activity?</li></ul></article>
+        <article class="panel dark"><h3>Intended outcome</h3><p>A documented body of practical product observations, ecosystem research and a clearly labelled growth proposal. Findings will be supported by dated notes, screenshots and source links as the work is completed.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f0f1eb">
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker">02 / Starting point</p><h2>Establishing a clear baseline.</h2></div><p class="section-intro">The project begins with foundational wallet familiarity and exchange experience. The baseline is intentionally specific: owning a wallet or purchasing crypto through an exchange is not the same as completing an on-chain transaction.</p></div>
+      <div class="baseline">
+        <div class="baseline-item"><strong>Current experience</strong><p>MetaMask wallet created. Prior experience purchasing crypto through Binance.</p></div>
+        <div class="baseline-item"><strong>Experience to develop</strong><p>Verified on-chain interactions, dApp connections, transaction inspection, token approvals, swaps and cross-chain concepts.</p></div>
+      </div>
+      <p style="font-size:.8rem;color:#68705f;margin:15px 0 0">Baseline reflects experience confirmed at project start. Additional activity will only be added after it has been completed and documented.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker">03 / Workstreams</p><h2>Five connected areas of exploration.</h2></div><p class="section-intro">Each workstream will produce a concrete output. Planned activities are not presented as completed work; this page will be updated as research and practical exercises are carried out.</p></div>
+      <div class="workstreams">
+        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">Planned</span></div><h3>Wallet & on-chain fundamentals</h3><p>Explore wallet setup, addresses, networks, transaction anatomy, gas, signatures, token approvals and blockchain explorers.</p><div class="deliverable">Output: annotated transaction and wallet journey notes</div></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">Planned</span></div><h3>dApp & DeFi product review</h3><p>Experience selected decentralised applications and examine swaps, liquidity, slippage, bridges and user-facing risk communication.</p><div class="deliverable">Output: product experience audit and friction map</div></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">Planned</span></div><h3>X Layer ecosystem intelligence</h3><p>Research ecosystem projects, their value propositions, target users, activity signals and potential partnership fit.</p><div class="deliverable">Output: ecosystem map and project shortlist</div></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">Planned</span></div><h3>Acquisition & retention strategy</h3><p>Develop a campaign concept with audience segments, discovery channels, activation mechanics, community touchpoints and retention loops.</p><div class="deliverable">Output: campaign proposal, funnel and KPI framework</div></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">05</span><span class="stage">Planned</span></div><h3>User insights & adoption</h3><p>Study onboarding, education, trust cues and the barriers that shape beginner and experienced user behaviour.</p><div class="deliverable">Output: user journey, insight summary and recommendations</div></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">06</span><span class="stage">Planned</span></div><h3>OKX Wallet product exploration</h3><p>Review the wallet experience and relevant ecosystem journeys, documenting what is intuitive, what needs explanation and where users may need support.</p><div class="deliverable">Output: product walkthrough and improvement opportunities</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-lab">
+    <div class="wrap">
+      <div class="section-head">
+        <div><p class="kicker">04 / Web3 Explained</p><h2>Making complex ideas easier to understand.</h2></div>
+        <p class="section-intro">An AI-assisted educational video series translating Web3 concepts into clear, beginner-friendly explanations. Each episode combines research, scripting, visual storytelling and an AI-assisted production workflow — building the ability to communicate technical ideas to broader audiences.</p>
+      </div>
+      <div class="video-feature">
+        <article class="video-main">
+          <span class="video-status">Episode 01 · In production</span>
+          <h3>What is Web3?</h3>
+          <p>The pilot episode introduces the evolution from Web1 to Web2 and the emerging vision for Web3, using simple comparisons and visual explanations of blockchains, digital wallets and smart contracts.</p>
+          <div class="video-meta"><span>Beginner education</span><span>AI presenter + cloned voice</span><span>Motion-led diagrams</span><span>60-second pilot</span></div>
+        </article>
+        <div class="video-side">
+          <div class="video-side-card"><b>01 / Research & scripting</b><p>Translate technical concepts into accurate, accessible narration, supported by research and clear learning objectives.</p></div>
+          <div class="video-side-card"><b>02 / Visual storytelling</b><p>Storyboard diagrams, comparisons, visual metaphors, typography, colour and transitions to make abstract concepts easier to follow.</p></div>
+          <div class="video-side-card"><b>03 / AI-assisted production</b><p>Use an AI presenter, cloned voice and generated visual sequences, then review the output for clarity, accuracy and mobile readability.</p></div>
+        </div>
+      </div>
+      <div class="episode-list" aria-label="Planned Web3 Explained episodes">
+        <article class="episode"><small>Episode 01 · In production</small><strong>What is Web3?</strong><span>Series pilot</span></article>
+        <article class="episode"><small>Episode 02 · Planned</small><strong>What is a Blockchain?</strong><span>Shared digital record</span></article>
+        <article class="episode"><small>Episode 03 · Planned</small><strong>What is a Blockchain Network?</strong><span>Nodes and networks</span></article>
+        <article class="episode"><small>Episode 04 · Planned</small><strong>What is Layer 1?</strong><span>Base-layer foundations</span></article>
+      </div>
+      <p class="video-footnote">The pilot is currently being generated. Further episodes are planned and will be added as they are produced and reviewed. No completed video or published performance results are claimed at this stage.</p>
+    </div>
+  </section>
+
+
+  <section class="process">
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker">05 / Working method</p><h2>Learn it. Test it. Analyse it. Apply it.</h2></div><p class="section-intro">A repeatable process keeps the work grounded in actual product use and observable evidence, then connects those findings to commercial and ecosystem growth decisions.</p></div>
+      <div class="steps">
+        <div class="step"><b>STEP 01</b><h3>Explore</h3><p>Use products and protocols in a controlled, low-risk way. Record the exact journey and context.</p></div>
+        <div class="step"><b>STEP 02</b><h3>Document</h3><p>Capture screenshots, transaction references where applicable, sources and dated observations.</p></div>
+        <div class="step"><b>STEP 03</b><h3>Interpret</h3><p>Identify user needs, friction points, ecosystem patterns and potential growth levers.</p></div>
+        <div class="step"><b>STEP 04</b><h3>Recommend</h3><p>Turn evidence into product, partnership, campaign and retention recommendations.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker">06 / Evidence log</p><h2>Proof before claims.</h2></div><p class="section-intro">This section will become the evidence layer of the case study. Only completed activities and verified findings will be added here; proposed exercises and hypotheses will remain clearly labelled.</p></div>
+      <div class="evidence">
+        <table class="evidence-table" aria-label="Project evidence tracker"><thead><tr><th>Evidence item</th><th>Status</th></tr></thead><tbody>
+          <tr><td>MetaMask wallet created</td><td>Confirmed at start</td></tr>
+          <tr><td>On-chain transaction inspected</td><td>Not yet documented</td></tr>
+          <tr><td>dApp interaction and permissions review</td><td>To be completed</td></tr>
+          <tr><td>DEX / DeFi product walkthrough</td><td>To be completed</td></tr>
+          <tr><td>X Layer project research</td><td>To be completed</td></tr>
+          <tr><td>Growth campaign proposal</td><td>To be developed</td></tr>
+        </tbody></table>
+        <aside class="evidence-note"><h3>Documentation standard</h3><p>Each completed exercise will include its date, product or protocol, network, steps taken, what was observed, relevant source or transaction reference, and the growth or product insight drawn from it. Sensitive wallet details will never be published.</p></aside>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f0f1eb">
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker">07 / Principles</p><h2>Useful participation over vanity activity.</h2></div><p class="section-intro">The project is designed to build practical fluency without confusing activity with expertise. It will prioritise responsible exploration, accurate interpretation and user-centred recommendations.</p></div>
+      <div class="principles">
+        <article class="principle"><div class="icon">01</div><h3>Evidence-led</h3><p>Distinguish verified activity, research observations, hypotheses and proposed campaign ideas.</p></article>
+        <article class="principle"><div class="icon">02</div><h3>User-centred</h3><p>Consider clarity, usability, trust and the reasons users may hesitate or disengage.</p></article>
+        <article class="principle"><div class="icon">03</div><h3>Risk-aware</h3><p>Use controlled exploration, protect wallet credentials and avoid unnecessary financial exposure.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap" style="padding:20px 0 76px">
+    <div class="closing">
+      <div><p class="kicker">The intended result</p><h2>Turning product understanding into ecosystem growth.</h2><p>A portfolio case study connecting hands-on Web3 learning with user research, ecosystem analysis and practical growth strategy.</p></div>
+      <div class="closing-note"><strong>Project status: In development</strong><br><br>This is an independent learning and research project. It is not affiliated with or endorsed by OKX. No campaign execution or ecosystem partnership is claimed.</div>
+    </div>
+  </div>
+</main>
+<footer class="wrap"><span>© 2026 Maryam Khan</span><span>Independent Web3 research & growth project</span></footer>
+</body>
+</html>
