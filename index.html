@@ -191,15 +191,6 @@ section{padding:104px 0}
 @media(max-width:760px){.foundations-grid{grid-template-columns:1fr}.foundations{padding-top:38px!important;padding-bottom:38px!important}}
 
 
-/* Plain-English Web3 primer */
-.primer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 18px}
-.primer-card{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#151e29,#11151c)}
-.primer-label{display:block;color:var(--accent);font-size:.65rem;font-weight:850;letter-spacing:.13em;margin-bottom:10px}
-.primer-card h3{font-size:1.1rem;margin:0 0 8px;color:var(--ink)}
-.primer-card p{font-size:.86rem;line-height:1.6;color:var(--muted);margin:0}
-.primer-card .primer-example{margin-top:12px;padding-top:11px;border-top:1px solid var(--line);font-size:.8rem}
-.primer-example strong{color:var(--accent)}
-@media(max-width:760px){.primer-grid{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -251,34 +242,9 @@ section{padding:104px 0}
     </div>
   </section>
 
-  <section class="foundations">
-    <div class="wrap">
-      <div class="section-head"><div><p class="kicker">A QUICK WEB3 PRIMER</p><h2>First, what do Web3 and blockchain mean?</h2></div><p class="section-intro">You do not need a technical background to follow this case study. These three ideas provide the context; the Layer 2 explainer reel can then show how they connect.</p></div>
-      <div class="foundations-grid">
-        <article class="foundation-card"><span class="foundation-index">01 / THE RECORD</span><h3>Blockchain</h3><p>A shared digital record of activity. Instead of one organisation keeping the only copy, a network of computers helps maintain and verify the record using agreed rules.</p><p class="foundation-example"><strong>Simple example:</strong> Imagine a shared record book that many independent participants can check. When a valid transaction is added, the network updates the record so participants can agree on what happened.</p></article>
-        <article class="foundation-card"><span class="foundation-index">02 / THE IDEA</span><h3>Web3</h3><p>A broad idea for internet services that use blockchain and digital assets to let people hold and use certain digital items, and interact with applications through a wallet.</p><p class="foundation-example"><strong>Simple example:</strong> Instead of signing into every service only with a company account, a person may connect a digital wallet to an app to use a supported service or manage a digital asset.</p></article>
-        <article class="foundation-card"><span class="foundation-index">03 / THE NETWORK</span><h3>Ethereum</h3><p>A blockchain network that can record transactions and run smart contracts — software that follows rules stored on the blockchain. Developers use it to build applications.</p><p class="foundation-example"><strong>Simple example:</strong> Developers can build services on Ethereum, such as apps for exchanging digital assets, lending, games or payments.</p></article>
-      </div>
-    </div>
-  </section>
-
   <section>
     <div class="wrap">
-      <div class="section-head"><div><p class="kicker">02 / THE TECHNOLOGY — IN PLAIN ENGLISH</p><h2>Just enough context to understand the opportunity.</h2></div><p class="section-intro">A Layer 2 is a network built to help applications run with more capacity and often lower transaction costs than using Ethereum directly. That can make frequent digital actions more practical. For this growth strategy, the important point is what that enables — not the technical mechanics underneath.</p></div>
-      <div class="primer-grid" aria-label="Web3 and blockchain basics">
-        <article class="primer-card">
-          <span class="primer-label">THE BIGGER IDEA</span>
-          <h3>What is Web3?</h3>
-          <p>Web3 is a broad term for internet services that use blockchain technology. Instead of every digital record being controlled by one company, some Web3 applications let people interact with shared networks and use or hold digital assets themselves.</p>
-          <p class="primer-example"><strong>Example:</strong> Rather than keeping a game item only inside one company's game database, a Web3 game might represent that item as a digital asset in a wallet that the player can control and use where supported.</p>
-        </article>
-        <article class="primer-card">
-          <span class="primer-label">THE UNDERLYING TECHNOLOGY</span>
-          <h3>What is a blockchain?</h3>
-          <p>A blockchain is a shared digital record of activity. A network of computers checks new transactions against agreed rules and updates the record, so participants can verify the same history without relying on one central company to maintain it.</p>
-          <p class="primer-example"><strong>Example:</strong> If someone sends a digital asset, the network checks that the sender is allowed to make the transfer and then adds the transaction to its shared record.</p>
-        </article>
-      </div>
+      <div class="section-head"><div><p class="kicker">02 / THE TECHNOLOGY — IN PLAIN ENGLISH</p><h2>Web3, blockchain and Layer 2 — how do they fit together?</h2></div><p class="section-intro">Web3 is a broad term for internet services that use blockchain technology. A blockchain is a shared digital record that a network helps maintain and verify. Ethereum is one such network; a Layer 2 connects to an underlying blockchain like Ethereum to help applications handle activity with greater capacity and often lower costs. The four stages below show how the technology becomes something people can actually use.</p></div>
       <div class="workstreams">
         <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">FOUNDATION</span><span class="icon-mark" aria-hidden="true">◈</span></div><h3>Ethereum</h3><p>The underlying blockchain that provides the base environment and security foundations for the ecosystem.</p><p class="example"><strong>Beginner example:</strong> Think of Ethereum as a shared public record book and rulebook. When someone sends a transaction or uses an app, computers on the network check that it follows the rules — for example, that the person is allowed to make the transfer — and update the shared record. This lets users and apps verify the same history instead of relying on one company to keep the only copy. Many Layer 2 networks use Ethereum to publish data or settle activity, although their security designs differ.</p></article>
         <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">SCALING</span><span class="icon-mark" aria-hidden="true">↗</span></div><h3>Layer 2 network</h3><p>A network designed to make blockchain activity more scalable and practical for everyday applications.</p><p class="example"><strong>Beginner example:</strong> Imagine a local express line connected to the main railway. It handles more journeys away from the busiest central tracks, then uses the main network in a defined way to report or settle activity. This can help apps handle more activity, often at a lower cost.</p></article>
