@@ -31,6 +31,34 @@ details{border:1px solid var(--line);border-radius:12px;background:#101215;paddi
 footer{padding:26px 0 38px;display:flex;justify-content:space-between;gap:15px;color:#777f76;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:52px 0 42px;gap:28px}.visual{height:290px}.section-head{display:block}.section-head p{margin-top:12px}.flow{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.wrap{width:calc(100% - 30px)}header{height:auto;padding:13px 0;flex-wrap:wrap}nav{order:3;width:100%;justify-content:space-between;gap:10px}nav a{font-size:11px}.back{font-size:11px}.hero{padding-top:40px}h1{font-size:43px}.intro{font-size:14px}.visual{height:250px}.section{padding:40px 0}.grid3,.compare,.flow,.hypotheses,.sources{grid-template-columns:1fr}.card{min-height:0}.section h2{font-size:27px}footer{display:block}footer span{display:block;margin-top:7px}}
+
+/* Visual learning modules */
+.iconrow{display:flex;align-items:center;gap:9px;margin-bottom:10px;color:var(--lime)}
+.iconbox{width:34px;height:34px;border:1px solid #48513a;background:#171d12;border-radius:10px;display:grid;place-items:center;flex:none}
+.iconbox svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ecosystem-map{margin-top:18px;padding:22px;border:1px solid #34303f;border-radius:16px;background:radial-gradient(ellipse at 50% 50%,#34204a66,transparent 55%),#0d0f14}
+.map-label{font-size:10px;color:#9ba196;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.eco-flow{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr;align-items:center;gap:8px}
+.eco-node{min-height:98px;border:1px solid #383b45;background:#14171e;border-radius:12px;padding:13px;text-align:center;display:grid;align-content:center;justify-items:center;gap:7px}
+.eco-node strong{font-size:12px}.eco-node span{font-size:10px;color:var(--muted);line-height:1.4}
+.eco-node .iconbox{margin:0}
+.eco-arrow{color:var(--lime);text-align:center;font-size:20px}
+.layer-diagram{margin-top:18px;padding:22px;border:1px solid #34303f;border-radius:16px;background:#0d0f14}
+.layer-stack{display:grid;gap:9px;max-width:720px;margin:auto}
+.layer-band{border:1px solid #454052;border-radius:12px;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px;background:linear-gradient(90deg,#17131f,#11151b)}
+.layer-band.l2{border-color:#6d5a92;background:linear-gradient(90deg,#24183a,#15131d)}
+.layer-band.l1{border-color:#758d38;background:linear-gradient(90deg,#202a14,#151a12)}
+.layer-band strong{font-size:13px}.layer-band span{font-size:10px;color:#adb3a9;text-align:right}
+.layer-connector{text-align:center;color:var(--lime);font-size:11px;letter-spacing:.08em}
+.video-module{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;padding:22px;border:1px solid #4b3b68;border-radius:16px;background:radial-gradient(ellipse at 15% 50%,#592b8a55,transparent 55%),#111118}
+.video-art{aspect-ratio:16/9;border:1px solid #66528a;border-radius:12px;position:relative;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,#17142b,#111b22)}
+.video-art:before,.video-art:after{content:"";position:absolute;width:55%;height:55%;border:1px solid #a56bff99;border-radius:50%;transform:rotate(-28deg)}
+.video-art:after{width:38%;height:80%;border-color:#c8ff4288;transform:rotate(35deg)}
+.play-mark{position:relative;z-index:1;width:52px;height:52px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:#10120c;font-size:19px;padding-left:3px;box-shadow:0 0 35px #c8ff4266}
+.video-copy h3{font-size:21px;line-height:1.15;letter-spacing:-.03em;margin:9px 0}.video-copy p{font-size:12px;color:var(--muted);margin:0 0 12px}
+.status{display:inline-block;border:1px solid #6d5a92;color:#c7a6ff;border-radius:30px;padding:5px 9px;font-size:9px;text-transform:uppercase;letter-spacing:.12em}
+@media(max-width:650px){.eco-flow{grid-template-columns:1fr;gap:7px}.eco-arrow{transform:rotate(90deg)}.eco-node{min-height:80px}.video-module{grid-template-columns:1fr}.layer-band{align-items:flex-start;flex-direction:column}.layer-band span{text-align:left}}
+
 </style>
 </head>
 <body><div class="wrap">
@@ -58,15 +86,28 @@ footer{padding:26px 0 38px;display:flex;justify-content:space-between;gap:15px;c
 <div class="bridge"><strong>How the pieces connect:</strong> a user interacts with an application, usually through a wallet. The wallet requests a transaction signature; the application submits it to the network; the network executes the relevant smart contract and updates its shared state. The result — such as a token transfer or an in-app action — can then be verified on-chain.</div>
 </section>
 
+<div class="ecosystem-map" role="img" aria-label="Diagram showing user interacting with an application through a wallet, with the blockchain network processing the transaction">
+<div class="map-label">THE BASIC INTERACTION LOOP</div><div class="eco-flow">
+<div class="eco-node"><div class="iconbox"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M5 20c.7-3.2 3.1-5 7-5s6.3 1.8 7 5"/></svg></div><strong>User</strong><span>Chooses an action</span></div><div class="eco-arrow">→</div>
+<div class="eco-node"><div class="iconbox"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h5M8 16h8"/></svg></div><strong>App + wallet</strong><span>Builds and signs a transaction</span></div><div class="eco-arrow">→</div>
+<div class="eco-node"><div class="iconbox"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c2.5 2.3 3.5 5 3.5 8s-1 5.7-3.5 8c-2.5-2.3-3.5-5-3.5-8S9.5 6.3 12 4Z"/></svg></div><strong>Network</strong><span>Verifies and executes</span></div>
+</div></div>
 <section class="section" id="layers">
 <div class="section-head"><div><div class="num">02 / SCALING</div><h2>Layer 1 and Layer 2, in simple terms.</h2></div><p>As activity grows, a base chain can become expensive or slower to use. Layer 2 systems aim to increase capacity while keeping a connection to Ethereum. The details matter: “Layer 2” describes a family of designs, not one identical technology.</p></div>
 <div class="compare">
 <article><span class="pill">LAYER 1</span><h3>Ethereum</h3><p>Ethereum is a Layer 1: it processes transactions, executes smart contracts and maintains its own consensus. Its decentralised validator network is a key part of its security model. Demand for blockspace can make transactions costly or slow during busy periods.</p></article>
 <article><span class="pill">LAYER 2</span><h3>Base · Arbitrum · ZKsync</h3><p>Layer 2s execute transactions outside Ethereum’s main execution layer, then publish data and/or proofs back to Ethereum under their specific design. This can reduce user costs and increase throughput. Base, Arbitrum and ZKsync are prominent examples, but their technical architectures and security assumptions differ.</p></article>
+<div class="layer-diagram" role="img" aria-label="Layer 2 execution layer connected to Ethereum Layer 1 settlement and security">
+<div class="map-label">A SIMPLIFIED ROLLUP MODEL</div><div class="layer-stack">
+<div class="layer-band l2"><strong>Layer 2 · Execution</strong><span>Transactions processed off the main Ethereum execution layer</span></div>
+<div class="layer-connector">DATA / PROOFS ↓</div>
+<div class="layer-band l1"><strong>Ethereum · Layer 1</strong><span>Settlement, data availability and base-layer security assumptions</span></div>
+</div></div>
 </div>
 <div class="bridge"><strong>Think of it this way:</strong> Ethereum is the shared railway foundation. Layer 2s are different metro systems connected to it. The analogy helps explain scaling, but it has limits: L2s differ in how they execute transactions, publish data, prove correctness and handle withdrawals. Users should also consider bridges, liquidity fragmentation and the risks of moving assets between networks.</div><div class="bridge"><strong>Why this matters for growth:</strong> lower fees alone do not create adoption. Users still need to know which network an app uses, how to fund a wallet, whether their assets are on the right chain and how to move them safely. Network complexity can quietly become an onboarding problem.</div>
 </section>
 
+<section class="section" id="video-explainer"><div class="section-head"><div><div class="num">VIDEO EXPLAINER / LEARNING SERIES</div><h2>Complex concepts, made easier to understand.</h2></div><p>A companion explainer will turn the Layer 2 research into a short, visual lesson.</p></div><div class="video-module"><div class="video-art" aria-label="Video thumbnail artwork placeholder"><div class="play-mark">▶</div></div><div class="video-copy"><span class="status">In production</span><h3>What is a Layer 2?</h3><p>AI-presented explainer with diagrams and a cloned voiceover, designed for both landscape and vertical viewing.</p><p><strong>Why it belongs here:</strong> it shows how technical research can become clear educational content — an important skill for Web3 marketing and community growth.</p></div></div></section>
 <section class="section" id="adoption">
 <div class="section-head"><div><div class="num">03 / THE GROWTH CHALLENGE</div><h2>Attention is not adoption.</h2></div><p>A funnel is useful, but Web3 adds unfamiliar decisions: wallet custody, signing transactions, gas fees, network selection and irreversible actions. A user can be interested in a product and still abandon it before reaching value.</p></div>
 <div class="flow">
