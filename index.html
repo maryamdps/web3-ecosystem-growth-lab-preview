@@ -158,6 +158,26 @@ section{padding:104px 0}
   .hero-node small{font-size:.56rem}
 }
 
+
+/* Beginner examples, campaign outcomes and adoption measurement visual */
+.example{margin-top:13px!important;padding:12px 13px;border-left:2px solid var(--accent);background:#18212b;border-radius:0 9px 9px 0;color:#c5d0c7!important;font-size:.82rem!important;line-height:1.55}
+.example strong{color:var(--accent)}
+.campaign-outcome{margin-top:12px!important;font-size:.82rem!important;line-height:1.5}
+.campaign-outcome strong{color:var(--accent)}
+.adoption-visual{background:linear-gradient(160deg,#151f2b,#101720);border:1px solid #34414c;border-radius:16px;padding:22px;color:#f2f5ef;align-self:stretch}
+.adoption-visual .kicker{color:var(--accent);margin:0 0 9px}
+.adoption-visual h3{font-size:1.3rem;line-height:1.15;margin:0 0 20px;letter-spacing:-.04em}
+.adoption-flow{display:grid;gap:0}
+.adoption-stage{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 10px;background:#1c2935;border:1px solid #354552;border-radius:10px}
+.adoption-icon{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#c8ff42;color:#111a12;font-weight:900}
+.adoption-stage b{display:block;font-size:.72rem;letter-spacing:.07em;color:#f2f5ef}
+.adoption-stage small{display:block;font-size:.7rem;color:#b3c0bd;margin-top:3px;line-height:1.35}
+.adoption-stage em{font-style:normal;font-size:.58rem;letter-spacing:.08em;font-weight:850;color:#c8ff42;text-align:right}
+.adoption-connector{height:13px;width:2px;background:linear-gradient(var(--accent),#a56bff);margin-left:25px}
+.adoption-takeaway{margin-top:17px;padding:13px;border-radius:10px;background:#c8ff42;color:#111a12;font-size:.8rem;line-height:1.5}
+.adoption-takeaway strong{font-weight:900}
+@media(max-width:760px){.adoption-visual{padding:18px}.adoption-stage{grid-template-columns:32px 1fr auto;gap:8px}.adoption-stage em{font-size:.52rem}}
+
 </style>
 </head>
 <body>
@@ -212,22 +232,12 @@ section{padding:104px 0}
     <div class="wrap">
       <div class="section-head"><div><p class="kicker">02 / THE TECHNOLOGY — IN PLAIN ENGLISH</p><h2>Just enough context to understand the opportunity.</h2></div><p class="section-intro">A Layer 2 is a network built to help applications run with more capacity and often lower transaction costs than using Ethereum directly. That can make frequent digital actions more practical. For this growth strategy, the important point is what that enables — not the technical mechanics underneath.</p></div>
       <div class="workstreams">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">FOUNDATION</span><span class="icon-mark" aria-hidden="true">◈</span></div><h3>Ethereum</h3><p>The underlying blockchain that provides the base environment and security foundations for the ecosystem.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">SCALING</span><span class="icon-mark" aria-hidden="true">↗</span></div><h3>Layer 2 network</h3><p>A network designed to make blockchain activity more scalable and practical for everyday applications.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">UTILITY</span><span class="icon-mark" aria-hidden="true">▣</span></div><h3>Apps and services</h3><p>Products built on the network — such as payment tools, games, marketplaces and finance applications.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">ADOPTION</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>People using them</h3><p>Growth happens when people discover an app, understand its value, complete a useful action and come back.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">FOUNDATION</span><span class="icon-mark" aria-hidden="true">◈</span></div><h3>Ethereum</h3><p>The underlying blockchain that provides the base environment and security foundations for the ecosystem.</p><p class="example"><strong>Beginner example:</strong> Think of Ethereum as the main railway system that provides the foundations and rules.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">SCALING</span><span class="icon-mark" aria-hidden="true">↗</span></div><h3>Layer 2 network</h3><p>A network designed to make blockchain activity more scalable and practical for everyday applications.</p><p class="example"><strong>Beginner example:</strong> A faster local train line that connects to the main railway, helping more journeys happen efficiently.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">UTILITY</span><span class="icon-mark" aria-hidden="true">▣</span></div><h3>Apps and services</h3><p>Products built on the network — such as payment tools, games, marketplaces and finance applications.</p><p class="example"><strong>Beginner example:</strong> A payment app that lets a freelancer receive money from an overseas client.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">ADOPTION</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>People using them</h3><p>Growth happens when people discover an app, understand its value, complete a useful action and come back.</p><p class="example"><strong>Beginner example:</strong> The freelancer receives their first payment, finds the experience useful and chooses the app again next month.</p></article>
       </div>
       <div class="panel" style="margin-top:16px"><h3>Why this matters for marketing</h3><p>Do not lead with “our network uses rollups”. Lead with the useful experience the network helps make possible. Explain the technology only when it helps someone understand the benefit, trust the product or take the next step.</p></div>
-      <div class="research-board" style="margin-top:18px">
-        <div class="board-head"><div><p class="kicker">A SIMPLE TRANSACTION FLOW</p><h2>From a tap to a network record.</h2></div><p>A wallet prepares and signs an instruction. The network checks and processes it, then records the result.</p></div>
-        <div class="journey">
-          <div class="journey-step"><b>01 / WALLET</b><span>Approve an action</span><small>User reviews and signs</small></div>
-          <div class="journey-step"><b>02 / INSTRUCTION</b><span>Submit the request</span><small>Signed and sent to network</small></div>
-          <div class="journey-step"><b>03 / NETWORK</b><span>Check & process</span><small>Rules are applied</small></div>
-          <div class="journey-step"><b>04 / RECORD</b><span>Check the outcome</span><small>Success, failure or pending</small></div>
-        </div>
-        <p class="framework-note">Conceptual flow only. Consensus, transaction ordering, fees and finality differ across blockchains. For growth, every step is part of the user experience: unclear approvals, network selection, fees or long waits can cause drop-off.</p>
-      </div>
     </div>
   </section>
 
@@ -279,10 +289,10 @@ section{padding:104px 0}
         <article class="panel"><h3>Example social creative</h3><p style="font-size:1.35rem;font-weight:850;line-height:1.2;letter-spacing:-.04em">Client overseas. You at home. Know what happens between “sent” and “received”.</p><p>A practical walkthrough of the supported payment journey, the fees to check and where to get help.</p><p><strong>CTA:</strong> See how it works</p></article>
       </div>
       <div class="workstreams" style="margin-top:18px">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">SHORT VIDEO</span><span class="icon-mark" aria-hidden="true">▶</span></div><h3>Explain the problem</h3><p>“What should you check before receiving an international payment?”</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">CAROUSEL</span><span class="icon-mark" aria-hidden="true">▤</span></div><h3>Make the journey clear</h3><p>Show the steps from client payment to funds received, using a real partner app.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">PARTNER CONTENT</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>Demonstrate the product</h3><p>A freelancer or creator walks through the supported experience with transparent disclosures.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">FOLLOW-UP</span><span class="icon-mark" aria-hidden="true">↻</span></div><h3>Answer objections</h3><p>Address availability, fees, safety, network choice and support before asking people to try it.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">SHORT VIDEO</span><span class="icon-mark" aria-hidden="true">▶</span></div><h3>Explain the problem</h3><p>“What should you check before receiving an international payment?”</p><p class="campaign-outcome"><strong>Purpose:</strong> Make a confusing topic feel relevant and easy to understand.</p><p class="campaign-outcome"><strong>Expected outcome:</strong> More qualified attention and visits to the campaign or partner page.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">CAROUSEL</span><span class="icon-mark" aria-hidden="true">▤</span></div><h3>Make the journey clear</h3><p>Show the steps from client payment to funds received, using a real partner app.</p><p class="campaign-outcome"><strong>Purpose:</strong> Break the process into clear, manageable steps.</p><p class="campaign-outcome"><strong>Expected outcome:</strong> Better understanding and fewer unanswered questions before trying the app.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">PARTNER CONTENT</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>Demonstrate the product</h3><p>A freelancer or creator walks through the supported experience with transparent disclosures.</p><p class="campaign-outcome"><strong>Purpose:</strong> Show a real, supported product journey through a relatable person.</p><p class="campaign-outcome"><strong>Expected outcome:</strong> Greater trust and more users exploring the partner app.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">FOLLOW-UP</span><span class="icon-mark" aria-hidden="true">↻</span></div><h3>Answer objections</h3><p>Address availability, fees, safety, network choice and support before asking people to try it.</p><p class="campaign-outcome"><strong>Purpose:</strong> Resolve practical concerns that may stop someone from taking action.</p><p class="campaign-outcome"><strong>Expected outcome:</strong> More confident first attempts and fewer avoidable drop-offs.</p></article>
       </div>
     </div>
   </section>
@@ -298,6 +308,22 @@ section{padding:104px 0}
           <tr><td>Quality</td><td>Completion rate, failed actions and support requests</td><td>Is the experience working reliably?</td></tr>
           <tr><td>Retention</td><td>Repeat payments and returning active users</td><td>Does the use case create lasting value?</td></tr>
         </tbody></table>
+        <aside class="adoption-visual" aria-label="Visual adoption measurement framework">
+          <p class="kicker">THE ADOPTION LOOP</p>
+          <h3>From first discovery to repeat use</h3>
+          <div class="adoption-flow">
+            <div class="adoption-stage"><span class="adoption-icon">◉</span><div><b>01 · DISCOVER</b><small>Relevant people find the app</small></div><em>VISITS</em></div>
+            <div class="adoption-connector"></div>
+            <div class="adoption-stage"><span class="adoption-icon">⌘</span><div><b>02 · BUILD</b><small>Useful apps join the ecosystem</small></div><em>INTEGRATIONS</em></div>
+            <div class="adoption-connector"></div>
+            <div class="adoption-stage"><span class="adoption-icon">↗</span><div><b>03 · ACTIVATE</b><small>Someone completes a first payment</small></div><em>FIRST ACTION</em></div>
+            <div class="adoption-connector"></div>
+            <div class="adoption-stage"><span class="adoption-icon">✓</span><div><b>04 · DELIVER</b><small>The experience works reliably</small></div><em>COMPLETION</em></div>
+            <div class="adoption-connector"></div>
+            <div class="adoption-stage"><span class="adoption-icon">↻</span><div><b>05 · RETAIN</b><small>The user comes back again</small></div><em>REPEAT USE</em></div>
+          </div>
+          <div class="adoption-takeaway"><strong>The real signal:</strong> people complete a useful action — and choose to do it again.</div>
+        </aside>
       </div>
       <p class="framework-note">Targets should be set only after reviewing a real network's baseline data, partner analytics and the definition of an active user.</p>
     </div>
