@@ -82,6 +82,13 @@ a{color:var(--accent)}.panel a{color:var(--accent);text-decoration:underline;tex
 footer{color:#84908a}
 @media(max-width:760px){.nav{justify-content:flex-start}}
 
+/* Visual icon system */
+.workstream-top{justify-content:flex-start}
+.workstream-top .stage{margin-left:auto}
+.icon-mark{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:10px;background:#202b36;border:1px solid #394653;color:var(--accent);font-size:1.12rem;font-weight:800;line-height:1}
+.visual-card:before{content:"";display:block;width:30px;height:3px;background:var(--accent);border-radius:5px;margin-bottom:14px}
+.summary-card{position:relative}
+.summary-card:before{content:"";display:block;width:24px;height:3px;background:var(--violet);margin-bottom:12px;border-radius:4px}
 /* Refined hierarchy: compact editorial typography */
 h1{font-size:clamp(2.35rem,4.8vw,4.25rem);line-height:1.02;letter-spacing:-.065em;margin:16px 0 18px;max-width:680px}
 .lead{font-size:1.02rem;line-height:1.65;max-width:610px}
@@ -117,7 +124,7 @@ section{padding:64px 0}
       <div>
         <p class="eyebrow">WEB3 ECOSYSTEM GROWTH · LAYER 2 · GO-TO-MARKET</p>
         <h1>Turning Layer 2<br><em>into real adoption.</em></h1>
-        <p class="lead">An independent research and go-to-market strategy for a hypothetical Ethereum Layer 2 ecosystem. This case study explores how to identify a valuable use case, reach the right audiences and turn technical infrastructure into products people actually use.</p>
+        <p class="lead">An independent go-to-market case study exploring how an Ethereum Layer 2 ecosystem could attract users, support builders and grow real-world adoption.</p>
         <div class="hero-meta"><span class="chip">Ecosystem research</span><span class="chip">Audience & positioning</span><span class="chip">GTM campaign</span></div>
       </div>
       <div class="hero-art" aria-label="Layer 2 ecosystem growth concept">
@@ -129,9 +136,9 @@ section{padding:64px 0}
       </div>
     </section>
     <div class="summary">
-      <div class="summary-card"><strong>THE CHALLENGE</strong><span>Layer 2 technology is not the end benefit. People need a reason to use the ecosystem.</span></div>
-      <div class="summary-card"><strong>THE STRATEGY</strong><span>Focus on a clear use case, understand its users and make the value easy to see.</span></div>
-      <div class="summary-card"><strong>THE OUTPUT</strong><span>A positioning direction, audience plan, campaign concept and adoption metrics.</span></div>
+      <div class="summary-card"><strong>FOCUS</strong><span>Real user needs, not technology for its own sake.</span></div>
+      <div class="summary-card"><strong>APPROACH</strong><span>Audience research, partnerships and practical marketing.</span></div>
+      <div class="summary-card"><strong>OUTCOME</strong><span>A plan to attract, activate and retain users.</span></div>
     </div>
   </div>
 
@@ -150,10 +157,10 @@ section{padding:64px 0}
     <div class="wrap">
       <div class="section-head"><div><p class="kicker">02 / THE TECHNOLOGY — IN PLAIN ENGLISH</p><h2>Just enough context to understand the opportunity.</h2></div><p class="section-intro">A Layer 2 is a network built to help applications run with more capacity and often lower transaction costs than using Ethereum directly. That can make frequent digital actions more practical. For this growth strategy, the important point is what that enables — not the technical mechanics underneath.</p></div>
       <div class="workstreams">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">FOUNDATION</span></div><h3>Ethereum</h3><p>The underlying blockchain that provides the base environment and security foundations for the ecosystem.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">SCALING</span></div><h3>Layer 2 network</h3><p>A network designed to make blockchain activity more scalable and practical for everyday applications.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">UTILITY</span></div><h3>Apps and services</h3><p>Products built on the network — such as payment tools, games, marketplaces and finance applications.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">ADOPTION</span></div><h3>People using them</h3><p>Growth happens when people discover an app, understand its value, complete a useful action and come back.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">FOUNDATION</span><span class="icon-mark" aria-hidden="true">◈</span></div><h3>Ethereum</h3><p>The underlying blockchain that provides the base environment and security foundations for the ecosystem.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">SCALING</span><span class="icon-mark" aria-hidden="true">↗</span></div><h3>Layer 2 network</h3><p>A network designed to make blockchain activity more scalable and practical for everyday applications.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">UTILITY</span><span class="icon-mark" aria-hidden="true">▣</span></div><h3>Apps and services</h3><p>Products built on the network — such as payment tools, games, marketplaces and finance applications.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">ADOPTION</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>People using them</h3><p>Growth happens when people discover an app, understand its value, complete a useful action and come back.</p></article>
       </div>
       <div class="panel" style="margin-top:16px"><h3>Why this matters for marketing</h3><p>Do not lead with “our network uses rollups”. Lead with the useful experience the network helps make possible. Explain the technology only when it helps someone understand the benefit, trust the product or take the next step.</p></div>
     </div>
@@ -176,15 +183,9 @@ section{padding:64px 0}
     <div class="wrap">
       <div class="section-head"><div><p class="kicker">04 / AUDIENCE & POSITIONING</p><h2>Who needs to believe in the ecosystem — and why?</h2></div><p class="section-intro">Ecosystem growth has more than one audience. Users need a useful product; developers need a reason to build; partners need confidence that the ecosystem can attract demand.</p></div>
       <div class="workstreams">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">END USERS</span></div><h3>Freelancers & remote workers</h3><p>Need a straightforward way to receive international payments through an application that supports their markets.</p><div class="deliverable">Message: Get paid globally, with a clearer payment experience.</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">BUILDERS</span></div><h3>Payment app developers</h3><p>Need users, distribution, useful infrastructure, documentation and ecosystem support.</p><div class="deliverable">Message: Build payment experiences for real user needs.</div></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">ECOSYSTEM PARTNERS</span></div><h3>Wallets, providers & communities</h3><p>Can improve discovery, onboarding, access and trust when the product experience is ready.</p><div class="deliverable">Message: Help make the end-to-end journey work.</div></article>
-      </div>
-      <div class="research-board" style="margin-top:18px">
-        <div class="board-grid">
-          <article class="visual-card"><h3>Proposed ecosystem positioning</h3><p class="sub">A direction to test, not a final brand claim</p><div class="loop-wrap" style="min-height:180px"><div class="loop-center" style="width:190px;height:112px;border-radius:18px">USEFUL APPS.<br>REAL-WORLD VALUE.</div><span class="loop-node n1">Build</span><span class="loop-node n2">Discover</span><span class="loop-node n3">Use</span><span class="loop-node n4">Return</span></div></article>
-          <article class="visual-card"><h3>Message hierarchy</h3><div class="signal-list"><div class="signal"><b>Lead with</b><p>The user benefit and the problem being solved.</p></div><div class="signal"><b>Support with</b><p>Relevant app examples, partner proof and a clear user journey.</p></div><div class="signal"><b>Explain</b><p>Layer 2 technology, fees and network details when they matter.</p></div></div></article>
-        </div>
+        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">END USERS</span><span class="icon-mark" aria-hidden="true">↗</span></div><h3>Freelancers & remote workers</h3><p>Need a straightforward way to receive international payments through an application that supports their markets.</p><div class="deliverable">Message: Get paid globally, with a clearer payment experience.</div></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">BUILDERS</span><span class="icon-mark" aria-hidden="true">⌘</span></div><h3>Payment app developers</h3><p>Need users, distribution, useful infrastructure, documentation and ecosystem support.</p><div class="deliverable">Message: Build payment experiences for real user needs.</div></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">ECOSYSTEM PARTNERS</span><span class="icon-mark" aria-hidden="true">◇</span></div><h3>Wallets, providers & communities</h3><p>Can improve discovery, onboarding, access and trust when the product experience is ready.</p><div class="deliverable">Message: Help make the end-to-end journey work.</div></article>
       </div>
     </div>
   </section>
@@ -213,10 +214,10 @@ section{padding:64px 0}
         <article class="panel"><h3>Example social creative</h3><p style="font-size:1.35rem;font-weight:850;line-height:1.2;letter-spacing:-.04em">Client overseas. You at home. Know what happens between “sent” and “received”.</p><p>A practical walkthrough of the supported payment journey, the fees to check and where to get help.</p><p><strong>CTA:</strong> See how it works</p></article>
       </div>
       <div class="workstreams" style="margin-top:18px">
-        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">SHORT VIDEO</span></div><h3>Explain the problem</h3><p>“What should you check before receiving an international payment?”</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">CAROUSEL</span></div><h3>Make the journey clear</h3><p>Show the steps from client payment to funds received, using a real partner app.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">PARTNER CONTENT</span></div><h3>Demonstrate the product</h3><p>A freelancer or creator walks through the supported experience with transparent disclosures.</p></article>
-        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">FOLLOW-UP</span></div><h3>Answer objections</h3><p>Address availability, fees, safety, network choice and support before asking people to try it.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">01</span><span class="stage">SHORT VIDEO</span><span class="icon-mark" aria-hidden="true">▶</span></div><h3>Explain the problem</h3><p>“What should you check before receiving an international payment?”</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">02</span><span class="stage">CAROUSEL</span><span class="icon-mark" aria-hidden="true">▤</span></div><h3>Make the journey clear</h3><p>Show the steps from client payment to funds received, using a real partner app.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">03</span><span class="stage">PARTNER CONTENT</span><span class="icon-mark" aria-hidden="true">◎</span></div><h3>Demonstrate the product</h3><p>A freelancer or creator walks through the supported experience with transparent disclosures.</p></article>
+        <article class="workstream"><div class="workstream-top"><span class="number">04</span><span class="stage">FOLLOW-UP</span><span class="icon-mark" aria-hidden="true">↻</span></div><h3>Answer objections</h3><p>Address availability, fees, safety, network choice and support before asking people to try it.</p></article>
       </div>
     </div>
   </section>
